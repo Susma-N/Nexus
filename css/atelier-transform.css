@@ -1,0 +1,355 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   AAPAAVANI NEXUS — FIELD LEDGER TRANSFORMATION
+   Loaded last, on purpose: this file re-authors the home screen's visual
+   and motion language on top of the existing three layers rather than
+   deleting them, so nothing else on the site has to be touched.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ─────────────────────────────────────────────────────────────────────────
+   1. TOKENS — swap every palette/type/motion variable already in use.
+   Because the existing markup and JS reference these variable NAMES
+   everywhere (including inline styles), changing the values here recolors
+   and re-types the whole home screen without editing HTML structure.
+   ───────────────────────────────────────────────────────────────────────── */
+:root {
+  /* nexus-transformation-2025.css namespace */
+  --primary-dark: #1B1B18;
+  --primary-mid: #3A362E;
+  --primary-light: #5C5548;
+  --accent-warm: #B54A28;         /* rust — the one confident accent, used like a reviewer's red pen */
+  --accent-warm-light: #D97A46;
+  --accent-warm-dark: #8C3818;
+  --accent-green: #5C6B4A;
+  --neutral-white: #F3EEE3;
+  --neutral-light: #EAE3D3;
+  --neutral-mid: #C9C0AC;
+  --neutral-dark: #1B1B18;
+  --surface-primary: #F3EEE3;
+  --surface-secondary: #EAE3D3;
+  --surface-tertiary: #D9D0BC;
+  --surface-dark: #1B1B18;
+  --text-primary: #1B1B18;
+  --text-secondary: #55503F;
+  --text-tertiary: #8A8272;
+  --text-light: #F3EEE3;
+  --font-serif: 'Fraunces', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier Prime', monospace;
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --shadow-sm: 0 1px 0 rgba(27,27,24,0.08);
+  --shadow-md: 2px 4px 0 rgba(27,27,24,0.10);
+  --shadow-lg: 4px 6px 0 rgba(27,27,24,0.12);
+  --shadow-xl: 6px 10px 0 rgba(27,27,24,0.14);
+  --shadow-glow: none;
+  --ease-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 0.15s;
+  --dur-base: 0.25s;
+  --dur-mid: 0.4s;
+  --dur-slow: 0.6s;
+
+  /* premium-redesign.css namespace (still governs the footer + typo strip) */
+  --ed-primary: #1B1B18;
+  --ed-sky: #B54A28;
+  --ed-aqua: #1B1B18;
+  --ed-mist: #A69C8C;
+  --ed-olive: #5C6B4A;
+  --ed-navy: #14120F;
+  --ed-white: #F3EEE3;
+  --font-serif: 'Fraunces', serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   2. MOTION — same keyframe NAMES used across all three layers, new
+   choreography. This changes what hundreds of `animation:` declarations
+   actually do without touching each one.
+   Rule of thumb: no floating, no glow-pulsing, no bounce/spring, no
+   scale-pop. Everything settles once, briefly, like ink hitting paper.
+   ───────────────────────────────────────────────────────────────────────── */
+@keyframes fade-in-up          { from { opacity:0; clip-path: inset(0 0 100% 0); } to { opacity:1; clip-path: inset(0 0 0% 0); } }
+@keyframes hero-content-fade-in{ from { opacity:0; } to { opacity:1; } }
+@keyframes title-scale-in      { from { opacity:0; clip-path: inset(0 0 100% 0); } to { opacity:1; clip-path: inset(0 0 0% 0); } }
+@keyframes label-slide-in      { from { opacity:0; letter-spacing: -2px; } to { opacity:1; letter-spacing: 3px; } }
+@keyframes serif-color-pulse   { 0%,100% { color: var(--accent-warm); } }
+@keyframes sub-fade-in         { from { opacity:0; } to { opacity:1; } }
+@keyframes button-slide-up     { from { opacity:0; } to { opacity:1; } }
+@keyframes topnav-slide-down   { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes gradient-shimmer    { 0%,100% { opacity: 1; } }
+@keyframes warm-glow           { 0%,100% { text-shadow: none; } }
+@keyframes title-fade-in-left  { from { opacity:0; clip-path: inset(0 100% 0 0); } to { opacity:1; clip-path: inset(0 0% 0 0); } }
+@keyframes desc-fade-in-left   { from { opacity:0; } to { opacity:1; } }
+@keyframes stats-fade-in       { from { opacity:0; } to { opacity:1; } }
+@keyframes stat-val-pop        { from { opacity:0; } to { opacity:1; } }
+@keyframes section-title-reveal{ from { opacity:0; clip-path: inset(0 0 100% 0); } to { opacity:1; clip-path: inset(0 0 0% 0); } }
+@keyframes section-desc-reveal { from { opacity:0; } to { opacity:1; } }
+@keyframes card-fade-in        { from { opacity:0; } to { opacity:1; } }
+@keyframes gradient-rotate     { 0%,100% { opacity: 1; } }
+@keyframes card-shine          { from { opacity:0; } to { opacity:0; } }
+@keyframes icon-slide-in       { from { opacity:0; } to { opacity:1; } }
+@keyframes card-title-reveal   { from { opacity:0; } to { opacity:1; } }
+@keyframes card-desc-reveal    { from { opacity:0; } to { opacity:1; } }
+@keyframes sidebar-slide-in    { from { opacity:0; } to { opacity:1; } }
+@keyframes expand-in           { from { opacity:0; } to { opacity:1; } }
+@keyframes preloader-text-float{ 0%,100% { opacity: 1; } }
+@keyframes preloader-fade-out  { from { opacity:1; visibility:visible; } to { opacity:0; visibility:hidden; } }
+@keyframes section-reveal      { from { opacity:0; } to { opacity:1; } }
+@keyframes stagger-in          { from { opacity:0; } to { opacity:1; } }
+@keyframes subtle-float        { 0%,100% { transform: translateY(0); } }
+@keyframes pulse-glow          { 0%,100% { box-shadow: none; } }
+@keyframes fluid-morph         { 0%,100% { border-radius: 0; } }
+@keyframes image-float         { 0%,100% { transform: translateY(0); } }
+@keyframes nexus-flow          { 0%,100% { background-position: 0 0; } }
+@keyframes n2-blink            { 0%,100% { opacity: 1; } }
+@keyframes logo-border-glow    { 0%,100% { filter: none; } }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   3. STRUCTURE — the parts a variable swap can't reach: shape language
+   (hard edges, not pills), surfaces (flat, not glassy), and the addition
+   of drafting-marginalia that reads as intentional and hand-set.
+   ───────────────────────────────────────────────────────────────────────── */
+
+#screen-home, .ed-hero, .ed-section, .ed-typo-section, .ed-company-footer {
+  cursor: auto;
+}
+
+/* Preloader: a typewriter line instead of a floating italic glow */
+.ln-preloader {
+  background: var(--surface-primary);
+  backdrop-filter: none;
+}
+.ln-preloader-text {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  position: relative;
+  padding-left: 28px;
+}
+.ln-preloader-text::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 16px; height: 1px;
+  background: var(--accent-warm);
+  animation: ledger-line-grow 1.4s var(--ease-out) infinite;
+}
+@keyframes ledger-line-grow {
+  0% { width: 0; opacity: 0.4; }
+  50% { width: 16px; opacity: 1; }
+  100% { width: 0; opacity: 0.4; }
+}
+
+/* Top navigation: hairline ledger bar, not a glowing glass strip */
+.topnav {
+  background: var(--surface-primary) !important;
+  border-bottom: 1px solid var(--text-primary);
+  box-shadow: none !important;
+}
+.topnav::after { display: none; }
+.brand-nexus {
+  background: none !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-serif) !important;
+  font-style: italic;
+  font-weight: 600 !important;
+}
+.n1 { font-family: var(--font-serif); }
+.n2 { color: var(--text-tertiary) !important; }
+.n2::before { display: none; }
+.main-logo-img { filter: none !important; animation: none !important; }
+.brand-icon { border-radius: 0 !important; background: transparent !important; border: none !important; }
+.nt {
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: 11px !important;
+  letter-spacing: 1px !important;
+}
+.nt::after { background: var(--accent-warm) !important; height: 2px !important; box-shadow: none !important; }
+.nt:hover { background: transparent !important; transform: none !important; }
+.nt.active { background: transparent !important; border: none !important; box-shadow: none !important; color: var(--accent-warm) !important; }
+.company-name { font-family: var(--font-mono) !important; }
+
+/* ─── Hero: duotone drafting frame instead of teal-glass gradient ─── */
+.ed-hero { background: var(--surface-dark); }
+.ed-hero-bg .ed-parallax-img {
+  filter: grayscale(0.55) sepia(0.18) contrast(1.05) brightness(0.75);
+}
+.ed-overlay {
+  background:
+    linear-gradient(rgba(20,18,15,0.35), rgba(20,18,15,0.35)),
+    linear-gradient(to top, var(--surface-dark) 0%, rgba(20,18,15,0.15) 55%, rgba(20,18,15,0.05) 100%);
+}
+/* corner registration marks — a printer's / surveyor's crosshair */
+.ed-hero::before, .ed-hero::after {
+  content: '';
+  position: absolute;
+  width: 22px; height: 22px;
+  border-top: 1px solid rgba(243,238,227,0.5);
+  border-left: 1px solid rgba(243,238,227,0.5);
+  top: 32px; left: 32px;
+  z-index: 3;
+  pointer-events: none;
+}
+.ed-hero::after { top: auto; left: auto; bottom: 32px; right: 32px; border: none; border-bottom: 1px solid rgba(243,238,227,0.5); border-right: 1px solid rgba(243,238,227,0.5); }
+
+.ed-hero-content { text-align: left; max-width: 760px; margin-left: 8vw; }
+.ed-hero-label {
+  font-family: var(--font-mono) !important;
+  color: var(--accent-warm-light) !important;
+  display: flex; align-items: center; gap: 10px;
+}
+.ed-hero-label::before { content: '§'; color: var(--accent-warm); }
+.ed-hero-title { font-family: var(--font-serif) !important; letter-spacing: -1.5px; text-align: left; }
+.ed-serif {
+  font-style: italic;
+  color: var(--accent-warm-light) !important;
+  -webkit-text-fill-color: var(--accent-warm-light) !important;
+  position: relative;
+}
+.ed-hero-sub { text-align: left; margin-left: 0; }
+
+/* ─── Buttons: an engineer's stamp, not a pill ─── */
+.magnetic-btn {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+  border: 1.5px solid var(--text-primary) !important;
+  border-radius: 0 !important;
+  padding: 15px 32px !important;
+  font-family: var(--font-mono) !important;
+  font-weight: 600 !important;
+  letter-spacing: 1.5px !important;
+  box-shadow: none !important;
+  position: relative;
+  overflow: visible !important;
+}
+.ed-hero .magnetic-btn, section[style*="var(--ed-primary)"] .magnetic-btn, .ed-typo-section .magnetic-btn {
+  color: var(--ed-white) !important;
+  border-color: var(--ed-white) !important;
+}
+.magnetic-btn::before { background: var(--accent-warm) !important; z-index: -1; }
+.magnetic-btn:hover {
+  transform: none !important;
+  color: var(--ed-white) !important;
+  box-shadow: none !important;
+  border-color: var(--accent-warm) !important;
+}
+.ed-hero .magnetic-btn:hover, .ed-typo-section .magnetic-btn:hover { color: var(--ed-navy) !important; }
+.magnetic-btn::after {
+  content: '→';
+  margin-left: 10px;
+  display: inline-block;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.magnetic-btn:hover::after { transform: translateX(4px); }
+
+/* ─── Section rhythm: a ledger grid, alternating tint, no floating panels ─── */
+.ed-section { background: var(--surface-primary) !important; border-top: 1px solid var(--surface-tertiary); }
+.ed-section::before { display: none; }
+.ed-section:nth-child(even) { background: var(--surface-primary) !important; }
+.ed-grid { position: relative; }
+
+.ed-section-title, .ed-intro-title {
+  font-family: var(--font-serif) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--text-primary) !important;
+  letter-spacing: -1px;
+}
+.ed-intro-block { position: relative; padding-left: 20px; border-left: 2px solid var(--accent-warm); }
+.ed-intro-stats { border-top: 1px solid var(--text-primary) !important; }
+.ed-stat-val { font-family: var(--font-serif) !important; color: var(--accent-warm) !important; }
+.ed-stat-label { font-family: var(--font-mono) !important; }
+
+/* image wrap: one clipped corner (a torn spec-sheet), no morphing blob, no float */
+.ed-image-wrap {
+  border-radius: 0 !important;
+  border: 1px solid var(--text-primary) !important;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 36px 100%, 0 calc(100% - 36px));
+  box-shadow: var(--shadow-lg) !important;
+}
+.ed-image-wrap img, .ed-image-wrap video {
+  filter: grayscale(0.35) contrast(1.05);
+}
+.ed-image-wrap:hover img, .ed-image-wrap:hover video { transform: none !important; }
+.ed-image-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 36px; height: 36px;
+  background: var(--accent-warm);
+}
+
+/* ─── Cards: index-card spec sheets, not glass tiles ─── */
+.up-cards-grid { gap: 1px !important; background: var(--text-primary); border: 1px solid var(--text-primary); }
+.up-card {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: var(--surface-primary) !important;
+  transition: background var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out) !important;
+}
+.up-card::before, .up-card::after { display: none !important; }
+.up-card-icon {
+  border-left: none !important;
+  border-bottom: 1px solid var(--accent-warm) !important;
+  background: transparent !important;
+  padding: 0 0 8px 0 !important;
+  border-radius: 0 !important;
+}
+.up-card:hover { transform: none !important; background: var(--text-primary) !important; }
+.up-card:hover .up-card-icon { color: var(--accent-warm-light) !important; transform: none !important; border-left: none !important; }
+.up-card:hover h3 { color: var(--surface-primary) !important; }
+.up-card:hover p { color: var(--neutral-mid) !important; }
+
+/* ─── Massive type strip: outline type on paper, not a solid teal slab ─── */
+.ed-typo-section { background: var(--ed-navy) !important; }
+.ed-massive-text {
+  font-family: var(--font-serif) !important;
+  color: transparent !important;
+  -webkit-text-stroke: 1px rgba(243,238,227,0.5);
+}
+.ed-massive-text .ed-serif { -webkit-text-stroke: 0; -webkit-text-fill-color: var(--accent-warm-light) !important; }
+
+/* CTA band right before the footer */
+section[style*="var(--ed-primary)"] { background: var(--ed-navy) !important; }
+section[style*="var(--ed-primary)"] .ed-section-title { -webkit-text-fill-color: var(--ed-white) !important; }
+
+/* ─── Footer: ledger columns, hairline rule, monospace section marks ─── */
+.ed-company-footer { background: var(--ed-navy) !important; border-top: 1px solid rgba(243,238,227,0.15); }
+.footer-col h4 { font-family: var(--font-mono); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+.footer-col h4::after { background: var(--accent-warm) !important; }
+.logo-box { background: transparent !important; border: 1px solid rgba(243,238,227,0.3); border-radius: 0 !important; }
+.logo-text strong { color: var(--ed-white) !important; font-family: var(--font-serif) !important; font-style: italic; }
+.soc-link { border-radius: 0 !important; background: transparent !important; border: 1px solid rgba(243,238,227,0.3); }
+.soc-link:hover { background: var(--accent-warm) !important; transform: none !important; }
+.leader-card { border-radius: 0 !important; background: transparent !important; border: 1px solid rgba(243,238,227,0.2); font-family: var(--font-mono); font-size: 0.8rem; }
+.footer-btn { border-radius: 0 !important; background: transparent !important; border: 1px solid var(--ed-white); }
+.footer-btn:hover { background: var(--accent-warm) !important; color: var(--ed-white) !important; }
+
+/* ─── Sidebar (design wizard / module browser) — carried lightly into app shell ─── */
+.sidebar { background: var(--surface-dark) !important; }
+.sb-cat-head:hover { color: var(--accent-warm) !important; }
+.si:hover { background: rgba(181,74,40,0.12) !important; color: var(--accent-warm-light) !important; border-color: var(--accent-warm) !important; box-shadow: none !important; transform: none !important; }
+.si:hover .si-icon { transform: none !important; }
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-warm) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Respect reduced motion regardless of anything above */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
