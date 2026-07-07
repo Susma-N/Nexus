@@ -1,0 +1,89 @@
+=== SHEET: 2. Sec Clarifier Design ===
+A1: Activated Sludge Waste Water Treatment Calculations - S.I. units
+A3: 2. Secondary Clarifier Design
+A5: Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes
+A7: Inputs | F7: Calculations
+A9: Prim. Effl. Flow Rate, Q = | C9: 10600.0 | D9: m3/d | F9: Recycle Act. Sl. Rate, Qr = | H9: =C11*C9 | I9: m3/d
+A11: Return Act. Sl. Ratio, R = | C11: 0.3 | F11: Peak Hourly Flow Rate, Qp = | H11: =C9*C22 | I11: m3/d
+A13: Aeration tank MLSS, X = | C13: 2100.0 | D13: mg/L | F13: Calculate Clarifier Area based on SOR 
+A15: Design Surface | F15:  Based on ave. Flow:  A1 = | H15: =C9/C16 | I15: m2 
+A16:   Overflow Rate , SOR  = | C16: 22.0 | D16: m3/d/m2  | E16:  (ave) | F16: Based on Peak Flow:  A2 = | H16: =H11/C17 | I16: m2 
+C17: 47.0 | D17: m3/d/m2  | E17: (peak) | F17: The larger of the two areas is: | H17: =IF(H15>H16,H15,H16) | I17: m2 
+A18: Design Solids
+A19:     Loading Rate , SLR  = | C19: 5.0 | D19: kg/hr/m2  | E19:  (ave) | F19: Calculate Clarifier Area based on SLR 
+C20: 8.0 | D20: kg/hr/m2  | E20: (peak) | F20:  Based on ave. Flow:  A3 = | H20: =(C9+H9)*0.001*C13/(24*C19) | I20: m2 
+F21: Based on Peak Flow:  A4 = | H21: =(C9+H9)*0.001*C13*C22/(24*C20) | I21: m2 
+A22: Peaking Factor, PF = | C22: 2.25 | F22: The larger of the two areas is: | H22: =IF(H20>H21,H20,H21) | I22: m2 
+A23:    (for peak hourly flow)
+F24: Area needed for Clarifier,  A = | H24: =IF(H17>H22,H17,H22) | I24: m2 
+F25:    (The largest of A1, A2, A3, & A4) | J25:   Adapted from: Metcalf & Eddy, Inc, (Revised by Tchobanoglous, G, Burton, F.L., Stensel, H.D., 
+J26:   Wastewater Engineering, Treatment and Reuse, 4th Ed., New York, NY, 2003.
+A27: Calculate Circular Clarifier Diameter:
+J28: NOTE:  The design parameters for a particular project will typically come from the design guide
+A29: Number of Clarifiers, N = | C29: 2.0 | F29:      Clarifier Diameter, D = | H29: =((H24/C29)*4/PI())^0.5 | I29: m | J29: of the appropriate state, county or municipality.
+A31: Effluent Weir Calculations (Circular Clarifiers) | K31: Typical maximum values for Weir Overflow Rate (WOR):
+F32:   Min. Diameter for single
+A33: Max Weir Overflow Rate = | C33: 375.0 | D33: m3/d/m  | F33:      circular effluent weir  = | H33: =(C9/C29)/(PI()*C33) | I33: m | K33: for Q < 3800 m3/day: | N33: WOR < 250 m3/d/m
+F35:   Min. Diameter for circular Channel with | K35: for Q > 3800 m3/day: | N35: WOR < 375 m3/d/m
+F36:    effluent weir on each side  = | H36: =(C9/(2*C29))/(PI()*C33) | I36: m
+K37: Typical Values for Peaking Factors (hourly maximum/daily average)
+A38: Calculate Length and Width for Rectangular Clarifier:
+L39: Ave Flow, MGD | M39: Peaking Factor
+A40: Number of Clarifiers, N = | C40: 2.0 | F40:      Clarifier Width, W = | H40: =((H24/C40)/(C41))^0.5 | I40: m
+A41: Length/Width ratio, L/W = | C41: 4.0 | F41:      Clarifier Length, L = | H41: =(H24/C41)/H40 | I41: m | L41:  < 0.1 | M41: 3.0
+L42: 0.1 - 0.3 | M42: 2.9
+A43: Effluent Weir Calculations (Rectangular Clarifiers) | L43: 0.3 - 0.5 | M43: 2.8
+F44: Number of channel widths | L44: 0.5 - 0.7 | M44: 2.7
+A45: Max Weir Overflow Rate = | C45: 375.0 | D45: m3/d/m  | F45:      needed for effluent weir = | H45: =(C9/C40)/(C45*H40) | L45: 0.7 - 1.0 | M45: 2.6
+L46: 1 - 2 | M46: 2.5
+L47: 2 - 4 | M47: 2.25
+A48:   Equations used for Calculations: | F48:   A note on unit conversions: | L48: > 4 | M48: 2.0
+A50:    Clarifier area:  A  =  Q/SOR | F50:   1 mg/L  =  0.001 kg/m3  
+A52:   Clarifier Area:  A  =  (Q + Qr)*X*0.001/24*SLR
+A54:   Effl. Weir Length:  L  =  Q/WOR
+B58:        Find more Excel spreadsheets for engineering at:
+C59: EngineeringExcelTemplates.com
+B62: Copyright © 2011 Engineering Excel Templates. All Rights Reserved.
+
+=== SHEET: 3. Prim Clarif Design ===
+A1: Activated Sludge Waste Water Treatment Calculations - U.S. units
+A3: 3. Primary Clarifier Design
+A5: Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes
+A7: Inputs | F7: Calculations
+A9: Influent Flow Rate, Q = | C9: 10600.0 | D9: m3/d  | F9: Recycle Act. Sl. Rate, Qr = | H9: =C11*C9 | I9: m3/d 
+A11: Return Act. Sl. Ratio, R = | C11: 0.3 | F11: Peak Hourly Flow Rate, Qp = | H11: =C9*C19 | I11: m3/d 
+A13: Design Surface Overflow | F13: Calculate Clarifier Area based on SOR 
+A14:   Rate (average) , SORa = | C14: 40.0 | D14: m3/d/m2 
+F15:  Based on ave. Flow:  A1 = | H15: =C9/C14 | I15: m2 
+A16: Design Surface Overflow
+A17:   Rate (peak) , SORp = | C17: 100.0 | D17: m3/d/m2  | F17: Based on Peak Flow:  A2 = | H17: =H11/C17 | I17: m2 
+A19: Peaking Factor, PF = | C19: 2.25 | F19: The larger of the two areas is: | H19: =IF(H15>H17,H15,H17) | I19: m2 
+A20:    (for peak hourly flow)
+A22: Calculate Circular Clarifier Diameter:
+A24: Number of Clarifiers, N = | C24: 2.0 | F24:      Clarifier Diameter, D = | H24: =((H19/C24)*4/PI())^0.5 | I24: m
+A26: Effluent Weir Calculations (Circular Clarifiers)
+F27:   Min. Diameter for single
+F28:      circular effluent weir  = | H28: =(C9/C24)/(PI()*C30) | I28: m
+A29:       Max Weir Overflow
+A30:          Rate,  WOR = | C30: 200.0 | D30: m3/hr/m  | F30:   Min. Diameter for circular Channel with
+F31:    effluent weir on each side  = | H31: =(C9/(2*C24))/(PI()*C30) | I31: m
+A33: Calculate Length and Width for Rectangular Clarifier: | J33:   Adapted from: Metcalf & Eddy, Inc, (Revised by Tchobanoglous, G, Burton, F.L., Stensel, H.D., 
+J34:   Wastewater Engineering, Treatment and Reuse, 4th Ed., New York, NY, 2003.
+A35: Number of Clarifiers, N = | C35: 2.0 | F35:      Clarifier Width, W = | H35: =((H19/C35)/(C36))^0.5 | I35: m
+A36: Length/Width ratio, L/W = | C36: 4.0 | F36:      Clarifier Length, L = | H36: =(H19/C36)/H35 | I36: m | J36: NOTE:  The design parameters for a particular project will typically come from the design guide
+J37: of the appropriate state, county or municipality.
+A38: Effluent Weir Calculations (Rectangular Clarifiers)
+A40:    Max Weir Overflow | F40:       Number of channel widths
+A41:         Rate,  WOR = | C41: 200.0 | D41: m3/hr/m  | F41:      needed for effluent weir = | H41: =(C9/C35)/(C41*H35)
+B43:   Equations used for Calculations: | K43: Typical Values for Peaking Factors (hourly maximum/daily average)
+B45:    Clarifier area:  A  =  Q/SOR | L45: Ave Flow, MGD | M45: Peaking Factor
+B47:   Effl. Weir Length:  L  =  Q/WOR | L47:  < 0.1 | M47: 3.0
+L48: 0.1 - 0.3 | M48: 2.9
+L49: 0.3 - 0.5 | M49: 2.8
+L50: 0.5 - 0.7 | M50: 2.7
+L51: 0.7 - 1.0 | M51: 2.6
+B52:        Find more Excel spreadsheets for engineering at: | L52: 1 - 2 | M52: 2.5
+C53: EngineeringExcelTemplates.com | L53: 2 - 4 | M53: 2.25
+L54: > 4 | M54: 2.0
+B56: Copyright © 2011 Engineering Excel Templates. All Rights Reserved.
+

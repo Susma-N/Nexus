@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aapaavani NEXUS v3.0 | M&E 5th Edition WWT Design Platform</title>
+<meta name="description" content="Aapaavani NEXUS — Intelligent wastewater treatment plant design platform based on M&E 5th Edition, IWA, and CPHEEO standards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Clash+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/premium-redesign.css">
+<link rel="stylesheet" href="css/atelier-transform.css">
+<link rel="stylesheet" href="css/process-archive.css">
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="home-active">
+
+<nav class="topnav">
+  <div class="brand" onclick="goHome()">
+    <div class="brand-words">
+      <div class="n1"><span class="brand-nexus">NEXUS</span></div>
+      <div class="n2">WWT Design Platform</div>
+    </div>
+  </div>
+  <div class="nav-tabs">
+    <div class="nt active" id="nt-home" onclick="goHome()">Home</div>
+    <div class="nt" id="nt-wizard" onclick="showWiz()">Design Wizard</div>
+    <div class="nt" id="nt-modules" onclick="showModules()">Unit Processes</div>
+  </div>
+  <div class="nav-right">
+    <div class="company-name">
+      Aapaavani
+    </div>
+    <div class="brand-icon">
+      <img src="img/logo-white-aa.png" alt="Aapaavani Logo" class="main-logo-img" />
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════
+     HOME
+════════════════════════════════════ -->
+<div class="screen show" id="screen-home">
+
+  <!-- ════════════════════════════════════
+       PROCESS ARCHIVE — scroll-driven intro
+       ════════════════════════════════════ -->
+  <div id="pa-spacer">
+    <div id="pa-hero-video">
+      <video src="video/bg_plant.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="pa-reg tl"></div>
+    <div class="pa-reg br"></div>
+
+    <div id="pa-caption">
+      Every unit process on this page is scaled from mass-balance and kinetic
+      calculations against feed data you enter — nothing below is decorative.
+    </div>
+
+    <div id="pa-spec">
+      <div class="pa-spec-top">
+        <div class="pa-spec-circle"><span id="pa-spec-symbol">Q</span></div>
+        <div class="pa-spec-label">Unit Process<br>Archive — Nexus</div>
+      </div>
+      <div class="pa-spec-val" id="pa-spec-val">10<small>MLD</small></div>
+    </div>
+
+    <div id="pa-cta"><span>ENTER →</span></div>
+    <div id="pa-footer"><span>Aapaavani NEXUS &copy; 2026</span><span>M&amp;E 5th Ed. &middot; IWA &middot; CPHEEO</span></div>
+    <div id="pa-outro-overlay"></div>
+
+    <div id="pa-panel">
+      <div id="pa-wrap">
+        <div id="pa-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Premium Water Dynamics Background (Isometric Fluid System) -->
+  <div style="position: fixed; inset: 0; width: 100vw; height: 100vh; z-index: 0; pointer-events: none;">
+    <canvas id="water-bg" style="width: 100%; height: 100%;"></canvas>
+  </div>
+  <!-- Preloader -->
+  <div class="ln-preloader">
+    <div class="ln-preloader-text">Start your journey with Nexus</div>
+  </div>
+
+  <!-- Main Scroll Container -->
+  <div class="ln-scroll-container" style="position: relative; z-index: 1;">
+    
+    <!-- Editorial Hero Section -->
+    <section class="ed-hero cinematic-section">
+      <div class="ed-hero-bg">
+        <video src="video/bg_dam.mp4" class="ed-parallax-img" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;"></video>
+        <div class="ed-overlay"></div>
+      </div>
+      <div class="ed-hero-content">
+        <div class="ed-hero-label">AAPAAVANI NEXUS — M&E 5TH ED. · IWA · CPHEEO</div>
+        <h1 class="ed-hero-title">From influent data to<br><span class="ed-serif">complete plant design</span></h1>
+        <p class="ed-hero-sub">Enter feed parameters once. NEXUS applies rigorous kinetic and stoichiometric models to generate a comprehensive plant layout, mass balances, and unit sizes.</p>
+        <button class="magnetic-btn ed-cta" onclick="showWiz()">START DESIGN WIZARD</button>
+      </div>
+    </section>
+
+    <!-- Slide 1: Preliminary & Primary (ed-left) -->
+    <section class="ed-section ed-left cinematic-section">
+      <div class="ed-grid">
+        <div class="ed-intro-block mask-reveal">
+          <h2 class="ed-intro-title">Unit <br><span class="ed-serif">Processes</span></h2>
+          <p class="ed-intro-desc">Select a treatment module to begin engineering design</p>
+          
+          <div class="ed-intro-stats">
+            <div class="ed-stat">
+              <div class="ed-stat-val">20+</div>
+              <div class="ed-stat-label">Engineering Modules</div>
+            </div>
+            <div class="ed-stat">
+              <div class="ed-stat-val">M&amp;E</div>
+              <div class="ed-stat-label">5th Edition Standards</div>
+            </div>
+          </div>
+          
+          <button class="magnetic-btn ed-cta" onclick="showModules()" style="margin-top: 40px; align-self: flex-start;">BROWSE LIBRARY</button>
+        </div>
+        <div class="ed-text-wrap">
+          <div class="up-cards-grid">
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('screen', document.getElementById('msb-screen-design')), 100)">
+              <div class="up-card-icon">01 // PRELIMINARY TREATMENT</div>
+              <h3>Screening</h3>
+              <p>Bar screen headloss (Kirschmer)</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('grit-horizontal', document.getElementById('msb-grit-horizontal')), 100)">
+              <div class="up-card-icon">02 // PRELIMINARY TREATMENT</div>
+              <h3>Horizontal Flow Grit Chamber</h3>
+              <p>Horizontal flow grit removal</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('aerated-grit', document.getElementById('msb-grit-aerated')), 100)">
+              <div class="up-card-icon">03 // PRELIMINARY TREATMENT</div>
+              <h3>Aerated Grit Chamber</h3>
+              <p>Aerated grit chamber design</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('clarifier', document.getElementById('msb-primary-clarifier')), 100)">
+              <div class="up-card-icon">04 // PRIMARY TREATMENT</div>
+              <h3>Primary Clarifier</h3>
+              <p>Primary sedimentation tanks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 2: Secondary Suspended (ed-right) -->
+    <section class="ed-section ed-right cinematic-section">
+      <div class="ed-grid">
+        <div class="ed-text-wrap">
+          <div class="up-cards-grid">
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('tertiary-denitrif', document.getElementById('msb-tertiary-denitrif')), 100)">
+              <div class="up-card-icon">05 // SECONDARY (SUSPENDED)</div>
+              <h3>CMAS with Tertiary Denitrification</h3>
+              <p>Tertiary denitrification modeling</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('cmas-ebpr', document.getElementById('msb-cmas-ebpr')), 100)">
+              <div class="up-card-icon">06 // SECONDARY (SUSPENDED)</div>
+              <h3>CMAS Nitrification-Denitrification-EBPR (A²O)</h3>
+              <p>Nitrification-Denitrification-EBPR</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('sbr', document.getElementById('msb-sbr')), 100)">
+              <div class="up-card-icon">07 // SECONDARY (SUSPENDED)</div>
+              <h3>SBR</h3>
+              <p>Sequencing Batch Reactor</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('oxditch', document.getElementById('msb-oxditch')), 100)">
+              <div class="up-card-icon">08 // SECONDARY (SUSPENDED)</div>
+              <h3>Oxidation Ditch</h3>
+              <p>Extended aeration systems</p>
+            </div>
+          </div>
+        </div>
+        <div class="ed-image-wrap mask-reveal">
+          <video src="https://videos.pexels.com/video-files/14189689/14189689-uhd_2560_1440_24fps.mp4" class="ed-parallax-img" autoplay loop muted playsinline style="object-fit:cover;"></video>
+        </div>
+</div>
+    </section>
+
+    <!-- Slide 3: Secondary Advanced (ed-left) -->
+    <section class="ed-section ed-left cinematic-section">
+      <div class="ed-grid">
+        <div class="ed-image-wrap mask-reveal">
+          <video src="video/bg_dam.mp4" class="ed-parallax-img" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+        <div class="ed-text-wrap">
+          <div class="up-cards-grid">
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('clarifier', document.getElementById('msb-secondary-clarifier')), 100)">
+              <div class="up-card-icon">09 // SECONDARY (SUSPENDED)</div>
+              <h3>Secondary Clarifier</h3>
+              <p>Secondary sedimentation tanks</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('mbbr-bod', document.getElementById('msb-mbbr-bod')), 100)">
+              <div class="up-card-icon">10 // SECONDARY (ATTACHED)</div>
+              <h3>MBBR BOD Removal</h3>
+              <p>Moving Bed Biofilm Reactor</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('mbbr-bnr', document.getElementById('msb-mbbr-bnr')), 100)">
+              <div class="up-card-icon">11 // SECONDARY (ATTACHED)</div>
+              <h3>MBBR Nitrification-Denitrification</h3>
+              <p>Nitrification-Denitrification</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('mbr', document.getElementById('msb-mbr')), 100)">
+              <div class="up-card-icon">12 // SECONDARY (ATTACHED)</div>
+              <h3>MBR</h3>
+              <p>Membrane Bioreactor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Specialized (ed-right) -->
+    <section class="ed-section ed-right cinematic-section">
+      <div class="ed-grid">
+        <div class="ed-text-wrap">
+          <div class="up-cards-grid">
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('aeration-blower', document.getElementById('msb-aeration-blower')), 100)">
+              <div class="up-card-icon">13 // SECONDARY (SUPPORT)</div>
+              <h3>Aeration Tank Blower</h3>
+              <p>Airflow and capacity sizing</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('uasb', document.getElementById('msb-uasb')), 100)">
+              <div class="up-card-icon">14 // ANAEROBIC TREATMENT</div>
+              <h3>UASBR</h3>
+              <p>Upflow Anaerobic Sludge Blanket</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('daf', document.getElementById('msb-daf')), 100)">
+              <div class="up-card-icon">15 // PHYSICAL-CHEMICAL</div>
+              <h3>DAF</h3>
+              <p>Dissolved Air Flotation</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('lagoon', document.getElementById('msb-lagoon')), 100)">
+              <div class="up-card-icon">16 // NATURAL SYSTEMS</div>
+              <h3>Waste Stabilization Pond</h3>
+              <p>Waste stabilization pond</p>
+            </div>
+          </div>
+        </div>
+        <div class="ed-image-wrap mask-reveal">
+          <video src="https://videos.pexels.com/video-files/13805097/13805097-hd_1920_1080_30fps.mp4" class="ed-parallax-img" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover;"></video>
+        </div>
+</div>
+    </section>
+
+    <!-- Slide 5: Tertiary & Solids (ed-left) -->
+    <section class="ed-section ed-left cinematic-section">
+      <div class="ed-grid">
+        <div class="ed-image-wrap mask-reveal">
+          <img src="img/pexels_5115943.jpg" alt="Industrial Drum" class="ed-parallax-img" style="object-fit:cover;">
+        </div>
+        <div class="ed-text-wrap">
+          <div class="up-cards-grid">
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('chlorination', document.getElementById('msb-chlorination')), 100)">
+              <div class="up-card-icon">17 // TERTIARY / ADVANCED</div>
+              <h3>Chlorination System</h3>
+              <p>Chlorine contact system</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('uv', document.getElementById('msb-uv')), 100)">
+              <div class="up-card-icon">18 // TERTIARY / ADVANCED</div>
+              <h3>UV Disinfection</h3>
+              <p>Ultraviolet irradiation</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('gravity-thickener', document.getElementById('msb-gravity-thickener')), 100)">
+              <div class="up-card-icon">19 // SOLIDS HANDLING</div>
+              <h3>Gravity Thickener</h3>
+              <p>Sludge thickening</p>
+            </div>
+            <div class="up-card" onclick="showModules(); setTimeout(()=>gm('digester', document.getElementById('msb-digester')), 100)">
+              <div class="up-card-icon">20 // SOLIDS HANDLING</div>
+              <h3>Anaerobic Digester</h3>
+              <p>Sludge digestion modeling</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Transition Wave Divider -->
+    <div class="transition-wave" style="line-height: 0; background: transparent;">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; display: block;">
+        <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--ed-primary)"></path>
+      </svg>
+    </div>
+
+    <!-- Slide 6: Blue Transition Section -->
+    <section class="ed-section" style="background: var(--ed-primary); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; text-align: center;">
+      <h2 class="ed-section-title" style="color: var(--ed-white); margin-bottom: 20px; opacity: 1; transform: none;">READY TO <span class="ed-serif" style="color: var(--ed-sky);">DESIGN?</span></h2>
+      <button class="magnetic-btn" style="background: var(--ed-navy); color: var(--ed-white);" onclick="showWiz()">ENTER PLATFORM</button>
+    </section>
+
+    <!-- Massive Typography Footer -->
+    <section class="ed-typo-section" style="background: var(--ed-primary);">
+      <div class="ed-typo-container">
+        <h1 class="ed-massive-text" style="color: rgba(255,255,255,0.4); opacity: 1; transform: none;">
+          SOLUTIONS FOR A BETTER<br>
+          <span class="ed-serif" style="color: var(--ed-white);">TOMORROW.</span>
+        </h1>
+      </div>
+    </section>
+
+    <!-- Company Footer -->
+    <footer class="ed-company-footer">
+      <div class="footer-container">
+        <!-- Col 1 -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <div class="logo-box">
+              <img src="img/logo-white-aa.png" alt="AAPAAVANI Logo" style="height: 40px; display: block;">
+              <div class="logo-text" style="margin-left: 12px; text-align: left;">
+                <strong style="color: var(--ed-white); display: block; font-size: 1.2rem; line-height: 1.1; margin-bottom: 2px;">AAPAAVANI</strong>
+                <span style="color: var(--ed-mist); font-size: 0.55rem; font-weight: 600; letter-spacing: 0.5px;">ENVIRONMENTAL SOLUTIONS PVT LTD</span>
+              </div>
+            </div>
+          </div>
+          <p>Founded by seasoned engineers, we are a clean-tech engineering firm specialising in smart, efficient, and sustainable environmental solutions for a better tomorrow.</p>
+          <div class="social-icons">
+            <a href="https://linkedin.com/company/aapaavani" class="soc-link in"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+            <a href="https://instagram.com" class="soc-link ig"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="https://youtube.com" class="soc-link yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></a>
+            <a href="https://whatsapp.com" class="soc-link wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0h-.063c-6.627 0-11.968 5.342-11.968 11.969 0 2.637.854 5.083 2.302 7.07l-1.583 5.795 5.922-1.554c1.921 1.306 4.248 2.062 6.758 2.062 6.627 0 11.969-5.341 11.969-11.968 0-6.627-5.342-11.969-11.969-11.969zm6.331 17.202c-.255.719-1.47 1.378-2.035 1.419-.516.037-1.168.172-3.328-.724-2.607-1.08-4.298-3.766-4.428-3.94-.129-.174-1.055-1.405-1.055-2.68 0-1.275.658-1.9 1.144-2.438.256-.283.56-.355.748-.355.188 0 .375.002.544.009.176.008.411-.067.643.493.243.585.803 1.957.876 2.103.072.146.121.317.025.509-.098.192-.148.311-.295.484-.148.173-.312.378-.445.503-.146.136-.3.284-.136.568.163.284.726 1.204 1.56 1.954 1.077.967 1.98 1.267 2.27 1.411.288.145.457.123.627-.071.17-.193.731-.849.927-1.141.196-.293.391-.244.653-.146.262.098 1.656.782 1.94 923.284.141.283.228.437.283.673.055 1.056-.255 1.774-.974z"/></svg></a>
+          </div>
+        </div>
+        
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Industrial Effluent Treatment</a></li>
+            <li><a href="#">Domestic & Institutional Sewage</a></li>
+            <li><a href="#">Water Treatment</a></li>
+            <li><a href="#">Environment & Sustainability Consulting</a></li>
+          </ul>
+          
+          <h4 class="mt-4">Leadership</h4>
+          <div class="leader-card">
+            <span>Dr Vishnu Sharma</span>
+            <a href="#" class="in-box"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          </div>
+          <div class="leader-card">
+            <span>Chinmaya Delampady</span>
+            <a href="#" class="in-box"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          </div>
+        </div>
+        
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <div class="contact-text">
+              <a href="tel:+918147901288">+91 81479 01288</a><br>
+              <a href="tel:+919980584372">+91 99805 84372</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <div class="contact-text">
+              <a href="mailto:director@aapaavani.com">director@aapaavani.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <div class="contact-text">
+              Serving Across India from<br>Mangaluru & Belthangady,<br>Dakshina Kannada.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- CLOSE ln-scroll-container -->
+
+</div>
+
+<!-- ════════════════════════════════════
+     WIZARD
+════════════════════════════════════ -->
+<div class="screen" id="screen-wizard">
+<div class="two-panel">
+  <aside class="sidebar" data-lenis-prevent>
+    <div class="sb-logo"><div class="sb-logo-t">NEXUS Design Engine</div><div class="sb-logo-s">Project Wizard</div></div>
+    <div class="sb-sec">Setup Steps</div>
+    <div class="si active" id="wsb1" onclick="wz(1)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 10-16 0"/></svg>Project Info<span class="si-badge new">1</span></div>
+    <div class="si" id="wsb2" onclick="wz(2)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>Feed Parameters<span class="si-badge new">2</span></div>
+    <div class="si" id="wsb3" onclick="wz(3)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Discharge Targets<span class="si-badge new">3</span></div>
+    <div class="si" id="wsb4" onclick="wz(4)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="8" width="20" height="8" rx="2"/></svg>System Type<span class="si-badge new">4</span></div>
+    <div class="si" id="wsb5" onclick="wz(5)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Technology<span class="si-badge new">5</span></div>
+    <div class="sb-div"></div>
+
+    <!-- Abstract Processing Animation -->
+    <div class="wiz-anim-wrap">
+      <svg class="wiz-anim-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="dropGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#22d3ee" />
+            <stop offset="100%" stop-color="#0284c7" />
+          </linearGradient>
+          <linearGradient id="scanBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="rgba(34,211,238,0)" />
+            <stop offset="70%" stop-color="rgba(34,211,238,0.2)" />
+            <stop offset="100%" stop-color="rgba(34,211,238,0.8)" />
+          </linearGradient>
+          <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="2" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+          <clipPath id="dropClip">
+            <path d="M50 22 C50 22 28 48 28 62 A22 22 0 0 0 72 62 C72 48 50 22 50 22 Z" />
+          </clipPath>
+        </defs>
+
+        <!-- Background grid lines -->
+        <g class="wiz-bg-lines">
+          <line x1="50" y1="0" x2="50" y2="110" />
+          <line x1="0" y1="55" x2="100" y2="55" />
+          <line x1="15" y1="20" x2="85" y2="90" />
+          <line x1="85" y1="20" x2="15" y2="90" />
+        </g>
+
+        <!-- Glowing Aura -->
+        <circle cx="50" cy="55" r="28" fill="rgba(14,165,233,0.08)" filter="url(#neonGlow)"/>
+
+        <!-- High-Tech Rings -->
+        <circle cx="50" cy="55" r="42" class="wiz-ring wiz-ring-outer" />
+        <circle cx="50" cy="55" r="36" class="wiz-ring wiz-ring-mid" />
+        <circle cx="50" cy="55" r="28" class="wiz-ring wiz-ring-inner" />
+
+        <!-- Orbital Data Nodes -->
+        <g class="wiz-ring-nodes">
+           <circle cx="50" cy="13" r="2.5" fill="#22d3ee" filter="url(#neonGlow)" />
+           <circle cx="86" cy="55" r="1.5" fill="#38bdf8" />
+           <circle cx="14" cy="55" r="2" fill="#38bdf8" />
+           <circle cx="50" cy="97" r="2.5" fill="#22d3ee" filter="url(#neonGlow)"/>
+        </g>
+
+        <!-- Base Drop Background -->
+        <path d="M50 22 C50 22 28 48 28 62 A22 22 0 0 0 72 62 C72 48 50 22 50 22 Z" class="wiz-drop-bg" />
+
+        <!-- Liquid Waves inside Drop -->
+        <g clip-path="url(#dropClip)">
+          <g class="wiz-liquid-level">
+            <path d="M -100 55 Q -75 48 -50 55 T 0 55 T 50 55 T 100 55 T 150 55 L 150 150 L -100 150 Z" class="wiz-wave-back">
+              <animateTransform attributeName="transform" type="translate" from="0 0" to="-100 0" dur="2.5s" repeatCount="indefinite" />
+            </path>
+            <path d="M -100 55 Q -75 62 -50 55 T 0 55 T 50 55 T 100 55 T 150 55 L 150 150 L -100 150 Z" class="wiz-wave-front">
+              <animateTransform attributeName="transform" type="translate" from="0 0" to="-100 0" dur="3.5s" repeatCount="indefinite" />
+            </path>
+          </g>
+        </g>
+
+        <!-- Glossy Glass Overlay -->
+        <path d="M50 22 C50 22 28 48 28 62 A22 22 0 0 0 72 62 C72 48 50 22 50 22 Z" class="wiz-drop-glass" />
+        <path d="M35 48 Q32 60 45 74" class="wiz-drop-shine" />
+
+        <!-- Scanner Beam Group -->
+        <g class="wiz-scanner-grp">
+          <polygon points="30,19 70,19 80,-5 20,-5" fill="url(#scanBeam)" />
+          <rect x="25" y="19" width="50" height="1.5" fill="#22d3ee" filter="url(#neonGlow)" />
+        </g>
+
+        <!-- Rising Data Bubbles -->
+        <g class="wiz-particles">
+          <circle cx="42" cy="75" r="1.5" class="wiz-bubble b1" />
+          <circle cx="58" cy="65" r="2.5" class="wiz-bubble b2" />
+          <circle cx="48" cy="80" r="1.2" class="wiz-bubble b3" />
+          <circle cx="52" cy="70" r="1.8" class="wiz-bubble b4" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="sb-prog"><div class="sb-prog-bar"><div class="sb-prog-fill" id="wiz-bar" style="width:20%"></div></div><div class="sb-prog-txt" id="wiz-pg-txt">Step 1 of 5</div></div>
+  </aside>
+  <div class="panel-main" data-lenis-prevent>
+    <!-- Steps nav -->
+    <div class="steps-nav">
+      <div class="sn-item active" id="sn1"><div class="sn-dot">1</div>Project Info</div>
+      <div class="sn-line" id="sl1"></div>
+      <div class="sn-item" id="sn2"><div class="sn-dot">2</div>Feed Parameters</div>
+      <div class="sn-line" id="sl2"></div>
+      <div class="sn-item" id="sn3"><div class="sn-dot">3</div>Discharge Targets</div>
+      <div class="sn-line" id="sl3"></div>
+      <div class="sn-item" id="sn4"><div class="sn-dot">4</div>System Type</div>
+      <div class="sn-line" id="sl4"></div>
+      <div class="sn-item" id="sn5"><div class="sn-dot">5</div>Technology</div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div id="ws1">
+      <div class="step-hero"><div class="step-hrow"><div class="step-num-box">1</div><div class="step-title">Project Information</div></div><div class="step-desc">Enter project details for drawing title blocks and design reports. These customise all output documentation.</div></div>
+      <div class="step-body">
+        <div class="card"><div class="card-hd"><div class="card-hd-t">🏗️ Project Identification</div></div><div class="card-body">
+          <div class="g3" style="margin-bottom:13px">
+            <div class="f"><label>Project Name</label><input id="p_name" value="Municipal WWT Plant — Phase I"><div class="h">Appears on drawings and reports</div></div>
+            <div class="f"><label>Client / Owner</label><input id="p_client" placeholder="Municipality or client name"></div>
+            <div class="f"><label>Project Location</label><input id="p_loc" placeholder="City, State, Country"></div>
+            <div class="f"><label>Design Engineer / Firm</label><input id="p_eng" placeholder="Engineer or consulting firm"></div>
+            <div class="f"><label>Project Reference No.</label><input id="p_no" placeholder="WWT-2026-001"></div>
+            <div class="f"><label>Design Horizon</label><select id="p_horizon"><option value="10">10 Years</option><option value="15">15 Years</option><option value="20" selected>20 Years (standard)</option><option value="25">25 Years</option><option value="30">30 Years</option></select></div>
+          </div>
+          <div class="g3">
+            <div class="f"><label>Wastewater Category</label><select id="p_type"><option value="domestic">Domestic / Municipal</option><option value="industrial">Industrial</option><option value="combined">Combined (Municipal+Industrial)</option><option value="agri">Agro-industrial</option></select></div>
+            <div class="f"><label>Design Code / Standard</label><select id="p_code"><option value="india">India — CPHEEO / CPCB Guidelines</option><option value="mande">Metcalf &amp; Eddy 5th Ed. (International)</option><option value="usa">USA — MOP 8 / WEF Standards</option><option value="eu">European EN Standards</option></select></div>
+            <div class="f"><label>Project Notes</label><input id="p_notes" placeholder="Special constraints, site conditions..."></div>
+          </div>
+        </div></div>
+        <div class="btn-row mt"><button class="btn btn-a" onclick="wz(2)">Continue → Feed Parameters ›</button></div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div id="ws2" style="display:none">
+      <div class="step-hero"><div class="step-hrow"><div class="step-num-box">2</div><div class="step-title">Influent Feed Parameters</div></div><div class="step-desc">Enter or estimate influent characteristics. NEXUS auto-populates all downstream modules. Use measured values; defaults are typical Indian domestic sewage.</div></div>
+      <div class="step-body">
+        <div class="alert al-a">💡 All values propagate globally. Every unit process uses these as inputs — you can override individual modules later.</div>
+        <div class="card"><div class="card-hd"><div class="card-hd-t">💧 Hydraulic Parameters</div><div class="card-hd-s">Flow rates and peaking factors</div></div><div class="card-body">
+          <div class="g4">
+            <div class="f"><label>Design Average Flow Q</label><div class="fuw"><input type="number" id="w_Q" value="5000"><div class="fu">m³/d</div></div><div class="h">Average daily design flow</div></div>
+            <div class="f"><label>Peak Hourly Factor</label><input type="number" id="w_PF" value="2.5" step="0.1"><div class="h">Qpeak = PF × Qavg | Domestic: 2.0–3.5</div></div>
+            <div class="f"><label>Peak Monthly Factor</label><input type="number" id="w_PMF" value="1.2" step="0.05"><div class="h">For sludge calcs | Typical 1.1–1.3</div></div>
+            <div class="f"><label>Infiltration Allowance</label><div class="fuw"><input type="number" id="w_inf" value="0"><div class="fu">m³/d</div></div><div class="h">Groundwater infiltration (if any)</div></div>
+          </div>
+        </div></div>
+        <div class="card"><div class="card-hd"><div class="card-hd-t">🧪 Organic Load Parameters</div><div class="card-hd-s">BOD₅, COD, TSS — primary characterisation per M&E 5th Ed.</div></div><div class="card-body">
+          <div class="g4">
+            <div class="f"><label>Influent BOD₅</label><div class="fuw"><input type="number" id="w_BOD" value="250"><div class="fu">mg/L</div></div><div class="h">5-day BOD | Domestic: 150–350</div></div>
+            <div class="f"><label>Soluble BOD (sBOD)</label><div class="fuw"><input type="number" id="w_sBOD" value="125"><div class="fu">mg/L</div></div><div class="h">Filtered BOD | ~50% of total</div></div>
+            <div class="f"><label>Influent COD</label><div class="fuw"><input type="number" id="w_COD" value="450"><div class="fu">mg/L</div></div><div class="h">Total COD | Domestic: 300–600</div></div>
+            <div class="f"><label>Soluble COD (sCOD)</label><div class="fuw"><input type="number" id="w_sCOD" value="200"><div class="fu">mg/L</div></div><div class="h">Filtered COD</div></div>
+            <div class="f"><label>rbCOD</label><div class="fuw"><input type="number" id="w_rbCOD" value="80"><div class="fu">mg/L</div></div><div class="h">Readily biodegradable | For EBPR, denitrif.</div></div>
+            <div class="f"><label>Influent TSS</label><div class="fuw"><input type="number" id="w_TSS" value="220"><div class="fu">mg/L</div></div><div class="h">Total susp. solids | Domestic: 150–300</div></div>
+            <div class="f"><label>Influent VSS</label><div class="fuw"><input type="number" id="w_VSS" value="185"><div class="fu">mg/L</div></div><div class="h">Volatile susp. solids | VSS/TSS ≈ 0.8</div></div>
+            <div class="f"><label>nbVSS (non-biodeg.)</label><div class="fuw"><input type="number" id="w_nbVSS" value="40"><div class="fu">mg/L</div></div><div class="h">Non-biodegradable VSS | For UASB</div></div>
+          </div>
+        </div></div>
+        <div class="card"><div class="card-hd"><div class="card-hd-t">🌿 Nutrient Parameters</div><div class="card-hd-s">Nitrogen, phosphorus, alkalinity</div></div><div class="card-body">
+          <div class="g4">
+            <div class="f"><label>Influent TKN</label><div class="fuw"><input type="number" id="w_TKN" value="40"><div class="fu">mg/L</div></div><div class="h">Total Kjeldahl N | Domestic: 25–60</div></div>
+            <div class="f"><label>Influent NH₄-N</label><div class="fuw"><input type="number" id="w_NH4" value="28"><div class="fu">mg/L</div></div><div class="h">Ammonia-N | ~70–80% of TKN</div></div>
+            <div class="f"><label>Influent NO₃-N (raw)</label><div class="fuw"><input type="number" id="w_NO3" value="1"><div class="fu">mg/L</div></div><div class="h">Usually negligible in raw sewage</div></div>
+            <div class="f"><label>Total Phosphorus TP</label><div class="fuw"><input type="number" id="w_TP" value="6"><div class="fu">mg/L</div></div><div class="h">Domestic: 4–12 mg/L</div></div>
+            <div class="f"><label>VFA (Acetate)</label><div class="fuw"><input type="number" id="w_VFA" value="15"><div class="fu">mg/L</div></div><div class="h">Volatile fatty acids | For EBPR</div></div>
+            <div class="f"><label>Alkalinity</label><div class="fuw"><input type="number" id="w_Alk" value="200"><div class="fu">mg/L CaCO₃</div></div><div class="h">Typical: 100–300</div></div>
+            <div class="f"><label>Influent pH</label><input type="number" id="w_pH" value="7.2" step="0.1"><div class="h">Typical: 6.5–8.0</div></div>
+            <div class="f"><label>TKN Peak/Avg Factor Fs</label><input type="number" id="w_TKNfs" value="1.5" step="0.1"><div class="h">For SRT safety factor | M&E: 1.3–1.8</div></div>
+          </div>
+        </div></div>
+        <div class="card"><div class="card-hd"><div class="card-hd-t">🌡️ Physical / Site Conditions</div></div><div class="card-body">
+          <div class="g4">
+            <div class="f"><label>Design Temp. (coldest month)</label><div class="fuw"><input type="number" id="w_T" value="20"><div class="fu">°C</div></div><div class="h">Critical for kinetics and O₂ transfer</div></div>
+            <div class="f"><label>Summer Max. Temp.</label><div class="fuw"><input type="number" id="w_Tmax" value="32"><div class="fu">°C</div></div><div class="h">For MBR flux correction</div></div>
+            <div class="f"><label>Site Elevation</label><div class="fuw"><input type="number" id="w_elev" value="100"><div class="fu">m asl</div></div><div class="h">For blower + O₂ transfer correction</div></div>
+            <div class="f"><label>Population (if known)</label><input type="number" id="w_PE" placeholder="Auto-calc"><div class="h">Auto-calc: Q ÷ 0.1 m³/cap/d</div></div>
+          </div>
+        </div></div>
+        <div class="btn-row mt"><button class="btn btn-o" onclick="wz(1)">‹ Back</button><button class="btn btn-a" onclick="wz(3)">Continue → Discharge Targets ›</button></div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div id="ws3" style="display:none">
+      <div class="step-hero"><div class="step-hrow"><div class="step-num-box">3</div><div class="step-title">Effluent Quality Targets &amp; Discharge Standard</div></div><div class="step-desc">Select a regulatory standard — NEXUS auto-fills all limits and recommends appropriate technology.</div></div>
+      <div class="step-body">
+        <div class="alert al-a">💡 Select a standard to auto-fill targets. You can override any value. Technology recommendation updates automatically based on stringency.</div>
+        <div class="card"><div class="card-hd"><div class="card-hd-t">📋 Quick-Select Discharge Standards</div></div><div class="card-body">
+          <div class="std-pills">
+            <div class="std-p on" id="sp-inland" onclick="setStd('inland')">🏞 IS 2490 — Inland Surface Water</div>
+            <div class="std-p" id="sp-land" onclick="setStd('land')">🌾 CPCB — Land Irrigation</div>
+            <div class="std-p" id="sp-reuse" onclick="setStd('reuse')">♻️ ZLD / Water Reuse</div>
+            <div class="std-p" id="sp-marine" onclick="setStd('marine')">🌊 Marine Discharge</div>
+            <div class="std-p" id="sp-mld" onclick="setStd('mld')">⚡ MLD / High Grade</div>
+            <div class="std-p" id="sp-custom" onclick="setStd('custom')">✏️ Custom</div>
+          </div>
+          <div class="g4">
+            <div class="f"><label>Effluent BOD₅</label><div class="fuw"><input type="number" id="w_BODe" value="10"><div class="fu">mg/L</div></div></div>
+            <div class="f"><label>Effluent COD</label><div class="fuw"><input type="number" id="w_CODe" value="50"><div class="fu">mg/L</div></div></div>
+            <div class="f"><label>Effluent TSS</label><div class="fuw"><input type="number" id="w_TSSe" value="10"><div class="fu">mg/L</div></div></div>
+            <div class="f"><label>Effluent NH₄-N</label><div class="fuw"><input type="number" id="w_NH4e" value="5"><div class="fu">mg/L</div></div></div>
+            <div class="f"><label>Effluent TN</label><div class="fuw"><input type="number" id="w_TNe" value="10"><div class="fu">mg/L</div></div></div>
+            <div class="f"><label>Effluent TP</label><div class="fuw"><input type="number" id="w_TPe" value="2"><div class="fu">mg/L</div></div></div>
+            <div class="f"><label>Effluent pH Range</label><input type="text" id="w_pHe" value="6.5–8.5"></div>
+            <div class="f"><label>Faecal Coliform</label><input type="text" id="w_FCe" value="&lt;1000 MPN/100mL"></div>
+          </div>
+        </div></div>
+        <div class="btn-row mt"><button class="btn btn-o" onclick="wz(2)">‹ Back</button><button class="btn btn-a" onclick="wz(4)">Continue → System Type ›</button></div>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div id="ws4" style="display:none">
+      <div class="step-hero"><div class="step-hrow"><div class="step-num-box">4</div><div class="step-title">Treatment System Configuration</div></div><div class="step-desc">Choose whether to design a conventional multi-unit train or focus on a specific secondary treatment technology.</div></div>
+      <div class="step-body">
+        <div class="card"><div class="card-hd"><div class="card-hd-t">🏭 System Design Approach</div></div><div class="card-body">
+          <div class="sys-g">
+            <div class="sc on" id="sc-conv" onclick="selSys('conventional')"><div class="sc-icon">🏗️</div><div class="sc-name">Conventional Full Train</div><div class="sc-desc">Complete sequential design: Screening → Grit → Primary → Biological → Secondary Clarifier → Tertiary. Mass balance continuity across all units from single feed input.</div></div>
+            <div class="sc" id="sc-spec" onclick="selSys('specific')"><div class="sc-icon">⚙️</div><div class="sc-name">Specific Technology Focus</div><div class="sc-desc">Deep-dive into a specific secondary technology (MBR, SBR, MBBR, UASB+ASP, Trickling Filter) with full integration of required pre/post-treatment stages.</div></div>
+          </div>
+        </div></div>
+        <div class="btn-row mt"><button class="btn btn-o" onclick="wz(3)">‹ Back</button><button class="btn btn-a" onclick="wz(5)">Continue → Select Technology ›</button></div>
+      </div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div id="ws5" style="display:none">
+      <div class="step-hero"><div class="step-hrow"><div class="step-num-box">5</div><div class="step-title" id="s5-title">Select Secondary Treatment Technology</div></div><div class="step-desc" id="s5-desc">NEXUS recommends based on your effluent targets and plant scale. Click a card to select.</div></div>
+      <div class="step-body">
+        <div class="tech-grid" id="tech-grid"></div>
+        <div id="rec-box" class="alert al-g" style="display:none;margin-top:6px"></div>
+        <div class="btn-row mt">
+          <button class="btn btn-o" onclick="wz(4)">‹ Back</button>
+          <button class="btn btn-a" style="font-size:14px;padding:12px 28px" onclick="launchDesign()">🚀 Launch Full Design →</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- panel-main -->
+</div><!-- two-panel -->
+</div><!-- wizard -->
+
+<!-- ════════════════════════════════════
+     MODULES SCREEN
+════════════════════════════════════ -->
+<div class="screen" id="screen-modules">
+<div class="two-panel">
+  <aside class="sidebar" data-lenis-prevent>
+    <div class="sb-logo"><div class="sb-logo-t">Unit Process Library</div><div class="sb-logo-s">20 design modules</div></div>
+    
+    <div class="si active" id="msb-train" onclick="gm('train', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="8" width="20" height="8" rx="2"/></svg>Train Overview<span class="si-badge new">→</span></div>
+    
+    <div class="sb-div"></div>
+    
+    <div class="sb-accordion">
+      
+      <!-- 1. Preliminary Treatment -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Preliminary Treatment</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-screen-design" data-mod="screen" onclick="gm('screen', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>Screening</div>
+          <div class="si" id="msb-grit-horizontal" data-mod="grit-horizontal" onclick="gm('grit-horizontal', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 19 22 12 13 5 13 19"/><polygon points="2 19 11 12 2 5 2 19"/></svg>Horizontal Flow Grit Chamber</div>
+          <div class="si" id="msb-grit-aerated" data-mod="aerated-grit" onclick="gm('aerated-grit', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>Aerated Grit Chamber</div>
+        </div>
+      </div>
+      
+      <!-- 2. Primary Treatment -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Primary Treatment</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-primary-clarifier" data-mod="clarifier" onclick="gm('clarifier', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/></svg>Primary Clarifier</div>
+        </div>
+      </div>
+      
+      <!-- 3. Secondary Treatment - Suspended Growth -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Secondary Treatment - Suspended</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-tertiary-denitrif" data-mod="tertiary-denitrif" onclick="gm('tertiary-denitrif', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>CMAS with Tertiary Denitrification</div>
+          <div class="si" id="msb-cmas-ebpr" data-mod="cmas-ebpr" onclick="gm('cmas-ebpr', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>CMAS Nitrification-Denitrification-EBPR (A²O)</div>
+          <div class="si" id="msb-sbr" data-mod="sbr" onclick="gm('sbr', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>SBR</div>
+          <div class="si" id="msb-oxditch" data-mod="oxditch" onclick="gm('oxditch', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6H6A6 6 0 0 0 6 18h12a6 6 0 0 0 0-12z"/></svg>Oxidation Ditch</div>
+          <div class="si" id="msb-secondary-clarifier" data-mod="clarifier" onclick="gm('clarifier', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Secondary Clarifier</div>
+        </div>
+      </div>
+      
+      <!-- 4. Secondary Treatment - Attached Growth / Membrane -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Secondary Treatment - Attached/MBR</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-mbbr-bod" data-mod="mbbr-bod" onclick="gm('mbbr-bod', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/></svg>MBBR BOD Removal</div>
+          <div class="si" id="msb-mbbr-bnr" data-mod="mbbr-bnr" onclick="gm('mbbr-bnr', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/><polyline points="12 22 12 12"/></svg>MBBR Nitrification-Denitrification</div>
+          <div class="si" id="msb-mbr" data-mod="mbr" onclick="gm('mbr', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>MBR</div>
+        </div>
+      </div>
+
+      <!-- 5. Secondary Treatment - Support Systems -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Secondary Treatment - Support</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-aeration-blower" data-mod="aeration-blower" onclick="gm('aeration-blower', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>Aeration Tank Blower</div>
+        </div>
+      </div>
+
+      <!-- 6. Anaerobic Treatment -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Anaerobic Treatment</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-uasb" data-mod="uasb" onclick="gm('uasb', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>UASBR</div>
+        </div>
+      </div>
+      
+      <!-- 7. Physical-Chemical Treatment -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Physical-Chemical</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-daf" data-mod="daf" onclick="gm('daf', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>DAF</div>
+        </div>
+      </div>
+
+      <!-- 8. Natural Systems -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Natural Systems</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-lagoon" data-mod="lagoon" onclick="gm('lagoon', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>Waste Stabilization Pond</div>
+        </div>
+      </div>
+      
+      <!-- 9. Tertiary / Advanced Treatment -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Tertiary / Advanced</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-chlorination" data-mod="chlorination" onclick="gm('chlorination', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>Chlorination System</div>
+          <div class="si" id="msb-uv" data-mod="uv" onclick="gm('uv', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>UV Disinfection</div>
+        </div>
+      </div>
+
+      <!-- 10. Solids (Sludge) Handling -->
+      <div class="sb-cat expanded">
+        <div class="sb-cat-head" onclick="toggleCat(this)">
+          <span class="sb-cat-title">Solids Handling</span>
+          <svg class="sb-cat-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sb-cat-items">
+          <div class="si" id="msb-gravity-thickener" data-mod="gravity-thickener" onclick="gm('gravity-thickener', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>Gravity Thickener</div>
+          <div class="si" id="msb-digester" data-mod="digester" onclick="gm('digester', this)"><svg class="si-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Anaerobic Digester</div>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="panel-main" data-lenis-prevent id="mod-content">
+    <!-- modules rendered here -->
+  </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="js/state.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/wizard.js"></script>
+<script src="js/modules.js"></script>
+<script src="js/modules/screening.js"></script>
+<script src="js/modules/grit_horizontal.js"></script>
+<script src="js/modules/aerated_grit.js"></script>
+<script src="js/modules/daf.js"></script>
+<script src="js/modules/clarifier.js"></script>
+<script src="js/modules/trickling_filter.js"></script>
+<script src="js/modules/digester.js?v=3"></script>
+<script src="js/modules/others.js"></script>
+<script src="js/modules/mbr.js"></script>
+<script src="js/water-bg.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/modules/aeration_tank_blower.js"></script>
+<script src="js/modules/tertiary_denitrif.js"></script>
+<script src="js/modules/cmas_ebpr.js"></script>
+<script src="js/modules/mbbr_bnr.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/premium-scroll.js"></script>
+<script src="js/atelier-motion.js"></script>
+<script src="js/process-archive.js"></script>
+</body>
+</html>

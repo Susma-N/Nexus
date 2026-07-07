@@ -1,0 +1,2370 @@
+{
+  "1. Contents": [
+    [
+      {
+        "coord": "C1",
+        "value": "Workbook Contents"
+      }
+    ],
+    [
+      {
+        "coord": "A3",
+        "value": "Click on tabs at the bottom of the screen to access the following:"
+      }
+    ],
+    [
+      {
+        "coord": "B5",
+        "value": "Tab 1. Contents (current tab)"
+      }
+    ],
+    [
+      {
+        "coord": "B7",
+        "value": "Tab 2. General WW Information Input (Flow & concentrations)"
+      }
+    ],
+    [
+      {
+        "coord": "B9",
+        "value": "Tab 3. Aeration Tank Sizing Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "B11",
+        "value": "Tab 4. Aeration Tank Operations Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "B13",
+        "value": "Tab 5. Oxygen Requirement/Blower Sizing Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A17",
+        "value": "Why you shouldn\u2019t give copies of this workbook away"
+      }
+    ],
+    [
+      {
+        "coord": "A18",
+        "value": "We at EngineeringExcelTemplates.com hope that you find this workbook useful. \u00a0If you "
+      }
+    ],
+    [
+      {
+        "coord": "A19",
+        "value": "would like us to develop additional useful spreadsheets for you in the future, then encourage "
+      }
+    ],
+    [
+      {
+        "coord": "A20",
+        "value": "your friends and colleagues to buy their own copies, rather than allowing them to copy "
+      }
+    ],
+    [
+      {
+        "coord": "A21",
+        "value": "the spreadsheet you purchased. \u00a0We have deliberately set our prices so low that no one "
+      }
+    ],
+    [
+      {
+        "coord": "A22",
+        "value": "can really claim that they can\u2019t afford to pay. \u00a0But low prices will work for us\u2014that is, we "
+      }
+    ],
+    [
+      {
+        "coord": "A23",
+        "value": "can stay in business\u2014only if we can sell enough copies. \u00a0Bottom line: the more you get "
+      }
+    ],
+    [
+      {
+        "coord": "A24",
+        "value": "other people to pay for their own copies, the more low-cost useful spreadsheets will be "
+      }
+    ],
+    [
+      {
+        "coord": "A25",
+        "value": "available for you in the future."
+      }
+    ],
+    [
+      {
+        "coord": "A28",
+        "value": "This workbook is provided \"as is\", without warranty of any kind, express or"
+      }
+    ],
+    [
+      {
+        "coord": "A29",
+        "value": "implied."
+      }
+    ],
+    [
+      {
+        "coord": "B34",
+        "value": "       Find more Excel spreadsheets for engineering at"
+      }
+    ],
+    [
+      {
+        "coord": "D35",
+        "value": "EngineeringExcelTemplates.com"
+      }
+    ],
+    [
+      {
+        "coord": "B38",
+        "value": "Copyright \u00a9 2018 Harlan H. Bengtson. All Rights Reserved."
+      }
+    ]
+  ],
+  "2. WW Info Input": [
+    [
+      {
+        "coord": "A1",
+        "value": "Activated Sludge Waste Water Treatment Calculations - S.I. units"
+      }
+    ],
+    [
+      {
+        "coord": "A3",
+        "value": "1.  Input of General Parameter Values:"
+      }
+    ],
+    [
+      {
+        "coord": "A5",
+        "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+      }
+    ],
+    [
+      {
+        "coord": "A7",
+        "value": "Inputs"
+      }
+    ],
+    [
+      {
+        "coord": "A9",
+        "value": "Design ww Flow Rate, Qo ="
+      },
+      {
+        "coord": "C9",
+        "value": "5678.1"
+      },
+      {
+        "coord": "D9",
+        "value": "m3/d"
+      },
+      {
+        "coord": "F9",
+        "value": "   Prim. Effl. TSS, Xo ="
+      },
+      {
+        "coord": "H9",
+        "value": "180.0"
+      },
+      {
+        "coord": "I9",
+        "value": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "F10",
+        "value": "Waste/recycle activated"
+      }
+    ],
+    [
+      {
+        "coord": "A11",
+        "value": "   Prim. Effl. BOD, So ="
+      },
+      {
+        "coord": "C11",
+        "value": "160.0"
+      },
+      {
+        "coord": "D11",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "F11",
+        "value": "   sludge SS conc., Xw ="
+      },
+      {
+        "coord": "H11",
+        "value": "6800.0"
+      },
+      {
+        "coord": "I11",
+        "value": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A13",
+        "value": "Aeration tank MLSS, X ="
+      },
+      {
+        "coord": "C13",
+        "value": "2100.0"
+      },
+      {
+        "coord": "D13",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "F13",
+        "value": "Secondary Effl. TSS, Xe ="
+      },
+      {
+        "coord": "H13",
+        "value": "20.0"
+      },
+      {
+        "coord": "I13",
+        "value": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A15",
+        "value": "% volatile MLSS, %Vol  ="
+      },
+      {
+        "coord": "C15",
+        "value": "0.7"
+      }
+    ],
+    [
+      {
+        "coord": "A18",
+        "value": "NOTE:  The above values will be used for these parameters in the other three worksheets."
+      }
+    ],
+    [
+      {
+        "coord": "B22",
+        "value": "       Find more Excel spreadsheets for engineering at"
+      }
+    ],
+    [
+      {
+        "coord": "D23",
+        "value": "EngineeringExcelTemplates.com"
+      }
+    ],
+    [
+      {
+        "coord": "B28",
+        "value": "Copyright \u00a9 2018 Harlan H. Bengtson. All Rights Reserved."
+      }
+    ],
+    [
+      {
+        "coord": "A30",
+        "value": "    Ref.:  Bengtson, Harlan H.,"
+      },
+      {
+        "coord": "D30",
+        "value": "Activated Sludge Calculations Spreadsheet: Aeration Tank Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "D31",
+        "value": "an Amazon Kindle ebook"
+      }
+    ],
+    [
+      {
+        "coord": "A33",
+        "value": "    Ref.:  Bengtson, Harlan H.,"
+      },
+      {
+        "coord": "D33",
+        "value": "Biological Wastewater Treatment Process Design Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "D34",
+        "value": "available as a paperback book and as an Amazon Kindle ebook"
+      }
+    ]
+  ],
+  "3. Tank Sizing Calcns": [
+    [
+      {
+        "coord": "A1",
+        "value": "Activated Sludge Waste Water Treatment Calculations - S.I. units"
+      }
+    ],
+    [
+      {
+        "coord": "A3",
+        "value": "2.  Aeration Tank Sizing Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A5",
+        "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+      }
+    ],
+    [
+      {
+        "coord": "A7",
+        "value": "A. Aeration Tank Design based on volumetric loading"
+      }
+    ],
+    [
+      {
+        "coord": "A9",
+        "value": "Inputs"
+      },
+      {
+        "coord": "F9",
+        "value": "Calculations   (based on Volumetric Loading)"
+      }
+    ],
+    [
+      {
+        "coord": "A11",
+        "value": "Design Vol. Loading, VL  ="
+      },
+      {
+        "coord": "C11",
+        "value": "0.5606"
+      },
+      {
+        "coord": "F11",
+        "value": "Aeration tank volume, V ="
+      },
+      {
+        "coord": "H11",
+        "value": "=C15*C17/(C11*1000)"
+      },
+      {
+        "coord": "I11",
+        "value": "m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A12",
+        "value": "    (kg BOD/day/m3)"
+      }
+    ],
+    [
+      {
+        "coord": "A14",
+        "value": "Values Transferred from Worksheet 2:"
+      },
+      {
+        "coord": "F14",
+        "value": "Check on other design parameters:"
+      }
+    ],
+    [
+      {
+        "coord": "A15",
+        "value": "Design ww Flow Rate, Qo ="
+      },
+      {
+        "coord": "C15",
+        "value": "=WWFlowRateIn"
+      },
+      {
+        "coord": "D15",
+        "value": "m3/d"
+      },
+      {
+        "coord": "F15",
+        "value": "Aeration tank HRT  ="
+      },
+      {
+        "coord": "H15",
+        "value": "=24*H11/C15"
+      },
+      {
+        "coord": "I15",
+        "value": "hr"
+      }
+    ],
+    [
+      {
+        "coord": "A17",
+        "value": "   Prim. Effl. BOD, So ="
+      },
+      {
+        "coord": "C17",
+        "value": "=BODIn"
+      },
+      {
+        "coord": "D17",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "F17",
+        "value": "Aeration tank F:M  ="
+      },
+      {
+        "coord": "H17",
+        "value": "=C15*C17/(C21*C19*H11)"
+      }
+    ],
+    [
+      {
+        "coord": "F18",
+        "value": " (kg BOD/day/kg MLVSS)"
+      }
+    ],
+    [
+      {
+        "coord": "A19",
+        "value": "Aeration tank MLSS, X ="
+      },
+      {
+        "coord": "C19",
+        "value": "=AerTankMLSS"
+      },
+      {
+        "coord": "D19",
+        "value": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A21",
+        "value": "% volatile MLSS, %Vol  ="
+      },
+      {
+        "coord": "C21",
+        "value": "=PerCentVolatile"
+      }
+    ],
+    [
+      {
+        "coord": "A23",
+        "value": "  Equations used for Calculations:"
+      }
+    ],
+    [
+      {
+        "coord": "A25",
+        "value": "   V  =  (So*Qo/1000)/VL"
+      },
+      {
+        "coord": "J25",
+        "value": "  Adapted from: Metcalf & Eddy, Inc, (Revised by Tchobanoglous, G, Burton, F.L., Stensel, H.D., "
+      }
+    ],
+    [
+      {
+        "coord": "J26",
+        "value": "  Wastewater Engineering, Treatment and Reuse, 4th Ed., New York, NY, 2003."
+      }
+    ],
+    [
+      {
+        "coord": "A27",
+        "value": "   HRT  =  24*V/Qo "
+      }
+    ],
+    [
+      {
+        "coord": "M28",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A29",
+        "value": "   F:M  =  (So*Qo)/(%Vol*X*V)"
+      },
+      {
+        "coord": "K29",
+        "value": "       Find more Excel spreadsheets for engineering at:"
+      }
+    ],
+    [
+      {
+        "coord": "M30",
+        "value": "EngineeringExcelTemplates.com"
+      }
+    ],
+    [
+      {
+        "coord": "K33",
+        "value": "Copyright \u00a9 2018 Harlan H. Bengtson. All Rights Reserved."
+      }
+    ],
+    [
+      {
+        "coord": "A35",
+        "value": "B. Aeration Tank Design based on hydraulic loading"
+      }
+    ],
+    [
+      {
+        "coord": "A37",
+        "value": "Inputs"
+      },
+      {
+        "coord": "F37",
+        "value": "Check on other design parameters:"
+      },
+      {
+        "coord": "K37",
+        "value": "    Ref.:  Bengtson, Harlan H.,"
+      },
+      {
+        "coord": "N37",
+        "value": "Activated Sludge Calculations Spreadsheet: Aeration Tank Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "N38",
+        "value": "an Amazon Kindle ebook"
+      }
+    ],
+    [
+      {
+        "coord": "A39",
+        "value": "Design Aer. tank HRT  ="
+      },
+      {
+        "coord": "C39",
+        "value": "7.0"
+      },
+      {
+        "coord": "D39",
+        "value": "hr"
+      },
+      {
+        "coord": "F39",
+        "value": "Volumetric Loading, VL  ="
+      },
+      {
+        "coord": "H39",
+        "value": "=(BODIn*WWFlowRateIn)/(1000*C43)"
+      }
+    ],
+    [
+      {
+        "coord": "F40",
+        "value": "    (kg BOD/day/m3)"
+      },
+      {
+        "coord": "K40",
+        "value": "    Ref.:  Bengtson, Harlan H.,"
+      },
+      {
+        "coord": "N40",
+        "value": "Biological Wastewater Treatment Process Design Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A41",
+        "value": "Calculations   (based on Hydraulic Loading)"
+      },
+      {
+        "coord": "F41",
+        "value": "Aeration tank F:M  ="
+      },
+      {
+        "coord": "H41",
+        "value": "=WWFlowRateIn*BODIn/(PerCentVolatile*AerTankMLSS*C43)"
+      },
+      {
+        "coord": "N41",
+        "value": "available as a paperback book and as an Amazon Kindle ebook"
+      }
+    ],
+    [
+      {
+        "coord": "F42",
+        "value": " (kg BOD/day/kg MLVSS)"
+      }
+    ],
+    [
+      {
+        "coord": "A43",
+        "value": "Aeration tank volume, V ="
+      },
+      {
+        "coord": "C43",
+        "value": "=WWFlowRateIn*C39/24"
+      },
+      {
+        "coord": "D43",
+        "value": "m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A46",
+        "value": "C.  Aeration Tank Design based on F:M ratio"
+      }
+    ],
+    [
+      {
+        "coord": "A48",
+        "value": "Inputs"
+      }
+    ],
+    [
+      {
+        "coord": "A50",
+        "value": "Aeration tank F:M  ="
+      },
+      {
+        "coord": "C50",
+        "value": "0.35"
+      },
+      {
+        "coord": "F50",
+        "value": "Check on other design parameters:"
+      }
+    ],
+    [
+      {
+        "coord": "A51",
+        "value": " (kg BOD/day/kg MLVSS)"
+      }
+    ],
+    [
+      {
+        "coord": "F52",
+        "value": "Volumetric Loading, VL  ="
+      },
+      {
+        "coord": "H52",
+        "value": "=(BODIn*WWFlowRateIn)/(1000*C55)"
+      }
+    ],
+    [
+      {
+        "coord": "A53",
+        "value": "Calculations   (based on F:M ratio)"
+      },
+      {
+        "coord": "F53",
+        "value": "    (kg BOD/day/m3)"
+      }
+    ],
+    [
+      {
+        "coord": "A55",
+        "value": "Aeration tank volume, V ="
+      },
+      {
+        "coord": "C55",
+        "value": "=(BODIn*WWFlowRateIn)/(PerCentVolatile*AerTankMLSS*C50)"
+      },
+      {
+        "coord": "D55",
+        "value": "m3 "
+      },
+      {
+        "coord": "F55",
+        "value": "Aeration tank HRT  ="
+      },
+      {
+        "coord": "H55",
+        "value": "=24*C55/WWFlowRateIn"
+      },
+      {
+        "coord": "I55",
+        "value": "hr"
+      }
+    ]
+  ],
+  "4. Operations Calcns": [
+    [
+      {
+        "coord": "A1",
+        "value": "Activated Sludge Waste Water Treatment Calculations - S.I. units"
+      }
+    ],
+    [
+      {
+        "coord": "A3",
+        "value": "3. Aeration Tank Operation Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A5",
+        "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+      }
+    ],
+    [
+      {
+        "coord": "A7",
+        "value": "Values Transferred from Worksheet 2:"
+      },
+      {
+        "coord": "F7",
+        "value": "Inputs"
+      }
+    ],
+    [
+      {
+        "coord": "A9",
+        "value": "Design ww Flow Rate, Qo ="
+      },
+      {
+        "coord": "C9",
+        "value": "=WWFlowRateIn"
+      },
+      {
+        "coord": "D9",
+        "value": "m3/d"
+      },
+      {
+        "coord": "F9",
+        "value": "Aeration tank vol., V ="
+      },
+      {
+        "coord": "H9",
+        "value": "1699.0"
+      },
+      {
+        "coord": "I9",
+        "value": "m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A11",
+        "value": "   Prim. Effl. BOD, So ="
+      },
+      {
+        "coord": "C11",
+        "value": "=BODIn"
+      },
+      {
+        "coord": "D11",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "F11",
+        "value": "Sludge ret. time, SRT ="
+      },
+      {
+        "coord": "H11",
+        "value": "12.0"
+      },
+      {
+        "coord": "I11",
+        "value": "days"
+      }
+    ],
+    [
+      {
+        "coord": "A13",
+        "value": "Aeration tank MLSS, X ="
+      },
+      {
+        "coord": "C13",
+        "value": "=AerTankMLSS"
+      },
+      {
+        "coord": "D13",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "F13",
+        "value": "Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A15",
+        "value": "% volatile MLSS, %Vol  ="
+      },
+      {
+        "coord": "C15",
+        "value": "=PerCentVolatile"
+      },
+      {
+        "coord": "F15",
+        "value": "Aeration tank F:M  ="
+      },
+      {
+        "coord": "H15",
+        "value": "=(C9*C11)/(C15*H9*C13)"
+      }
+    ],
+    [
+      {
+        "coord": "A16",
+        "value": "Waste/recycle activated"
+      },
+      {
+        "coord": "F16",
+        "value": " (kg BOD/day/kg MLVSS)"
+      }
+    ],
+    [
+      {
+        "coord": "A17",
+        "value": "   sludge SS conc., Xw ="
+      },
+      {
+        "coord": "C17",
+        "value": "=WASConc"
+      },
+      {
+        "coord": "D17",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "E17",
+        "value": "    Waste Act. Sludge Rate, Qw ="
+      },
+      {
+        "coord": "H17",
+        "value": "=(1/C17)*((H9*C13/H11)-(C9*C21))"
+      },
+      {
+        "coord": "I17",
+        "value": "m3/d"
+      }
+    ],
+    [
+      {
+        "coord": "F18",
+        "value": "Recycle Activated"
+      }
+    ],
+    [
+      {
+        "coord": "A19",
+        "value": "   Prim. Effl. TSS, Xo ="
+      },
+      {
+        "coord": "C19",
+        "value": "=TSSIn"
+      },
+      {
+        "coord": "D19",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "F19",
+        "value": "   Sludge Flow Rate, Qr ="
+      },
+      {
+        "coord": "H19",
+        "value": "=C9*(C13-C19)/(C17-C13)"
+      },
+      {
+        "coord": "I19",
+        "value": "m3/d"
+      }
+    ],
+    [
+      {
+        "coord": "A21",
+        "value": "Secondary Effl. TSS, Xe ="
+      },
+      {
+        "coord": "C21",
+        "value": "=EffluentTSS"
+      },
+      {
+        "coord": "D21",
+        "value": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A24",
+        "value": "  Equations used for Calculations:"
+      }
+    ],
+    [
+      {
+        "coord": "A26",
+        "value": "   Qr = Qo(X - Xo)/(Xw - X)"
+      }
+    ],
+    [
+      {
+        "coord": "J27",
+        "value": "  Adapted from: Metcalf & Eddy, Inc, (Revised by Tchobanoglous, G, Burton, F.L., Stensel, H.D., "
+      }
+    ],
+    [
+      {
+        "coord": "A28",
+        "value": "   Qw = (1/Xw)[(V*X/SRT) - QeXe]"
+      },
+      {
+        "coord": "J28",
+        "value": "  Wastewater Engineering, Treatment and Reuse, 4th Ed., New York, NY, 2003."
+      }
+    ],
+    [
+      {
+        "coord": "A30",
+        "value": "   F:M  =  (So*Qo)/(%Vol*X*V)"
+      },
+      {
+        "coord": "I30",
+        "value": "    Ref.:  Bengtson, Harlan H.,"
+      },
+      {
+        "coord": "M30",
+        "value": "Activated Sludge Calculations Spreadsheet: Aeration Tank Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "L31",
+        "value": "an Amazon Kindle ebook"
+      }
+    ],
+    [
+      {
+        "coord": "I33",
+        "value": "    Ref.:  Bengtson, Harlan H.,"
+      },
+      {
+        "coord": "M33",
+        "value": "Biological Wastewater Treatment Process Design Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "B34",
+        "value": "       Find more Excel spreadsheets for engineering at:"
+      },
+      {
+        "coord": "L34",
+        "value": "available as a paperback book and as an Amazon Kindle ebook"
+      }
+    ],
+    [
+      {
+        "coord": "C35",
+        "value": "EngineeringExcelTemplates.com"
+      }
+    ],
+    [
+      {
+        "coord": "B38",
+        "value": "Copyright \u00a9 2018 Engineering Excel Templates. All Rights Reserved."
+      }
+    ]
+  ],
+  "5. Oxygen_Blower Calcns": [
+    [
+      {
+        "coord": "A1",
+        "value": "Activated Sludge Waste Water Treatment Calculations - S.I. units"
+      }
+    ],
+    [
+      {
+        "coord": "A3",
+        "value": "4.  Oxygen Requirement/Blower Sizing Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A5",
+        "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+      }
+    ],
+    [
+      {
+        "coord": "A7",
+        "value": "Values Transferred from Previous Worksheets:"
+      }
+    ],
+    [
+      {
+        "coord": "A9",
+        "value": "   Design ww Flow Rate, Qo ="
+      },
+      {
+        "coord": "C9",
+        "value": "=WWFlowRateIn"
+      },
+      {
+        "coord": "D9",
+        "value": "m3/d"
+      },
+      {
+        "coord": "F9",
+        "value": "         Prim. Effl. BOD, So ="
+      },
+      {
+        "coord": "H9",
+        "value": "=BODIn"
+      },
+      {
+        "coord": "I9",
+        "value": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A11",
+        "value": "Additional User Inputs:"
+      }
+    ],
+    [
+      {
+        "coord": "K12",
+        "value": "Rules of Thumb for Estimating Oxygen/Air Requirements for Coarse or Fine Bubble Diffusers"
+      }
+    ],
+    [
+      {
+        "coord": "A13",
+        "value": "     Influent TKN, TKNo ="
+      },
+      {
+        "coord": "C13",
+        "value": "35.0"
+      },
+      {
+        "coord": "D13",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "E13",
+        "value": "         Target Effl NH4-N conc, Ne  ="
+      },
+      {
+        "coord": "H13",
+        "value": "0.5"
+      },
+      {
+        "coord": "I13",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "K13",
+        "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+      }
+    ],
+    [
+      {
+        "coord": "A14",
+        "value": "         (needed only if nitrification is to be achieved)"
+      },
+      {
+        "coord": "F14",
+        "value": "(needed only if nitrification is to be achieved)"
+      },
+      {
+        "coord": "K14",
+        "value": "Source: "
+      }
+    ],
+    [
+      {
+        "coord": "A15",
+        "value": " Target Effluent BOD, Se ="
+      },
+      {
+        "coord": "C15",
+        "value": "20.0"
+      },
+      {
+        "coord": "D15",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "K15",
+        "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+      }
+    ],
+    [
+      {
+        "coord": "A17",
+        "value": "A. Simplified Estimates Using \"Rules of Thumb\"  - See Notes at Right"
+      },
+      {
+        "coord": "K17",
+        "value": "1.  The typical AOR/SOR  (or AOTE/SOTE) is 0.50 for a coarse bubble aertion system."
+      }
+    ],
+    [
+      {
+        "coord": "A19",
+        "value": "1. Inputs:  (Values of \"Rule of Thumb\" Constants to be used in Calculations - See notes at right)"
+      },
+      {
+        "coord": "K19",
+        "value": "2.  The typical AOR/SOR  (or AOTE/SOTE) is 0.33 for a fine bubble aertion system."
+      }
+    ],
+    [
+      {
+        "coord": "A21",
+        "value": "   O2 needed per kg BOD ="
+      },
+      {
+        "coord": "C21",
+        "value": "1.2"
+      },
+      {
+        "coord": "D21",
+        "value": " kg O2/kg BOD"
+      },
+      {
+        "coord": "F21",
+        "value": "        Depth of Diffusers ="
+      },
+      {
+        "coord": "H21",
+        "value": "3.66"
+      },
+      {
+        "coord": "I21",
+        "value": "m"
+      },
+      {
+        "coord": "K21",
+        "value": "3.  The typical SOTE is 0.75% per foot (2.46%/m) of diffuser submergence for a coarse bubble system"
+      }
+    ],
+    [
+      {
+        "coord": "A22",
+        "value": "   O2 needed per kg NH3-N ="
+      },
+      {
+        "coord": "C22",
+        "value": "4.57"
+      },
+      {
+        "coord": "D22",
+        "value": " kg O2/kg NH3-N"
+      },
+      {
+        "coord": "F22",
+        "value": "     Normal Temperature ="
+      },
+      {
+        "coord": "H22",
+        "value": "0.0"
+      },
+      {
+        "coord": "I22",
+        "value": "oC"
+      }
+    ],
+    [
+      {
+        "coord": "A23",
+        "value": "SOTE as Function of Depth ="
+      },
+      {
+        "coord": "C23",
+        "value": "0.0656"
+      },
+      {
+        "coord": "D23",
+        "value": " % per m depth"
+      },
+      {
+        "coord": "F23",
+        "value": "         Normal Pressure ="
+      },
+      {
+        "coord": "H23",
+        "value": "1.0"
+      },
+      {
+        "coord": "I23",
+        "value": "bar"
+      },
+      {
+        "coord": "K23",
+        "value": "4.  The typical SOTE is 2.0% per foot (6.56%/m) of diffuser submergence for a fine bubble system"
+      }
+    ],
+    [
+      {
+        "coord": "A24",
+        "value": "        AOTE/SOTE   ="
+      },
+      {
+        "coord": "C24",
+        "value": "0.33"
+      },
+      {
+        "coord": "F24",
+        "value": "  Atmospheric Pressure ="
+      },
+      {
+        "coord": "H24",
+        "value": "1.014"
+      },
+      {
+        "coord": "I24",
+        "value": "bar"
+      }
+    ],
+    [
+      {
+        "coord": "A25",
+        "value": "Press. Drop across Diffuser ="
+      },
+      {
+        "coord": "C25",
+        "value": "0.03"
+      },
+      {
+        "coord": "D25",
+        "value": "bar"
+      },
+      {
+        "coord": "F25",
+        "value": "      Air Density at STP  ="
+      },
+      {
+        "coord": "H25",
+        "value": "1.275"
+      },
+      {
+        "coord": "I25",
+        "value": "kg/m3 "
+      },
+      {
+        "coord": "K25",
+        "value": "3.  Air weighs 1.275 kg/m3 (at 0oC and 1 bar) and contains 23% oxygen by weight, thus:"
+      }
+    ],
+    [
+      {
+        "coord": "A26",
+        "value": "        (from mfr/vendor)"
+      },
+      {
+        "coord": "F26",
+        "value": "        O2 Content in Air ="
+      },
+      {
+        "coord": "H26",
+        "value": "0.293"
+      },
+      {
+        "coord": "I26",
+        "value": "kg/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "J27",
+        "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+      },
+      {
+        "coord": "K27",
+        "value": "4.  Air contains 0.293 kg of oxygen/m3."
+      }
+    ],
+    [
+      {
+        "coord": "A28",
+        "value": "2. Calculations for BOD Removal Only:"
+      }
+    ],
+    [
+      {
+        "coord": "K29",
+        "value": "7.  For biological treatment with SRT from 5 to 10 days, kg oxygen required /kg BOD removed"
+      }
+    ],
+    [
+      {
+        "coord": "A30",
+        "value": "BOD Daily Loading ="
+      },
+      {
+        "coord": "C30",
+        "value": "=(C9*(H9-C15)/1000)/24"
+      },
+      {
+        "coord": "D30",
+        "value": "kg/hr"
+      },
+      {
+        "coord": "G30",
+        "value": "    AOTE ="
+      },
+      {
+        "coord": "H30",
+        "value": "=C32*C24"
+      },
+      {
+        "coord": "K30",
+        "value": "      is typically in the range from 0.92 - 1.1 kg O2/kg BOD.  Higher SRT results in a higher value"
+      }
+    ],
+    [
+      {
+        "coord": "A31",
+        "value": "  Oxygen Requirement ="
+      },
+      {
+        "coord": "C31",
+        "value": "=C21*C30"
+      },
+      {
+        "coord": "D31",
+        "value": "kg/hr"
+      },
+      {
+        "coord": "F31",
+        "value": "        Air Requirement ="
+      },
+      {
+        "coord": "H31",
+        "value": "=((C31/H30)/H26)"
+      },
+      {
+        "coord": "I31",
+        "value": "Nm3/hr"
+      },
+      {
+        "coord": "K31",
+        "value": "      of kg O2 required/kg BOD removed."
+      }
+    ],
+    [
+      {
+        "coord": "B32",
+        "value": "    SOTE ="
+      },
+      {
+        "coord": "C32",
+        "value": "=C23*H21"
+      },
+      {
+        "coord": "F32",
+        "value": "  Blower Outlet Pressure ="
+      },
+      {
+        "coord": "H32",
+        "value": "=H24+(C25)+(1000*9.81*H21/100000)"
+      },
+      {
+        "coord": "I32",
+        "value": "bar"
+      }
+    ],
+    [
+      {
+        "coord": "K33",
+        "value": "8.  The oxidation of 1 kg of ammonia nitrogen typically requires 4.1 to 4.6 kg of oxygen."
+      },
+      {
+        "coord": "M33",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A34",
+        "value": "3. Calculations for BOD Removal and Nitrification:"
+      },
+      {
+        "coord": "M34",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A36",
+        "value": "  NH3-N Daily Loading ="
+      },
+      {
+        "coord": "C36",
+        "value": "=(C9*(C13-H13)/1000)/24"
+      },
+      {
+        "coord": "D36",
+        "value": "kg/hr"
+      },
+      {
+        "coord": "G36",
+        "value": "    AOTE ="
+      },
+      {
+        "coord": "H36",
+        "value": "=C32*C24"
+      },
+      {
+        "coord": "K36",
+        "value": "     Activated Sludge Kinetic Coefficients for heterotrophic bacteria at 20oC (for BOD removal)"
+      }
+    ],
+    [
+      {
+        "coord": "A37",
+        "value": "  Oxygen Requirement ="
+      },
+      {
+        "coord": "C37",
+        "value": "=(C36*C22)+C31"
+      },
+      {
+        "coord": "D37",
+        "value": "kg/hr"
+      },
+      {
+        "coord": "F37",
+        "value": "        Air Requirement ="
+      },
+      {
+        "coord": "H37",
+        "value": "=((C37/H36)/H26)"
+      },
+      {
+        "coord": "I37",
+        "value": "Nm3/hr"
+      }
+    ],
+    [
+      {
+        "coord": "B38",
+        "value": "    SOTE ="
+      },
+      {
+        "coord": "C38",
+        "value": "=C23*H21"
+      },
+      {
+        "coord": "F38",
+        "value": "  Blower Outlet Pressure ="
+      },
+      {
+        "coord": "H38",
+        "value": "=H24+(C25)+(1000*9.81*H21/100000)"
+      },
+      {
+        "coord": "I38",
+        "value": "bar"
+      },
+      {
+        "coord": "K38",
+        "value": "Coefficient"
+      },
+      {
+        "coord": "M38",
+        "value": "Unit"
+      },
+      {
+        "coord": "O38",
+        "value": "Range"
+      },
+      {
+        "coord": "Q38",
+        "value": "Typical Value"
+      }
+    ],
+    [
+      {
+        "coord": "K39",
+        "value": "   Y"
+      },
+      {
+        "coord": "M39",
+        "value": "g VSS/day/g bCOD"
+      },
+      {
+        "coord": "O39",
+        "value": "0.30 - 0.50"
+      },
+      {
+        "coord": "Q39",
+        "value": "0.4"
+      }
+    ],
+    [
+      {
+        "coord": "A40",
+        "value": "B. More Detailed Estimates Using Biol. Kinetics and Diffuser Parameters"
+      },
+      {
+        "coord": "K40",
+        "value": "                 kd"
+      },
+      {
+        "coord": "M40",
+        "value": "g VSS/day/g VSS"
+      },
+      {
+        "coord": "O40",
+        "value": "0.06 - 0.20"
+      },
+      {
+        "coord": "Q40",
+        "value": "0.12"
+      }
+    ],
+    [
+      {
+        "coord": "N41",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A42",
+        "value": "1. Inputs  (See tables at right for typical values of kinetic coefficients and oxygen transfer parameters.)"
+      },
+      {
+        "coord": "K42",
+        "value": "                 fd"
+      },
+      {
+        "coord": "M42",
+        "value": "dimensionless"
+      },
+      {
+        "coord": "O42",
+        "value": "0.08 - 0.20"
+      },
+      {
+        "coord": "Q42",
+        "value": "0.15"
+      }
+    ],
+    [
+      {
+        "coord": "K43",
+        "value": "q values for temperature corrections"
+      }
+    ],
+    [
+      {
+        "coord": "A44",
+        "value": "Std O2 Transf. Effic.,  SOTE  = "
+      },
+      {
+        "coord": "C44",
+        "value": "0.2"
+      },
+      {
+        "coord": "F44",
+        "value": "Ratio of BOD5/BODu, f  ="
+      },
+      {
+        "coord": "H44",
+        "value": "0.67"
+      },
+      {
+        "coord": "K44",
+        "value": "             for kd"
+      },
+      {
+        "coord": "M44",
+        "value": "dimensionless"
+      },
+      {
+        "coord": "O44",
+        "value": "1.03 - 1.08"
+      },
+      {
+        "coord": "Q44",
+        "value": "1.04"
+      }
+    ],
+    [
+      {
+        "coord": "A45",
+        "value": "  (from diffuser mfr or vendor)"
+      },
+      {
+        "coord": "E45",
+        "value": "             D.O. conc to be maintained for WW"
+      }
+    ],
+    [
+      {
+        "coord": "A46",
+        "value": "     Design ww Temp., Tww  ="
+      },
+      {
+        "coord": "C46",
+        "value": "10.0"
+      },
+      {
+        "coord": "D46",
+        "value": "oC"
+      },
+      {
+        "coord": "F46",
+        "value": "       trtmt operation, CL ="
+      },
+      {
+        "coord": "H46",
+        "value": "2.0"
+      },
+      {
+        "coord": "I46",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "K46",
+        "value": "Parameters used to calculate AOTE from SOTE"
+      }
+    ],
+    [
+      {
+        "coord": "E47",
+        "value": "    Ratio of oxygen transfer rate in wastewater"
+      },
+      {
+        "coord": "K47",
+        "value": "Parameter"
+      },
+      {
+        "coord": "M47",
+        "value": "Range of Values"
+      },
+      {
+        "coord": "O47",
+        "value": "Typical Value"
+      },
+      {
+        "coord": "Q47",
+        "value": "Units"
+      }
+    ],
+    [
+      {
+        "coord": "A48",
+        "value": "     Blower efficiency, h  ="
+      },
+      {
+        "coord": "C48",
+        "value": "0.7"
+      },
+      {
+        "coord": "E48",
+        "value": "          to that in clean water, a ="
+      },
+      {
+        "coord": "H48",
+        "value": "0.5"
+      },
+      {
+        "coord": "K48",
+        "value": "a (fine bubble)"
+      },
+      {
+        "coord": "M48",
+        "value": "0.4 - 0.7"
+      },
+      {
+        "coord": "O48",
+        "value": "0.5 - 0.6"
+      },
+      {
+        "coord": "Q48",
+        "value": "dimensionless"
+      }
+    ],
+    [
+      {
+        "coord": "E49",
+        "value": "  Ratio of D.O. saturation in wastewater to that"
+      },
+      {
+        "coord": "K49",
+        "value": "a (coarse bubble)"
+      },
+      {
+        "coord": "M49",
+        "value": "0.6 - 0.95"
+      },
+      {
+        "coord": "O49",
+        "value": "0.7 - 0.8"
+      },
+      {
+        "coord": "Q49",
+        "value": "dimensionless"
+      }
+    ],
+    [
+      {
+        "coord": "A50",
+        "value": "   Rel. Humidity of Air,  RHa  ="
+      },
+      {
+        "coord": "C50",
+        "value": "0.5"
+      },
+      {
+        "coord": "E50",
+        "value": " in clean water at same T & P, B ="
+      },
+      {
+        "coord": "H50",
+        "value": "1.0"
+      },
+      {
+        "coord": "K50",
+        "value": "B"
+      },
+      {
+        "coord": "M50",
+        "value": "0.95 - 0.99"
+      },
+      {
+        "coord": "Q50",
+        "value": "dimensionless"
+      }
+    ],
+    [
+      {
+        "coord": "E51",
+        "value": "  D.O. saturation conc. For clean water"
+      },
+      {
+        "coord": "K51",
+        "value": "P"
+      },
+      {
+        "coord": "M51",
+        "value": "0.9 - 1"
+      },
+      {
+        "coord": "Q51",
+        "value": "dimensionless"
+      }
+    ],
+    [
+      {
+        "coord": "A52",
+        "value": " Design air Temperature, Ta ="
+      },
+      {
+        "coord": "C52",
+        "value": "10.0"
+      },
+      {
+        "coord": "D52",
+        "value": "oC"
+      },
+      {
+        "coord": "E52",
+        "value": "      at ww temp. &  1 atm, Cs ="
+      },
+      {
+        "coord": "H52",
+        "value": "11.28"
+      },
+      {
+        "coord": "I52",
+        "value": "g/m3 "
+      },
+      {
+        "coord": "K52",
+        "value": "CL"
+      },
+      {
+        "coord": "O52",
+        "value": "2.0"
+      },
+      {
+        "coord": "Q52",
+        "value": "mg/L"
+      }
+    ],
+    [
+      {
+        "coord": "K53",
+        "value": "F"
+      },
+      {
+        "coord": "M53",
+        "value": "0.65 - 0.9"
+      },
+      {
+        "coord": "Q53",
+        "value": "dimensionless"
+      }
+    ],
+    [
+      {
+        "coord": "A54",
+        "value": "         Diffuser fouling factor, F ="
+      },
+      {
+        "coord": "C54",
+        "value": "0.8"
+      },
+      {
+        "coord": "E54",
+        "value": "  Press. drop at blower inlet, DPin ="
+      },
+      {
+        "coord": "H54",
+        "value": "0.021"
+      },
+      {
+        "coord": "I54",
+        "value": "bar"
+      }
+    ],
+    [
+      {
+        "coord": "E55",
+        "value": "       (due to filter, silencer, etc.)"
+      },
+      {
+        "coord": "K55",
+        "value": "  Adapted from: Metcalf & Eddy, Inc, (Revised by Tchobanoglous, G, Burton, F.L., Stensel, H.D., "
+      }
+    ],
+    [
+      {
+        "coord": "A56",
+        "value": "  Synthesis Yield Coeff, Y ="
+      },
+      {
+        "coord": "C56",
+        "value": "0.6"
+      },
+      {
+        "coord": "D56",
+        "value": "  kgVSS/kg BOD5  "
+      },
+      {
+        "coord": "F56",
+        "value": "     Peaking Factor, Fp ="
+      },
+      {
+        "coord": "H56",
+        "value": "1.2"
+      },
+      {
+        "coord": "K56",
+        "value": "  Wastewater Engineering, Treatment and Reuse, 4th Ed., New York, NY, 2003."
+      }
+    ],
+    [
+      {
+        "coord": "A58",
+        "value": "   Endog. Decay Coeff, kd20  ="
+      },
+      {
+        "coord": "C58",
+        "value": "0.06"
+      },
+      {
+        "coord": "D58",
+        "value": "  kg VSS/d/kgVSS       Peaking Factor, Fp ="
+      },
+      {
+        "coord": "F58",
+        "value": "Sludge ret. time, SRT ="
+      },
+      {
+        "coord": "H58",
+        "value": "12.0"
+      },
+      {
+        "coord": "I58",
+        "value": "days"
+      },
+      {
+        "coord": "K58",
+        "value": "and"
+      },
+      {
+        "coord": "L58",
+        "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+      }
+    ],
+    [
+      {
+        "coord": "A59",
+        "value": "             (at 20 oC)"
+      }
+    ],
+    [
+      {
+        "coord": "E60",
+        "value": "       Standard Rel. Humidity, RHs  ="
+      },
+      {
+        "coord": "G60",
+        "value": "http://p2001c2fa9960220001"
+      },
+      {
+        "coord": "H60",
+        "value": "0.36"
+      },
+      {
+        "coord": "K60",
+        "value": "Equations used for these Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A62",
+        "value": "2. Calculations for BOD Removal Only:"
+      },
+      {
+        "coord": "K62",
+        "value": "  Temperature correction for kd:     kd at temp. T  =   (kd at 20oC)1.024(T - 20)              ( T is in oC )"
+      },
+      {
+        "coord": "M62",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A64",
+        "value": "   Endog. Decay Coeff, kdT  ="
+      },
+      {
+        "coord": "C64",
+        "value": "=C58*(1.024^(C46-20))"
+      },
+      {
+        "coord": "D64",
+        "value": " kgVSS/d/kg VSS"
+      },
+      {
+        "coord": "F64",
+        "value": "Design Air Density,  rair  ="
+      },
+      {
+        "coord": "H64",
+        "value": "=28.97*H24*100/(8.3145*(C46+273.15))"
+      },
+      {
+        "coord": "I64",
+        "value": "    kg/m3"
+      },
+      {
+        "coord": "K64",
+        "value": "  Observed Yield (with recycle):    Yobs = Y/(1 + kd*SRT)"
+      }
+    ],
+    [
+      {
+        "coord": "A65",
+        "value": "       (at ww temperature)"
+      }
+    ],
+    [
+      {
+        "coord": "A66",
+        "value": "         Observed Yield, Yobs ="
+      },
+      {
+        "coord": "C66",
+        "value": "=C56/(1+(C64*H58))"
+      },
+      {
+        "coord": "D66",
+        "value": "  kg VSS/kgBOD5"
+      },
+      {
+        "coord": "F66",
+        "value": "      Required O2 flow rate ="
+      },
+      {
+        "coord": "H66",
+        "value": "=(1/24)*(C9/1000)*(H9-C15)*((1/H44)-(1.42*C66))"
+      },
+      {
+        "coord": "I66",
+        "value": "    kg/hr"
+      },
+      {
+        "coord": "K66",
+        "value": "  Required O2 Flow Rate (BOD removal only):    kg/day O2 =(Qo*(So - Se)/1000)[(1/f) - 1.42 Yobs]"
+      }
+    ],
+    [
+      {
+        "coord": "A67",
+        "value": "                (with recycle)"
+      }
+    ],
+    [
+      {
+        "coord": "A68",
+        "value": "    Press. at mid depth, PD  ="
+      },
+      {
+        "coord": "C68",
+        "value": "=H24+(9.81*(H21/2)/100)"
+      },
+      {
+        "coord": "D68",
+        "value": "    bar"
+      },
+      {
+        "coord": "F68",
+        "value": "    Required air flow rate ="
+      },
+      {
+        "coord": "H68",
+        "value": "=(H66/C70)*28.97/(0.209*32*H64)"
+      },
+      {
+        "coord": "I68",
+        "value": "  m3/hr"
+      },
+      {
+        "coord": "K68",
+        "value": "  Required O2 Flow Rate (BOD removal & Nitrification): "
+      }
+    ],
+    [
+      {
+        "coord": "M69",
+        "value": "            kg/day O2 = (Qo/1000){(So - Se)[1/f - 1.42 Yobs] + 4.57(TKNo - Ne)}"
+      }
+    ],
+    [
+      {
+        "coord": "A70",
+        "value": "Act. O2 Transf. Effic.,  AOTE  = "
+      },
+      {
+        "coord": "C70",
+        "value": "=C44*H48*C54*(((H50*(C68/H23)*H52)-H46)/9.17)*(1.024^(C46-20))"
+      },
+      {
+        "coord": "E70",
+        "value": "Design Act. Air Flow Rate, Am3/m  ="
+      },
+      {
+        "coord": "H70",
+        "value": "=H68*H56"
+      },
+      {
+        "coord": "I70",
+        "value": "  m3/hr"
+      },
+      {
+        "coord": "L70",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      },
+      {
+        "coord": "M70",
+        "value": "   NOTE:  With nitrification, Se is typically taken to be zero because of the long SRT used."
+      }
+    ],
+    [
+      {
+        "coord": "F71",
+        "value": "   (with peaking factor)"
+      }
+    ],
+    [
+      {
+        "coord": "A72",
+        "value": "     Vapor Press at Ta, PVa ="
+      },
+      {
+        "coord": "C72",
+        "value": "=(1.014/760)*(10^(8.07131-(1730.63/(233.426+(C52)))))"
+      },
+      {
+        "coord": "D72",
+        "value": "    bar"
+      },
+      {
+        "coord": "E72",
+        "value": "Des. Norm. Air Flow Rate, Nm3/m  ="
+      },
+      {
+        "coord": "H72",
+        "value": "=H70*((H24-H$54)/H24)*((H22+273.15)/(C$52+273.15))*((H24-(C$50*EC55))/(H23-(H60*C$74)))"
+      },
+      {
+        "coord": "I72",
+        "value": "  Nm3/hr"
+      },
+      {
+        "coord": "K72",
+        "value": "   Actual O2 transfer effic.  =  AOTE  =  SOTE*a*F*[(B*(PD/Pstd)*Cs -CL)/Css]1.024(T-20)   "
+      }
+    ],
+    [
+      {
+        "coord": "F73",
+        "value": "   (with peaking factor)"
+      },
+      {
+        "coord": "M73",
+        "value": "  (Css = saturation D.O. in water at 20oC & 1 atm  =  9.17 mg/L)"
+      }
+    ],
+    [
+      {
+        "coord": "A74",
+        "value": "     Vapor Press at TN, PVN ="
+      },
+      {
+        "coord": "C74",
+        "value": "=(1.014/760)*(10^(8.07131-(1730.63/(233.426+(H22)))))"
+      },
+      {
+        "coord": "D74",
+        "value": "    bar"
+      },
+      {
+        "coord": "F74",
+        "value": "Blower outlet press, PB2  ="
+      },
+      {
+        "coord": "H74",
+        "value": "=H24+(C25)+(9.807*H21/100)"
+      },
+      {
+        "coord": "I74",
+        "value": "    bar"
+      }
+    ],
+    [
+      {
+        "coord": "L75",
+        "value": "See descriptions of the parameters in the User Entry section above left."
+      }
+    ],
+    [
+      {
+        "coord": "A76",
+        "value": "3. Calculations for BOD Removal and Nitrification:"
+      },
+      {
+        "coord": "K76",
+        "value": "  Des. Actual Air Flow Rate:    Am3/m = (kg/hr O2/AOTE)*MWair/[O2 fract in air)(MWO2)(rair)(60 min/hr)]"
+      }
+    ],
+    [
+      {
+        "coord": "M77",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A78",
+        "value": "      Required O2 flow rate ="
+      },
+      {
+        "coord": "C78",
+        "value": "=H66+((C9/1000)*4.57*(C13-H13)/24)"
+      },
+      {
+        "coord": "D78",
+        "value": "    kg/hr"
+      },
+      {
+        "coord": "E78",
+        "value": "Design Act. Air Flow Rate, Am3/m  ="
+      },
+      {
+        "coord": "H78",
+        "value": "=H56*C80"
+      },
+      {
+        "coord": "I78",
+        "value": "  m3/hr"
+      },
+      {
+        "coord": "K78",
+        "value": "  Des. Normal Air Flow Rate:    Nm3/m = Am3/m(TN/Ta)(Pa/Pb){[Pb - (RHa*PVa)]/[PN - (RHN*PVN)]}"
+      }
+    ],
+    [
+      {
+        "coord": "F79",
+        "value": "   (with peaking factor)"
+      }
+    ],
+    [
+      {
+        "coord": "A80",
+        "value": "    Required air flow rate ="
+      },
+      {
+        "coord": "C80",
+        "value": "=(C78/C70)*28.97/(0.209*32*H64)"
+      },
+      {
+        "coord": "D80",
+        "value": "  m3/hr"
+      },
+      {
+        "coord": "E80",
+        "value": "Des. Norm. Air Flow Rate, Nm3/m  ="
+      },
+      {
+        "coord": "H80",
+        "value": "=H78*((H24-H$54)/H24)*((H22+273.15)/(C$52+273.15))*((H24-(C$50*C70))/(H23-(H60*C$74)))"
+      },
+      {
+        "coord": "I80",
+        "value": "  Nm3/hr"
+      },
+      {
+        "coord": "K80",
+        "value": " ( T is abs temp., P is abs press., RH is relative humidity, PV is vapor press., Pb is barometric press.,  subscript a is for"
+      }
+    ],
+    [
+      {
+        "coord": "F81",
+        "value": "   (with peaking factor)"
+      },
+      {
+        "coord": "K81",
+        "value": "    actual conditions and subscript N is for normal conditions.)"
+      }
+    ],
+    [
+      {
+        "coord": "E82",
+        "value": "    Blower outlet pressure, PB2  ="
+      },
+      {
+        "coord": "H82",
+        "value": "=H24+(C25)+(9.807*H21/100)"
+      },
+      {
+        "coord": "I82",
+        "value": "    bar"
+      },
+      {
+        "coord": "M82",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "K83",
+        "value": "  Blower outlet pressure:    PB2 = Patm + DPdiff + gH2O*ddiff"
+      }
+    ],
+    [
+      {
+        "coord": "A84",
+        "value": "Reference:  Bengtson, Harlan H.,"
+      },
+      {
+        "coord": "D84",
+        "value": "Activated Sludge Calculations Spreadsheet: Aeration Tank Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "C85",
+        "value": "an Amazon Kindle ebook"
+      }
+    ],
+    [
+      {
+        "coord": "K86",
+        "value": "   Reference for Antoine Eqn:  "
+      },
+      {
+        "coord": "N86",
+        "value": "Perry's Chemical Engineers' Handbook, 8th Ed. - Table 13.4"
+      }
+    ],
+    [
+      {
+        "coord": "A87",
+        "value": "Reference:  Bengtson, Harlan H.,"
+      },
+      {
+        "coord": "D87",
+        "value": "Biological Wastewater Treatment Process Design Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "C88",
+        "value": "available as a paperback book and as an Amazon Kindle ebook"
+      },
+      {
+        "coord": "K88",
+        "value": "  Reference: Metcalf & Eddy, Inc, (Revised by Tchobanoglous, G, Burton, F.L., Stensel, H.D., "
+      }
+    ],
+    [
+      {
+        "coord": "K89",
+        "value": "  Wastewater Engineering, Treatment and Reuse, 4th Ed., New York, NY, 2003."
+      }
+    ],
+    [
+      {
+        "coord": "K93",
+        "value": "       Find more Excel spreadsheets for engineering at:"
+      }
+    ],
+    [
+      {
+        "coord": "L94",
+        "value": "EngineeringExcelTemplates.com"
+      }
+    ],
+    [
+      {
+        "coord": "K97",
+        "value": "Copyright \u00a9 2018 Harlan H. Bengtson. All Rights Reserved."
+      }
+    ],
+    [
+      {
+        "coord": "M65477",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "M65478",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "L65484",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "L65485",
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ]
+  ]
+}

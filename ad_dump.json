@@ -1,0 +1,1360 @@
+{
+  "1. Contents": [
+    [
+      {
+        "coord": "C1",
+        "formula": null,
+        "value": "Workbook Contents",
+        "raw": "Workbook Contents"
+      }
+    ],
+    [
+      {
+        "coord": "A3",
+        "formula": null,
+        "value": "Click on tabs at the bottom of the screen to access the following:",
+        "raw": "Click on tabs at the bottom of the screen to access the following:"
+      }
+    ],
+    [
+      {
+        "coord": "B5",
+        "formula": null,
+        "value": "Tab 1. Contents (current tab)",
+        "raw": "Tab 1. Contents (current tab)"
+      }
+    ],
+    [
+      {
+        "coord": "B7",
+        "formula": null,
+        "value": "Tab 2. Sludge Quantity Calculations",
+        "raw": "Tab 2. Sludge Quantity Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "B9",
+        "formula": null,
+        "value": "Tab 3. Digester Tank Design Calculations",
+        "raw": "Tab 3. Digester Tank Design Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A12",
+        "formula": null,
+        "value": "Why you shouldn\u2019t give copies of this workbook away",
+        "raw": "Why you shouldn\u2019t give copies of this workbook away"
+      }
+    ],
+    [
+      {
+        "coord": "A13",
+        "formula": null,
+        "value": "We at EngineeringExcelTemplates.com hope that you find this workbook useful. \u00a0If you ",
+        "raw": "We at EngineeringExcelTemplates.com hope that you find this workbook useful. \u00a0If you "
+      }
+    ],
+    [
+      {
+        "coord": "A14",
+        "formula": null,
+        "value": "would like us to develop additional useful spreadsheets for you in the future, then encourage ",
+        "raw": "would like us to develop additional useful spreadsheets for you in the future, then encourage "
+      }
+    ],
+    [
+      {
+        "coord": "A15",
+        "formula": null,
+        "value": "your friends and colleagues to buy their own copies, rather than allowing them to copy ",
+        "raw": "your friends and colleagues to buy their own copies, rather than allowing them to copy "
+      }
+    ],
+    [
+      {
+        "coord": "A16",
+        "formula": null,
+        "value": "the spreadsheet you purchased. \u00a0We have deliberately set our prices so low that no one ",
+        "raw": "the spreadsheet you purchased. \u00a0We have deliberately set our prices so low that no one "
+      }
+    ],
+    [
+      {
+        "coord": "A17",
+        "formula": null,
+        "value": "can really claim that they can\u2019t afford to pay. \u00a0But low prices will work for us\u2014that is, we ",
+        "raw": "can really claim that they can\u2019t afford to pay. \u00a0But low prices will work for us\u2014that is, we "
+      }
+    ],
+    [
+      {
+        "coord": "A18",
+        "formula": null,
+        "value": "can stay in business\u2014only if we can sell enough copies. \u00a0Bottom line: the more you get ",
+        "raw": "can stay in business\u2014only if we can sell enough copies. \u00a0Bottom line: the more you get "
+      }
+    ],
+    [
+      {
+        "coord": "A19",
+        "formula": null,
+        "value": "other people to pay for their own copies, the more low-cost useful spreadsheets will be ",
+        "raw": "other people to pay for their own copies, the more low-cost useful spreadsheets will be "
+      }
+    ],
+    [
+      {
+        "coord": "A20",
+        "formula": null,
+        "value": "available for you in the future.",
+        "raw": "available for you in the future."
+      }
+    ],
+    [
+      {
+        "coord": "A23",
+        "formula": null,
+        "value": "This workbook is provided \"as is\", without warranty of any kind, express or",
+        "raw": "This workbook is provided \"as is\", without warranty of any kind, express or"
+      }
+    ],
+    [
+      {
+        "coord": "A24",
+        "formula": null,
+        "value": "implied.",
+        "raw": "implied."
+      }
+    ],
+    [
+      {
+        "coord": "B30",
+        "formula": null,
+        "value": "       Find more Excel spreadsheets for engineering at",
+        "raw": "       Find more Excel spreadsheets for engineering at"
+      }
+    ],
+    [
+      {
+        "coord": "D31",
+        "formula": null,
+        "value": "EngineeringExcelTemplates.com",
+        "raw": "EngineeringExcelTemplates.com"
+      }
+    ],
+    [
+      {
+        "coord": "B35",
+        "formula": null,
+        "value": "Copyright \u00a9 2012 Engineering Excel Templates. All Rights Reserved.",
+        "raw": "Copyright \u00a9 2012 Engineering Excel Templates. All Rights Reserved."
+      }
+    ]
+  ],
+  "2. Sludge Quant. Calcns": [
+    [
+      {
+        "coord": "A1",
+        "formula": null,
+        "value": "Anaerobic Digester Calculations - S.I. units",
+        "raw": "Anaerobic Digester Calculations - S.I. units"
+      }
+    ],
+    [
+      {
+        "coord": "A3",
+        "formula": null,
+        "value": "1.  Sludge Quantity Calculations",
+        "raw": "1.  Sludge Quantity Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A5",
+        "formula": null,
+        "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes",
+        "raw": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+      }
+    ],
+    [
+      {
+        "coord": "A7",
+        "formula": null,
+        "value": "Primary Sludge",
+        "raw": "Primary Sludge"
+      }
+    ],
+    [
+      {
+        "coord": "A9",
+        "formula": null,
+        "value": "Inputs",
+        "raw": "Inputs"
+      },
+      {
+        "coord": "F9",
+        "formula": null,
+        "value": "Inputs",
+        "raw": "Inputs"
+      }
+    ],
+    [
+      {
+        "coord": "A11",
+        "formula": null,
+        "value": "Design Ave. Flow Rate, Qi =",
+        "raw": "Design Ave. Flow Rate, Qi ="
+      },
+      {
+        "coord": "C11",
+        "formula": null,
+        "value": "21600.0",
+        "raw": "21600.0"
+      },
+      {
+        "coord": "D11",
+        "formula": null,
+        "value": "m3/d",
+        "raw": "m3/d"
+      },
+      {
+        "coord": "F11",
+        "formula": null,
+        "value": "Prim. Sludge solids conc. =",
+        "raw": "Prim. Sludge solids conc. ="
+      },
+      {
+        "coord": "H11",
+        "formula": null,
+        "value": "0.05",
+        "raw": "0.05"
+      }
+    ],
+    [
+      {
+        "coord": "A12",
+        "formula": null,
+        "value": "Peaking factor for",
+        "raw": "Peaking factor for"
+      }
+    ],
+    [
+      {
+        "coord": "A13",
+        "formula": null,
+        "value": "   peak monthly flow,  PF =",
+        "raw": "   peak monthly flow,  PF ="
+      },
+      {
+        "coord": "C13",
+        "formula": null,
+        "value": "1.2",
+        "raw": "1.2"
+      },
+      {
+        "coord": "F13",
+        "formula": null,
+        "value": "Prim. Sludge Sp. Grav. =",
+        "raw": "Prim. Sludge Sp. Grav. ="
+      },
+      {
+        "coord": "H13",
+        "formula": null,
+        "value": "1.02",
+        "raw": "1.02"
+      }
+    ],
+    [
+      {
+        "coord": "A15",
+        "formula": null,
+        "value": "   Influent TSS, TSSi =",
+        "raw": "   Influent TSS, TSSi ="
+      },
+      {
+        "coord": "C15",
+        "formula": null,
+        "value": "400.0",
+        "raw": "400.0"
+      },
+      {
+        "coord": "D15",
+        "formula": null,
+        "value": "g/m3 ",
+        "raw": "g/m3 "
+      },
+      {
+        "coord": "F15",
+        "formula": null,
+        "value": "Prim. Clarif. % TSS rem =",
+        "raw": "Prim. Clarif. % TSS rem ="
+      },
+      {
+        "coord": "H15",
+        "formula": null,
+        "value": "0.7",
+        "raw": "0.7"
+      }
+    ],
+    [
+      {
+        "coord": "A17",
+        "formula": null,
+        "value": "After grit removal, TSSp =",
+        "raw": "After grit removal, TSSp ="
+      },
+      {
+        "coord": "C17",
+        "formula": null,
+        "value": "360.0",
+        "raw": "360.0"
+      },
+      {
+        "coord": "D17",
+        "formula": null,
+        "value": "g/m3 ",
+        "raw": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A19",
+        "formula": null,
+        "value": "Calculations",
+        "raw": "Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A21",
+        "formula": null,
+        "value": "Peak monthly flow, Qm =",
+        "raw": "Peak monthly flow, Qm ="
+      },
+      {
+        "coord": "C21",
+        "formula": "=C13*C11",
+        "value": "25920",
+        "raw": "=C13*C11"
+      },
+      {
+        "coord": "D21",
+        "formula": null,
+        "value": "m3/d",
+        "raw": "m3/d"
+      },
+      {
+        "coord": "F21",
+        "formula": null,
+        "value": "TSS in Primary Sludge =",
+        "raw": "TSS in Primary Sludge ="
+      },
+      {
+        "coord": "H21",
+        "formula": "=H15*C21*C17/1000",
+        "value": "6531.84",
+        "raw": "=H15*C21*C17/1000"
+      },
+      {
+        "coord": "I21",
+        "formula": null,
+        "value": "kg/d",
+        "raw": "kg/d"
+      }
+    ],
+    [
+      {
+        "coord": "A22",
+        "formula": null,
+        "value": "    (used for design)",
+        "raw": "    (used for design)"
+      }
+    ],
+    [
+      {
+        "coord": "F23",
+        "formula": null,
+        "value": "Vol. Flow of Prim. Sludge =",
+        "raw": "Vol. Flow of Prim. Sludge ="
+      },
+      {
+        "coord": "H23",
+        "formula": "=H21/(1000*H13*H11)",
+        "value": "128.0752941",
+        "raw": "=H21/(1000*H13*H11)"
+      },
+      {
+        "coord": "I23",
+        "formula": null,
+        "value": "m3/d",
+        "raw": "m3/d"
+      },
+      {
+        "coord": "K23",
+        "formula": null,
+        "value": "Equations Used for Calculations",
+        "raw": "Equations Used for Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A25",
+        "formula": null,
+        "value": "Waste Activated Sludge",
+        "raw": "Waste Activated Sludge"
+      },
+      {
+        "coord": "K25",
+        "formula": null,
+        "value": "Peak monthly flow = (Design ave. flow rate)(Peaking factor)     [  Qm  =  Qi*PF  ]",
+        "raw": "Peak monthly flow = (Design ave. flow rate)(Peaking factor)     [  Qm  =  Qi*PF  ]"
+      }
+    ],
+    [
+      {
+        "coord": "L26",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A27",
+        "formula": null,
+        "value": "Inputs",
+        "raw": "Inputs"
+      },
+      {
+        "coord": "F27",
+        "formula": null,
+        "value": "Calculations",
+        "raw": "Calculations"
+      },
+      {
+        "coord": "K27",
+        "formula": null,
+        "value": "kg/day of TSS in Prim. Sludge  =  Qm*TSSp*(Prim. Clarif. % TSS removal)/1000",
+        "raw": "kg/day of TSS in Prim. Sludge  =  Qm*TSSp*(Prim. Clarif. % TSS removal)/1000"
+      }
+    ],
+    [
+      {
+        "coord": "L28",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A29",
+        "formula": null,
+        "value": "Infl. BOD conc., BODi =",
+        "raw": "Infl. BOD conc., BODi ="
+      },
+      {
+        "coord": "C29",
+        "formula": null,
+        "value": "375.0",
+        "raw": "375.0"
+      },
+      {
+        "coord": "D29",
+        "formula": null,
+        "value": "g/m3 ",
+        "raw": "g/m3 "
+      },
+      {
+        "coord": "F29",
+        "formula": null,
+        "value": "BOD to aeration tank =",
+        "raw": "BOD to aeration tank ="
+      },
+      {
+        "coord": "H29",
+        "formula": "=C21*C29*(1-C31)/1000",
+        "value": "6512.4",
+        "raw": "=C21*C29*(1-C31)/1000"
+      },
+      {
+        "coord": "I29",
+        "formula": null,
+        "value": "kg/d",
+        "raw": "kg/d"
+      },
+      {
+        "coord": "K29",
+        "formula": null,
+        "value": "Vol. Flow of Prim. Sldge  =  (lb/day of TSS in Prim. Sldge)/[1000*(Prim. Sldge solids conc.)(Sp. Gr.)",
+        "raw": "Vol. Flow of Prim. Sldge  =  (lb/day of TSS in Prim. Sldge)/[1000*(Prim. Sldge solids conc.)(Sp. Gr.)"
+      }
+    ],
+    [
+      {
+        "coord": "L30",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A31",
+        "formula": null,
+        "value": "Prim. Clarif. % BOD rem =",
+        "raw": "Prim. Clarif. % BOD rem ="
+      },
+      {
+        "coord": "C31",
+        "formula": null,
+        "value": "0.33",
+        "raw": "0.33"
+      },
+      {
+        "coord": "F31",
+        "formula": null,
+        "value": "Aeration tank volume, V =",
+        "raw": "Aeration tank volume, V ="
+      },
+      {
+        "coord": "H31",
+        "formula": "=H29/C37",
+        "value": "8140.5",
+        "raw": "=H29/C37"
+      },
+      {
+        "coord": "I31",
+        "formula": null,
+        "value": "m3 ",
+        "raw": "m3 "
+      },
+      {
+        "coord": "K31",
+        "formula": null,
+        "value": "kg/day of BOD to aer. tank = (Peak mnthly flow)(BODi)(1 - % BOD rem. in prim. clarif.)/1000",
+        "raw": "kg/day of BOD to aer. tank = (Peak mnthly flow)(BODi)(1 - % BOD rem. in prim. clarif.)/1000"
+      }
+    ],
+    [
+      {
+        "coord": "A33",
+        "formula": null,
+        "value": "Aeration tank MLSS, X =",
+        "raw": "Aeration tank MLSS, X ="
+      },
+      {
+        "coord": "C33",
+        "formula": null,
+        "value": "3500.0",
+        "raw": "3500.0"
+      },
+      {
+        "coord": "D33",
+        "formula": null,
+        "value": "g/m3 ",
+        "raw": "g/m3 "
+      },
+      {
+        "coord": "K33",
+        "formula": null,
+        "value": "Aer. tank vol. in m3  =  V  =  (kg/day of BOD to aer. tank)/VL",
+        "raw": "Aer. tank vol. in m3  =  V  =  (kg/day of BOD to aer. tank)/VL"
+      }
+    ],
+    [
+      {
+        "coord": "F34",
+        "formula": null,
+        "value": "Waste Activated Sludge",
+        "raw": "Waste Activated Sludge"
+      }
+    ],
+    [
+      {
+        "coord": "A35",
+        "formula": null,
+        "value": "      Design SRT =",
+        "raw": "      Design SRT ="
+      },
+      {
+        "coord": "C35",
+        "formula": null,
+        "value": "13.0",
+        "raw": "13.0"
+      },
+      {
+        "coord": "D35",
+        "formula": null,
+        "value": "days",
+        "raw": "days"
+      },
+      {
+        "coord": "F35",
+        "formula": null,
+        "value": "TSS flow rate, mdotWAS =",
+        "raw": "TSS flow rate, mdotWAS ="
+      },
+      {
+        "coord": "H35",
+        "formula": "=(H31*C33/(1000*C35))-(C21*C41/1000)",
+        "value": "1673.273077",
+        "raw": "=(H31*C33/(1000*C35))-(C21*C41/1000)"
+      },
+      {
+        "coord": "I35",
+        "formula": null,
+        "value": "kg/d",
+        "raw": "kg/d"
+      },
+      {
+        "coord": "K35",
+        "formula": null,
+        "value": "kg/day of TSS in WAS, mdotWAS  =  VMG*X/(Design SRT*1000)  -  Qm*TSSe/1000",
+        "raw": "kg/day of TSS in WAS, mdotWAS  =  VMG*X/(Design SRT*1000)  -  Qm*TSSe/1000"
+      }
+    ],
+    [
+      {
+        "coord": "A36",
+        "formula": null,
+        "value": "Design vol. loading ",
+        "raw": "Design vol. loading "
+      },
+      {
+        "coord": "F36",
+        "formula": null,
+        "value": "Waste Activated Sludge",
+        "raw": "Waste Activated Sludge"
+      },
+      {
+        "coord": "L36",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A37",
+        "formula": null,
+        "value": "   for aeration tank, VL =",
+        "raw": "   for aeration tank, VL ="
+      },
+      {
+        "coord": "C37",
+        "formula": null,
+        "value": "0.8",
+        "raw": "0.8"
+      },
+      {
+        "coord": "F37",
+        "formula": null,
+        "value": "           Flow Rate, Qw =",
+        "raw": "           Flow Rate, Qw ="
+      },
+      {
+        "coord": "H37",
+        "formula": "=H35*1000/C39",
+        "value": "167.3273077",
+        "raw": "=H35*1000/C39"
+      },
+      {
+        "coord": "I37",
+        "formula": null,
+        "value": "m3/d",
+        "raw": "m3/d"
+      },
+      {
+        "coord": "K37",
+        "formula": null,
+        "value": "Waste Activated Sludge Flow Rate, Qw  =  mdotWAS*1000/TSSw",
+        "raw": "Waste Activated Sludge Flow Rate, Qw  =  mdotWAS*1000/TSSw"
+      }
+    ],
+    [
+      {
+        "coord": "A38",
+        "formula": null,
+        "value": "    (kg BOD/day/m3)",
+        "raw": "    (kg BOD/day/m3)"
+      }
+    ],
+    [
+      {
+        "coord": "A39",
+        "formula": null,
+        "value": "WAS conc., TSSW =",
+        "raw": "WAS conc., TSSW ="
+      },
+      {
+        "coord": "C39",
+        "formula": null,
+        "value": "10000.0",
+        "raw": "10000.0"
+      },
+      {
+        "coord": "D39",
+        "formula": null,
+        "value": "g/m3 ",
+        "raw": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A41",
+        "formula": null,
+        "value": "Effl. TSS conc., TSSe =",
+        "raw": "Effl. TSS conc., TSSe ="
+      },
+      {
+        "coord": "C41",
+        "formula": null,
+        "value": "20.0",
+        "raw": "20.0"
+      },
+      {
+        "coord": "D41",
+        "formula": null,
+        "value": "g/m3 ",
+        "raw": "g/m3 "
+      }
+    ],
+    [
+      {
+        "coord": "A43",
+        "formula": null,
+        "value": "Thickened Waste Activated Sludge",
+        "raw": "Thickened Waste Activated Sludge"
+      }
+    ],
+    [
+      {
+        "coord": "A45",
+        "formula": null,
+        "value": "Inputs",
+        "raw": "Inputs"
+      },
+      {
+        "coord": "F45",
+        "formula": null,
+        "value": "Calculations",
+        "raw": "Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "M46",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A47",
+        "formula": null,
+        "value": "Conc. Of thickened sludge =",
+        "raw": "Conc. Of thickened sludge ="
+      },
+      {
+        "coord": "C47",
+        "formula": null,
+        "value": "0.05",
+        "raw": "0.05"
+      },
+      {
+        "coord": "F47",
+        "formula": null,
+        "value": "TSS flow (thknd. Sludge) =",
+        "raw": "TSS flow (thknd. Sludge) ="
+      },
+      {
+        "coord": "H47",
+        "formula": "=C49*H35",
+        "value": "1505.945769",
+        "raw": "=C49*H35"
+      },
+      {
+        "coord": "I47",
+        "formula": null,
+        "value": "kg/d",
+        "raw": "kg/d"
+      },
+      {
+        "coord": "K47",
+        "formula": null,
+        "value": "lb/day of TSS in thickened sludge  =  (mdotWAS)(assumed solids recovery %)",
+        "raw": "lb/day of TSS in thickened sludge  =  (mdotWAS)(assumed solids recovery %)"
+      }
+    ],
+    [
+      {
+        "coord": "A49",
+        "formula": null,
+        "value": "Assumed solids recovery =",
+        "raw": "Assumed solids recovery ="
+      },
+      {
+        "coord": "C49",
+        "formula": null,
+        "value": "0.9",
+        "raw": "0.9"
+      },
+      {
+        "coord": "F49",
+        "formula": null,
+        "value": "Flow rate (thknd. Sludge) =",
+        "raw": "Flow rate (thknd. Sludge) ="
+      },
+      {
+        "coord": "H49",
+        "formula": "=H47/(C47*1000)",
+        "value": "30.11891538",
+        "raw": "=H47/(C47*1000)"
+      },
+      {
+        "coord": "I49",
+        "formula": null,
+        "value": "m3/d",
+        "raw": "m3/d"
+      },
+      {
+        "coord": "K49",
+        "formula": null,
+        "value": "MGD of thickened sludge  =  (lb/day of TSS in thcknd sldge)/[(conc. of thcknd sldge)(8.34)(106)",
+        "raw": "MGD of thickened sludge  =  (lb/day of TSS in thcknd sldge)/[(conc. of thcknd sldge)(8.34)(106)"
+      }
+    ],
+    [
+      {
+        "coord": "J52",
+        "formula": null,
+        "value": "Reference:  Mecalf & Eddy, Inc,  Wastewater Engineering Treatment and Reuse, 4th Ed, revised by:",
+        "raw": "Reference:  Mecalf & Eddy, Inc,  Wastewater Engineering Treatment and Reuse, 4th Ed, revised by:"
+      }
+    ],
+    [
+      {
+        "coord": "K53",
+        "formula": null,
+        "value": "     Tchobanoglous, G., Burton, F.L., and Stensel, D.H., McGraw Hill, 2003.",
+        "raw": "     Tchobanoglous, G., Burton, F.L., and Stensel, D.H., McGraw Hill, 2003."
+      }
+    ],
+    [
+      {
+        "coord": "M57",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "M66",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "M65532",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ]
+  ],
+  "3. Design Calcns": [
+    [
+      {
+        "coord": "A1",
+        "formula": null,
+        "value": "Anaerobic Digester Calculations - S.I. units",
+        "raw": "Anaerobic Digester Calculations - S.I. units"
+      },
+      {
+        "coord": "K1",
+        "formula": null,
+        "value": "Typical Design Loading Rates for mesophilic, high-rate, complete mix Anaerobic Digesters",
+        "raw": "Typical Design Loading Rates for mesophilic, high-rate, complete mix Anaerobic Digesters"
+      },
+      {
+        "coord": "M1",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "L2",
+        "formula": null,
+        "value": "  (from Metcalf & Eddy reference below)",
+        "raw": "  (from Metcalf & Eddy reference below)"
+      }
+    ],
+    [
+      {
+        "coord": "A3",
+        "formula": null,
+        "value": "2.  Single Stage, Mesophilic, Completely Mixed Digester Design",
+        "raw": "2.  Single Stage, Mesophilic, Completely Mixed Digester Design"
+      },
+      {
+        "coord": "K3",
+        "formula": null,
+        "value": "Solids Loading Rate:     1.6 - 4.8  kg VSS/day/m3  ",
+        "raw": "Solids Loading Rate:     1.6 - 4.8  kg VSS/day/m3  "
+      }
+    ],
+    [
+      {
+        "coord": "A5",
+        "formula": null,
+        "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes",
+        "raw": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+      },
+      {
+        "coord": "K5",
+        "formula": null,
+        "value": "Solids Retention Time:  15 - 20 days",
+        "raw": "Solids Retention Time:  15 - 20 days"
+      }
+    ],
+    [
+      {
+        "coord": "A7",
+        "formula": null,
+        "value": "Volume Determination",
+        "raw": "Volume Determination"
+      },
+      {
+        "coord": "K7",
+        "formula": null,
+        "value": "Typically based on peak 2 week or peak monthly influent wastewater flow rate",
+        "raw": "Typically based on peak 2 week or peak monthly influent wastewater flow rate"
+      },
+      {
+        "coord": "M7",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "A9",
+        "formula": null,
+        "value": "Choose Design Criterion (either Solids Loading Rate or Solids Retention Time)",
+        "raw": "Choose Design Criterion (either Solids Loading Rate or Solids Retention Time)"
+      }
+    ],
+    [
+      {
+        "coord": "A10",
+        "formula": null,
+        "value": "by entering either yes or no in the blue cell below:",
+        "raw": "by entering either yes or no in the blue cell below:"
+      },
+      {
+        "coord": "K10",
+        "formula": null,
+        "value": "Equations Used for Calculations",
+        "raw": "Equations Used for Calculations"
+      }
+    ],
+    [
+      {
+        "coord": "A12",
+        "formula": null,
+        "value": "     Solids Loading Rate ",
+        "raw": "     Solids Loading Rate "
+      },
+      {
+        "coord": "C12",
+        "formula": null,
+        "value": "no",
+        "raw": "no"
+      },
+      {
+        "coord": "F12",
+        "formula": null,
+        "value": "Solids Retention Time",
+        "raw": "Solids Retention Time"
+      },
+      {
+        "coord": "H12",
+        "formula": "=IF(C12=\"no\",\"yes\",\"no\")",
+        "value": "yes",
+        "raw": "=IF(C12=\"no\",\"yes\",\"no\")"
+      },
+      {
+        "coord": "K12",
+        "formula": null,
+        "value": "kg/day of VSS to digester  =  (kg/day TSS in prim. sldge)(% vol. solids in prim. sldge)",
+        "raw": "kg/day of VSS to digester  =  (kg/day TSS in prim. sldge)(% vol. solids in prim. sldge)"
+      }
+    ],
+    [
+      {
+        "coord": "A13",
+        "formula": null,
+        "value": "     (kg VSS/day/m3) ",
+        "raw": "     (kg VSS/day/m3) "
+      },
+      {
+        "coord": "F13",
+        "formula": null,
+        "value": "        (SRT, days)",
+        "raw": "        (SRT, days)"
+      },
+      {
+        "coord": "N13",
+        "formula": null,
+        "value": "               + (kg/day of thcknd WAS)(% vol. solids in WAS)",
+        "raw": "               + (kg/day of thcknd WAS)(% vol. solids in WAS)"
+      }
+    ],
+    [
+      {
+        "coord": "A15",
+        "formula": null,
+        "value": "Inputs",
+        "raw": "Inputs"
+      },
+      {
+        "coord": "F15",
+        "formula": null,
+        "value": "Calculations",
+        "raw": "Calculations"
+      },
+      {
+        "coord": "K15",
+        "formula": null,
+        "value": "For Solids Loading Rate as design criterion:",
+        "raw": "For Solids Loading Rate as design criterion:"
+      }
+    ],
+    [
+      {
+        "coord": "A16",
+        "formula": null,
+        "value": "% Volatile solids in ",
+        "raw": "% Volatile solids in "
+      }
+    ],
+    [
+      {
+        "coord": "A17",
+        "formula": null,
+        "value": "            primary sludge =",
+        "raw": "            primary sludge ="
+      },
+      {
+        "coord": "C17",
+        "formula": null,
+        "value": "0.7",
+        "raw": "0.7"
+      },
+      {
+        "coord": "E17",
+        "formula": null,
+        "value": "     VSS flow rate to digester =",
+        "raw": "     VSS flow rate to digester ="
+      },
+      {
+        "coord": "H17",
+        "formula": "=(PrimSolidsRate*C17)+(ThSlSolidsRate*C19)",
+        "value": "5777.044615",
+        "raw": "=(PrimSolidsRate*C17)+(ThSlSolidsRate*C19)"
+      },
+      {
+        "coord": "I17",
+        "formula": null,
+        "value": "kg/d",
+        "raw": "kg/d"
+      },
+      {
+        "coord": "K17",
+        "formula": null,
+        "value": "Digester liquid volume in m3  =  (kg/day of VSS to digester)/Solids Loading Rate",
+        "raw": "Digester liquid volume in m3  =  (kg/day of VSS to digester)/Solids Loading Rate"
+      }
+    ],
+    [
+      {
+        "coord": "A18",
+        "formula": null,
+        "value": "% Volatile solids in ",
+        "raw": "% Volatile solids in "
+      }
+    ],
+    [
+      {
+        "coord": "A19",
+        "formula": null,
+        "value": "    waste activated sludge =",
+        "raw": "    waste activated sludge ="
+      },
+      {
+        "coord": "C19",
+        "formula": null,
+        "value": "0.8",
+        "raw": "0.8"
+      },
+      {
+        "coord": "E19",
+        "formula": null,
+        "value": " Total digester liquid volume =",
+        "raw": " Total digester liquid volume ="
+      },
+      {
+        "coord": "H19",
+        "formula": "=IF(H12=\"no\",H17/C21,(WASFlow+PrimFlow)*C21)",
+        "value": "3544.831222",
+        "raw": "=IF(H12=\"no\",H17/C21,(WASFlow+PrimFlow)*C21)"
+      },
+      {
+        "coord": "I19",
+        "formula": null,
+        "value": "m3 ",
+        "raw": "m3 "
+      },
+      {
+        "coord": "K19",
+        "formula": null,
+        "value": "For Solids Retention Time as design criterion:",
+        "raw": "For Solids Retention Time as design criterion:"
+      }
+    ],
+    [
+      {
+        "coord": "A21",
+        "formula": "=IF(H12=\"no\",\"   Solids Loading Rate =\",\"   Solids Retention Time =\")",
+        "value": "   Solids Retention Time =",
+        "raw": "=IF(H12=\"no\",\"   Solids Loading Rate =\",\"   Solids Retention Time =\")"
+      },
+      {
+        "coord": "C21",
+        "formula": null,
+        "value": "12.0",
+        "raw": "12.0"
+      },
+      {
+        "coord": "D21",
+        "formula": "=IF(H12=\"no\",\" \",\"days\")",
+        "value": "days",
+        "raw": "=IF(H12=\"no\",\" \",\"days\")"
+      },
+      {
+        "coord": "F21",
+        "formula": "=IF(H12=\"no\",\"  Solids Retention Time =\",\"   Solids Loading Rate =\")",
+        "value": "   Solids Loading Rate =",
+        "raw": "=IF(H12=\"no\",\"  Solids Retention Time =\",\"   Solids Loading Rate =\")"
+      },
+      {
+        "coord": "H21",
+        "formula": "=IF(H12=\"no\",H19/(ThSlFlowRate+PrimFlow),H17/H19)",
+        "value": "1.629709358",
+        "raw": "=IF(H12=\"no\",H19/(ThSlFlowRate+PrimFlow),H17/H19)"
+      },
+      {
+        "coord": "I21",
+        "formula": "=IF(H12=\"no\",\"days\",\" \")",
+        "value": " ",
+        "raw": "=IF(H12=\"no\",\"days\",\" \")"
+      },
+      {
+        "coord": "K21",
+        "formula": null,
+        "value": "Digester liquid volume in m3",
+        "raw": "Digester liquid volume in m3"
+      }
+    ],
+    [
+      {
+        "coord": "A22",
+        "formula": "=IF(H12=\"no\",\"  (kg VSS/day/cu.m.)\",\" \")",
+        "value": " ",
+        "raw": "=IF(H12=\"no\",\"  (kg VSS/day/cu.m.)\",\" \")"
+      },
+      {
+        "coord": "F22",
+        "formula": "=IF(H12=\"no\",\" \",\"  (kg VSS/day/cu.m.)\")",
+        "value": "  (kg VSS/day/cu.m.)",
+        "raw": "=IF(H12=\"no\",\" \",\"  (kg VSS/day/cu.m.)\")"
+      },
+      {
+        "coord": "K22",
+        "formula": null,
+        "value": "          =  (flow rate of prim. sldge + flow rate of thcknd WAS)(Solids Retention Time)",
+        "raw": "          =  (flow rate of prim. sldge + flow rate of thcknd WAS)(Solids Retention Time)"
+      }
+    ],
+    [
+      {
+        "coord": "K23",
+        "formula": null,
+        "value": "   (Note that solids retention time = liquid retention time for a completely mixed reactor)",
+        "raw": "   (Note that solids retention time = liquid retention time for a completely mixed reactor)"
+      }
+    ],
+    [
+      {
+        "coord": "A24",
+        "formula": null,
+        "value": "Tank Dimensions",
+        "raw": "Tank Dimensions"
+      }
+    ],
+    [
+      {
+        "coord": "A26",
+        "formula": null,
+        "value": "       Number of tanks =",
+        "raw": "       Number of tanks ="
+      },
+      {
+        "coord": "C26",
+        "formula": null,
+        "value": "2.0",
+        "raw": "2.0"
+      },
+      {
+        "coord": "F26",
+        "formula": null,
+        "value": "Liquid volume/digester =",
+        "raw": "Liquid volume/digester ="
+      },
+      {
+        "coord": "H26",
+        "formula": "=H19/C26",
+        "value": "1772.415611",
+        "raw": "=H19/C26"
+      },
+      {
+        "coord": "I26",
+        "formula": null,
+        "value": "m3 ",
+        "raw": "m3 "
+      },
+      {
+        "coord": "K26",
+        "formula": null,
+        "value": "Liquid volume/digester  =  (Total digester liquid volume)/(Number of tanks)",
+        "raw": "Liquid volume/digester  =  (Total digester liquid volume)/(Number of tanks)"
+      }
+    ],
+    [
+      {
+        "coord": "A28",
+        "formula": null,
+        "value": "      Side water depth =",
+        "raw": "      Side water depth ="
+      },
+      {
+        "coord": "C28",
+        "formula": null,
+        "value": "10.0",
+        "raw": "10.0"
+      },
+      {
+        "coord": "D28",
+        "formula": null,
+        "value": "m",
+        "raw": "m"
+      },
+      {
+        "coord": "F28",
+        "formula": null,
+        "value": "Diameter of digester =",
+        "raw": "Diameter of digester ="
+      },
+      {
+        "coord": "H28",
+        "formula": "=(4*H26/(PI()*C28))^0.5",
+        "value": "15.02234884",
+        "raw": "=(4*H26/(PI()*C28))^0.5"
+      },
+      {
+        "coord": "I28",
+        "formula": null,
+        "value": "m",
+        "raw": "m"
+      },
+      {
+        "coord": "K28",
+        "formula": null,
+        "value": "Diameter of digester  =  [(liquid volume/digester)*4/p*SWD]0.5  ",
+        "raw": "Diameter of digester  =  [(liquid volume/digester)*4/p*SWD]0.5  "
+      }
+    ],
+    [
+      {
+        "coord": "A29",
+        "formula": null,
+        "value": "  (min SWD = 7.5 m; max SWD = 15 m)",
+        "raw": "  (min SWD = 7.5 m; max SWD = 15 m)"
+      },
+      {
+        "coord": "F29",
+        "formula": null,
+        "value": " (min diam = 6 m;  max diam = 38 m)",
+        "raw": " (min diam = 6 m;  max diam = 38 m)"
+      }
+    ],
+    [
+      {
+        "coord": "M30",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "J31",
+        "formula": null,
+        "value": "Reference:  Mecalf & Eddy, Inc,  Wastewater Engineering Treatment and Reuse, 4th Ed, revised by:",
+        "raw": "Reference:  Mecalf & Eddy, Inc,  Wastewater Engineering Treatment and Reuse, 4th Ed, revised by:"
+      }
+    ],
+    [
+      {
+        "coord": "K32",
+        "formula": null,
+        "value": "     Tchobanoglous, G., Burton, F.L., and Stensel, D.H., McGraw Hill, 2003.",
+        "raw": "     Tchobanoglous, G., Burton, F.L., and Stensel, D.H., McGraw Hill, 2003."
+      }
+    ],
+    [
+      {
+        "coord": "M65487",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "M65502",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ],
+    [
+      {
+        "coord": "M65528",
+        "formula": null,
+        "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+        "raw": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,17 @@
+Estimation of Peaking Factor - S.I. units,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13
+,,,,,,,,,,,,,
+Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes,,,,,,,,,,NOTE:  The peaking factor is calculated from the following equation:,,,
+,,,,,,,,,,,,,
+Inputs,,,,,Calculations,,,,,,,,
+,,,,,,,,,,,,,where P is the population in thousands
+"Design Ave Flow Rate, Q =",,10500,m3/d,,"  Peaking Factor, PF =",,2.510786711,,,,,,
+,,,,,   (Peak hourly flow/Average Flow),,,,,,,,
+,,,,,,,,,,"A factor of 3.785 m3/capita for daily ave. flow rate, or 3785 m3/thousand in population was used",,,
+,,,,,,,,,,,to calculate PF for a specified value of Design Daily Average Flow Rate.,,
+,,,,,,,,,,,,,
+,       Find more Excel spreadsheets for engineering at,,,,,,,,,"SOURCE:  This equation is from Page 10-6  of the publication, Recommended Standards",,,
+,,EngineeringExcelTemplates.com,,,,,,,,," for Wastewater Treatment Facilities, 2014,  commonly referred to as",,
+,,,,,,,,,,,"the ""10 States Standards""",,
+,,,,,,,,,,,,,
+,Copyright © 2020 Harlan H. Bengtson. All Rights Reserved.,,,,,,,,,,This publication is available for download from the following web address:,,
+,,,,,,,,,,,https://www.health.state.mn.us/communities/environment/water/tenstates/standards.html ,,

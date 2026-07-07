@@ -1,0 +1,203 @@
+
+--- SHEET: 1. Contents ---
+C1 | TEXT    | Workbook Contents
+A3 | TEXT    | Click on tabs at the bottom of the screen to access the following:
+B5 | TEXT    | Tab 1. Contents (current tab)
+B7 | TEXT    | Tab 2. Sludge Quantity Calculations
+B9 | TEXT    | Tab 3. Digester Tank Design Calculations
+A12 | TEXT    | Why you shouldn’t give copies of this workbook away
+A13 | TEXT    | We at EngineeringExcelTemplates.com hope that you find this workbook useful.  If you 
+A14 | TEXT    | would like us to develop additional useful spreadsheets for you in the future, then encourage 
+A15 | TEXT    | your friends and colleagues to buy their own copies, rather than allowing them to copy 
+A16 | TEXT    | the spreadsheet you purchased.  We have deliberately set our prices so low that no one 
+A17 | TEXT    | can really claim that they can’t afford to pay.  But low prices will work for us—that is, we 
+A18 | TEXT    | can stay in business—only if we can sell enough copies.  Bottom line: the more you get 
+A19 | TEXT    | other people to pay for their own copies, the more low-cost useful spreadsheets will be 
+A20 | TEXT    | available for you in the future.
+A23 | TEXT    | This workbook is provided "as is", without warranty of any kind, express or
+A24 | TEXT    | implied.
+B30 | TEXT    |        Find more Excel spreadsheets for engineering at
+D31 | TEXT    | EngineeringExcelTemplates.com
+B35 | TEXT    | Copyright © 2012 Engineering Excel Templates. All Rights Reserved.
+
+--- SHEET: 2. Sludge Quant. Calcns ---
+A1 | TEXT    | Anaerobic Digester Calculations - S.I. units
+A3 | TEXT    | 1.  Sludge Quantity Calculations
+A5 | TEXT    | Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes
+A7 | TEXT    | Primary Sludge
+A9 | TEXT    | Inputs
+F9 | TEXT    | Inputs
+A11 | TEXT    | Design Ave. Flow Rate, Qi =
+C11 | INPUT   | 21600.0
+D11 | TEXT    | m3/d
+F11 | TEXT    | Prim. Sludge solids conc. =
+H11 | INPUT   | 0.05
+A12 | TEXT    | Peaking factor for
+A13 | TEXT    |    peak monthly flow,  PF =
+C13 | INPUT   | 1.2
+F13 | TEXT    | Prim. Sludge Sp. Grav. =
+H13 | INPUT   | 1.02
+A15 | TEXT    |    Influent TSS, TSSi =
+C15 | INPUT   | 400.0
+D15 | TEXT    | g/m3 
+F15 | TEXT    | Prim. Clarif. % TSS rem =
+H15 | INPUT   | 0.7
+A17 | TEXT    | After grit removal, TSSp =
+C17 | INPUT   | 360.0
+D17 | TEXT    | g/m3 
+A19 | TEXT    | Calculations
+A21 | TEXT    | Peak monthly flow, Qm =
+C21 | FORMULA | =C13*C11 | VALUE: 25920
+D21 | TEXT    | m3/d
+F21 | TEXT    | TSS in Primary Sludge =
+H21 | FORMULA | =H15*C21*C17/1000 | VALUE: 6531.84
+I21 | TEXT    | kg/d
+A22 | TEXT    |     (used for design)
+F23 | TEXT    | Vol. Flow of Prim. Sludge =
+H23 | FORMULA | =H21/(1000*H13*H11) | VALUE: 128.0752941
+I23 | TEXT    | m3/d
+K23 | TEXT    | Equations Used for Calculations
+A25 | TEXT    | Waste Activated Sludge
+K25 | TEXT    | Peak monthly flow = (Design ave. flow rate)(Peaking factor)     [  Qm  =  Qi*PF  ]
+L26 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+A27 | TEXT    | Inputs
+F27 | TEXT    | Calculations
+K27 | TEXT    | kg/day of TSS in Prim. Sludge  =  Qm*TSSp*(Prim. Clarif. % TSS removal)/1000
+L28 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+A29 | TEXT    | Infl. BOD conc., BODi =
+C29 | INPUT   | 375.0
+D29 | TEXT    | g/m3 
+F29 | TEXT    | BOD to aeration tank =
+H29 | FORMULA | =C21*C29*(1-C31)/1000 | VALUE: 6512.4
+I29 | TEXT    | kg/d
+K29 | TEXT    | Vol. Flow of Prim. Sldge  =  (lb/day of TSS in Prim. Sldge)/[1000*(Prim. Sldge solids conc.)(Sp. Gr.)
+L30 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+A31 | TEXT    | Prim. Clarif. % BOD rem =
+C31 | INPUT   | 0.33
+F31 | TEXT    | Aeration tank volume, V =
+H31 | FORMULA | =H29/C37 | VALUE: 8140.5
+I31 | TEXT    | m3 
+K31 | TEXT    | kg/day of BOD to aer. tank = (Peak mnthly flow)(BODi)(1 - % BOD rem. in prim. clarif.)/1000
+A33 | TEXT    | Aeration tank MLSS, X =
+C33 | INPUT   | 3500.0
+D33 | TEXT    | g/m3 
+K33 | TEXT    | Aer. tank vol. in m3  =  V  =  (kg/day of BOD to aer. tank)/VL
+F34 | TEXT    | Waste Activated Sludge
+A35 | TEXT    |       Design SRT =
+C35 | INPUT   | 13.0
+D35 | TEXT    | days
+F35 | TEXT    | TSS flow rate, mdotWAS =
+H35 | FORMULA | =(H31*C33/(1000*C35))-(C21*C41/1000) | VALUE: 1673.273077
+I35 | TEXT    | kg/d
+K35 | TEXT    | kg/day of TSS in WAS, mdotWAS  =  VMG*X/(Design SRT*1000)  -  Qm*TSSe/1000
+A36 | TEXT    | Design vol. loading 
+F36 | TEXT    | Waste Activated Sludge
+L36 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+A37 | TEXT    |    for aeration tank, VL =
+C37 | INPUT   | 0.8
+F37 | TEXT    |            Flow Rate, Qw =
+H37 | FORMULA | =H35*1000/C39 | VALUE: 167.3273077
+I37 | TEXT    | m3/d
+K37 | TEXT    | Waste Activated Sludge Flow Rate, Qw  =  mdotWAS*1000/TSSw
+A38 | TEXT    |     (kg BOD/day/m3)
+A39 | TEXT    | WAS conc., TSSW =
+C39 | INPUT   | 10000.0
+D39 | TEXT    | g/m3 
+A41 | TEXT    | Effl. TSS conc., TSSe =
+C41 | INPUT   | 20.0
+D41 | TEXT    | g/m3 
+A43 | TEXT    | Thickened Waste Activated Sludge
+A45 | TEXT    | Inputs
+F45 | TEXT    | Calculations
+M46 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+A47 | TEXT    | Conc. Of thickened sludge =
+C47 | INPUT   | 0.05
+F47 | TEXT    | TSS flow (thknd. Sludge) =
+H47 | FORMULA | =C49*H35 | VALUE: 1505.945769
+I47 | TEXT    | kg/d
+K47 | TEXT    | lb/day of TSS in thickened sludge  =  (mdotWAS)(assumed solids recovery %)
+A49 | TEXT    | Assumed solids recovery =
+C49 | INPUT   | 0.9
+F49 | TEXT    | Flow rate (thknd. Sludge) =
+H49 | FORMULA | =H47/(C47*1000) | VALUE: 30.11891538
+I49 | TEXT    | m3/d
+K49 | TEXT    | MGD of thickened sludge  =  (lb/day of TSS in thcknd sldge)/[(conc. of thcknd sldge)(8.34)(106)
+J52 | TEXT    | Reference:  Mecalf & Eddy, Inc,  Wastewater Engineering Treatment and Reuse, 4th Ed, revised by:
+K53 | TEXT    |      Tchobanoglous, G., Burton, F.L., and Stensel, D.H., McGraw Hill, 2003.
+M57 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+M66 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+M65532 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+
+--- SHEET: 3. Design Calcns ---
+A1 | TEXT    | Anaerobic Digester Calculations - S.I. units
+K1 | TEXT    | Typical Design Loading Rates for mesophilic, high-rate, complete mix Anaerobic Digesters
+M1 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+L2 | TEXT    |   (from Metcalf & Eddy reference below)
+A3 | TEXT    | 2.  Single Stage, Mesophilic, Completely Mixed Digester Design
+K3 | TEXT    | Solids Loading Rate:     1.6 - 4.8  kg VSS/day/m3  
+A5 | TEXT    | Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes
+K5 | TEXT    | Solids Retention Time:  15 - 20 days
+A7 | TEXT    | Volume Determination
+K7 | TEXT    | Typically based on peak 2 week or peak monthly influent wastewater flow rate
+M7 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+A9 | TEXT    | Choose Design Criterion (either Solids Loading Rate or Solids Retention Time)
+A10 | TEXT    | by entering either yes or no in the blue cell below:
+K10 | TEXT    | Equations Used for Calculations
+A12 | TEXT    |      Solids Loading Rate 
+C12 | TEXT    | no
+F12 | TEXT    | Solids Retention Time
+H12 | FORMULA | =IF(C12="no","yes","no") | VALUE: yes
+K12 | TEXT    | kg/day of VSS to digester  =  (kg/day TSS in prim. sldge)(% vol. solids in prim. sldge)
+A13 | TEXT    |      (kg VSS/day/m3) 
+F13 | TEXT    |         (SRT, days)
+N13 | TEXT    |                + (kg/day of thcknd WAS)(% vol. solids in WAS)
+A15 | TEXT    | Inputs
+F15 | TEXT    | Calculations
+K15 | TEXT    | For Solids Loading Rate as design criterion:
+A16 | TEXT    | % Volatile solids in 
+A17 | TEXT    |             primary sludge =
+C17 | INPUT   | 0.7
+E17 | TEXT    |      VSS flow rate to digester =
+H17 | FORMULA | =(PrimSolidsRate*C17)+(ThSlSolidsRate*C19) | VALUE: 5777.044615
+I17 | TEXT    | kg/d
+K17 | TEXT    | Digester liquid volume in m3  =  (kg/day of VSS to digester)/Solids Loading Rate
+A18 | TEXT    | % Volatile solids in 
+A19 | TEXT    |     waste activated sludge =
+C19 | INPUT   | 0.8
+E19 | TEXT    |  Total digester liquid volume =
+H19 | FORMULA | =IF(H12="no",H17/C21,(WASFlow+PrimFlow)*C21) | VALUE: 3544.831222
+I19 | TEXT    | m3 
+K19 | TEXT    | For Solids Retention Time as design criterion:
+A21 | FORMULA | =IF(H12="no","   Solids Loading Rate =","   Solids Retention Time =") | VALUE:    Solids Retention Time =
+C21 | INPUT   | 12.0
+D21 | FORMULA | =IF(H12="no"," ","days") | VALUE: days
+F21 | FORMULA | =IF(H12="no","  Solids Retention Time =","   Solids Loading Rate =") | VALUE:    Solids Loading Rate =
+H21 | FORMULA | =IF(H12="no",H19/(ThSlFlowRate+PrimFlow),H17/H19) | VALUE: 1.629709358
+I21 | FORMULA | =IF(H12="no","days"," ") | VALUE:  
+K21 | TEXT    | Digester liquid volume in m3
+A22 | FORMULA | =IF(H12="no","  (kg VSS/day/cu.m.)"," ") | VALUE:  
+F22 | FORMULA | =IF(H12="no"," ","  (kg VSS/day/cu.m.)") | VALUE:   (kg VSS/day/cu.m.)
+K22 | TEXT    |           =  (flow rate of prim. sldge + flow rate of thcknd WAS)(Solids Retention Time)
+K23 | TEXT    |    (Note that solids retention time = liquid retention time for a completely mixed reactor)
+A24 | TEXT    | Tank Dimensions
+A26 | TEXT    |        Number of tanks =
+C26 | INPUT   | 2.0
+F26 | TEXT    | Liquid volume/digester =
+H26 | FORMULA | =H19/C26 | VALUE: 1772.415611
+I26 | TEXT    | m3 
+K26 | TEXT    | Liquid volume/digester  =  (Total digester liquid volume)/(Number of tanks)
+A28 | TEXT    |       Side water depth =
+C28 | INPUT   | 10.0
+D28 | TEXT    | m
+F28 | TEXT    | Diameter of digester =
+H28 | FORMULA | =(4*H26/(PI()*C28))^0.5 | VALUE: 15.02234884
+I28 | TEXT    | m
+K28 | TEXT    | Diameter of digester  =  [(liquid volume/digester)*4/p*SWD]0.5  
+A29 | TEXT    |   (min SWD = 7.5 m; max SWD = 15 m)
+F29 | TEXT    |  (min diam = 6 m;  max diam = 38 m)
+M30 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+J31 | TEXT    | Reference:  Mecalf & Eddy, Inc,  Wastewater Engineering Treatment and Reuse, 4th Ed, revised by:
+K32 | TEXT    |      Tchobanoglous, G., Burton, F.L., and Stensel, D.H., McGraw Hill, 2003.
+M65487 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+M65502 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx
+M65528 | TEXT    | http://www.engineeringexceltemplates.com/downloads_main.aspx

@@ -1,0 +1,8 @@
+PrimFlow: '2. Sludge Quant. Calcns'!$H$23
+PeakMonthlyFlow: '2. Sludge Quant. Calcns'!$C$21
+DesAveFlow: '2. Sludge Quant. Calcns'!$C$11
+ThSlSolidsRate: '2. Sludge Quant. Calcns'!$H$47
+PrimSolidsRate: '2. Sludge Quant. Calcns'!$H$21
+WASFlow: '2. Sludge Quant. Calcns'!$H$37
+ThSlFlowRate: '2. Sludge Quant. Calcns'!$H$49
+wasSolidsRate: '2. Sludge Quant. Calcns'!$H$35

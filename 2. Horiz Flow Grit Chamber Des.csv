@@ -1,0 +1,32 @@
+Horiz. Flow Grit Chamber Design Calculations - S.I. units,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13
+,,,,,,,,,,,,,
+Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes,,,,,,,,,,Typical Values for Horizontal Flow Grit Chamber Design Parameters,,,
+,,,,,,,,,,,,,
+Inputs,,,,,,,,,,Parameter,Units,Range,Typical Value
+,,,,,,,,,,,,,
+"Design Ave Flow Rate, Q =",,10500,m3/d,,"Design Horiz. Velocity, V =",,0.3,m/s,,Detention Time,seconds,45 - 90,60
+,,,,,,,,,,,,,
+"  Peaking Factor, PF =",,2.51,,,"Design Detention Time ,t =",,60.0,sec,,Horizontal Velocity,m/s,0.25 - 0.4,0.3
+   (Peak hourly flow/Average Flow),,,,,Per Cent Additional,,,,,Added Length for,,,
+"No. of Tanks in Parallel, N =",,2,,,  length  for Inlet and Outlet =,,0.25,,,Inlet and Outlet,%,25 - 50,30
+,,,,,,,,,,,,,
+"     Tank Freeboard, DFB=",,0.3,m,,"Depth for Grit Storage, DGR=",,0.25,m,,The values in the table above are from Table 5-16 in,,,
+,,,,,,,,,,"Metcalf & Eddy, Wastewater Engineering Treatment and Resource",,,
+Calculations,,,,,,,,,,"Recovery, 5th Ed., 2014",,,
+,,,,,,,,,,,,,
+"Peak Hourly Flow Rate, Qp =",,26355,m3/d,,"        Length for Flow , Lf =",,18.0,m,,NOTE:  The next worksheet may be used to estimate the peaking,,,
+,,,,, Cross-Sectional,,,,,factor based on the design average flow rate.  If you use that,,,
+"Grit Chamber Volume, V =",,18.30208333,m3 ,,"               Area of Flow,  A =",,1.016782407,m2 ,,"worksheet, enter the result in cell C9 above left.",,,
+             (for each tank),,,,,,,,,,,,,
+"         Tank Width,  W =",,1,m,,"             Depth of Fow,  D =",,1.016782407,m,,,,,
+  (User input for value of A above right),,,,,,,,,,,,,
+"         Tank Length,  L =",,22.5,m,,"     Tank Wall Depth,  DW =",,1.566782407,m,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,   Find more Excel spreadsheets for engineering at,,,,,,,,,,,,
+,,EngineeringExcelTemplates.com,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,Copyright © 2020 Harlan H. Bengtson. All Rights Reserved.,,,,,,,,,,,,

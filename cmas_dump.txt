@@ -1,0 +1,79 @@
+=== SHEET: 1. Contents ===
+C1: Workbook Contents
+J2: NOTE:  The calculations in this workbook follows the steps used in Example  8-9 in:
+A3: Click on tabs at the bottom of the screen to access the following:
+K4:  Metcalf & Eddy, Inc, (Revised by Tchobanoglous, G, Burton, F.L., Stensel, H.D.), 
+B5: Tab 1. Contents (current tab) | K5:   Wastewater Engineering, Treatment and Reuse, 4th Ed., New York, NY, 2003.
+B7: Tab 2. CMAS - Tertiary Anoxic Denitrification
+A11: Why you shouldn’t give copies of this workbook away
+A12: We at EngineeringExcelTemplates.com hope that you find this workbook useful.  If you 
+A13: would like us to develop additional useful spreadsheets for you in the future, then encourage 
+A14: your friends and colleagues to buy their own copies, rather than allowing them to copy 
+A15: the spreadsheet you purchased.  We have deliberately set our prices so low that no one 
+A16: can really claim that they can’t afford to pay.  But low prices will work for us—that is, we 
+A17: can stay in business—only if we can sell enough copies.  Bottom line: the more you get 
+A18: other people to pay for their own copies, the more low-cost useful spreadsheets will be 
+A19: available for you in the future.
+A22: This workbook is provided "as is", without warranty of any kind, express or
+A23: implied.
+B28:        Find more Excel spreadsheets for engineering at
+D29: EngineeringExcelTemplates.com
+B32: Copyright © 2015 Harlan H. Bengtson. All Rights Reserved.
+
+=== SHEET: 2. CMAS - Tertiary Denitrif. ===
+A1: Completely Mixed Activated Sludge Denitrification Calculations - S.I. units
+A2:     Tertiary Denitrification
+A3: This spreadsheet makes the design calculations for a postanoxic, tertiary denitrification basin
+A4: to follow a treatment process that produces a nitrified effluent that serves as influent to this process.
+A5: process as shown in the diagram at the right.
+A8: Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes
+A10: User Inputs 1 - Wastewater Parameters
+A12: Design ww Flow Rate, Qo = | C12: 4000.0 | D12: m3/d | F12:  Anoxic Tank Temp., Tww = | H12: 15.0 | I12: oC
+A13:  Influent TSS, TSSo = | C13: 20.0 | D13: mg/L | E13:    Target Effl.  nitrate conc. Ne  = | H13: 2.0 | I13: mg/L
+A14: Influent NO3-N, NO3-No = | C14: 25.0 | D14: mg/L | E14:        Resid. biomass fract., fd = | H14: 0.15
+A15: Est. Effl. TSS, TSSe = | C15: 15.0 | D15: mg/L | E15: Waste/recycle A.S. conc. TSSw  = | H15: 6500.0 | I15: mg/L
+A16: User Inputs 2 - Design Parameters
+F17: Mixing energy
+A18:        Design SRT,  SRT  = | C18: 5.0 | D18: days | F18:          for anoxic reactor  = | H18: 10.0 | I18:   kW/103 m3
+A19:             Tank Freeboard  = | C19: 0.5 | D19: m | F19:  Design MLSS, MLSS = | H19: 2000.0 | I19: mg/L
+A20:          Number of Tanks = | C20: 3.0 | F20:   Reaer. Det. Time, treaer  = | H20: 15.0 | I20: min
+A21:       Liquid Depth in Tank = | C21: 5.0 | D21: m | F21:          Tank L:W ratio = | H21: 1.0
+E22:        (target L:W - only used if tank is rectangular)
+A24: User Inputs 3 - Kinetic Coefficients for Denitrification with Methanol
+F25: at 10oC | H25: at 20oC
+A26:                      Synth. Yield Coeff, YD (g VSS/g bCOD)  = | F26: 0.17 | H26: 0.18
+A27:                                   Half Veloc. Coeff., KsD  (mg/L)  = | F27: 12.6 | H27: 9.1
+A28:                Max spec. grwth rate, mmD (gVSS/d/gVSS)  = | F28: 0.52 | H28: 1.86
+A29:               Endog. decay coeff., kdD (g VSS/d/g VSS)  = | F29: 0.04 | H29: 0.05
+A30:       Max spec. substrate util. rate, k (g VSS/d/g VSS)  = | F30: 3.1 | H30: 10.3 | K30: Equations used for the calculations:  (note that conversion factors are needed in some of the equations)
+A32: Calculations - Postanoxic basin design for denitrification | L32: S = Ks[1 + (kd)SRT]/[SRT(mm - kd) - 1
+A34:   1.  Calculate kinetic coefficients at ww temperature, Tww  (by interpolation) | L34: Yn  = Y/[1 + (kd)SRT]
+A36:   Endog. decay coeff., kdD  = | C36: =F29+(H29-F29)*((Tww-10)/10) | D36:   g VSS/d/g VSS | F36:    Synth. Yield Coeff, YD  = | H36: =F26+(H26-F26)*((Tww-10)/10) | I36:   g VSS/g bCOD | L36:  bCOD/NO4-N = 2.86/(1 - 1.42Yn)
+A37: Max spec. substr. Utiliz., k  = | C37: =F30+(H30-F30)*((Tww-10)/10) | D37:   g VSS/d/g VSS | F37:   Half Veloc. Coeff., KsD  = | H37: =F27+(H27-F27)*((Tww-10)/10) | I37: mg/L
+L38: Methanol dose (as COD)  =  (bCOD/NO4-N)(NOx - Ne)
+A39:   2.  Calculate Methanol Requirement | L39: Methanol dose = Methanol dose (as COD)/(1.5 g COD/g methanol)
+A41:  Resid. Meth. Conc in effl., S: | C41: =H37*(1+(C36*C18))/(C18*((H36*C37)-C36)-1) | D41: mg/L | F41: Methanol dose (as COD) = | H41: =(C43*(C14-H13))+C41 | I41: mg/L COD | L41: Daily Methanol needed = 8.34 (Methanol dose in mg/L)Q
+B42:            Yn  = | C42: =H36/(1+(C36*C18)) | D42:  g VSS/g bCOD | F42:            Methanol dose = | H42: =H41/1.5 | I42: mg/L CH3OH
+A43:           bCOD/NO4-N = | C43: =2.86/(1-(1.43*C42)) | D43: g/g | F43: Daily Methanol needed = | H43: =H42*Qo/1000 | I43: kg/d
+A45:   3.  Calculate Anoxic Tank Volume, Dimensions and Detention Time
+B46: (User Input needed in the Blue Cells)
+A47:  Solids prod. rate, PX,TSS  = | C47: =(Qo*H36*H41/((1+(C36*C18))*0.85))+(fd*C36*C18*Qo*H36*H41/((1+(C36*C18))*0.85))+(Qo*TSSo) | D47: kg/d | E47: Min.  Anoxic Tank Volume, Van = | H47: =C47*C18/H19 | I47: m3 
+E49: Click on green box and then  on
+A50:  Min. Vol. per tank,  Vtank = | C50: =H47/C20 | D50: m3 | E50:   arrow to Select Tank Shape: | H50: rectangular
+A51: =IF(H50="cylindrical","Calculated Tank Diam.  =","  Calculated Tank Width =") | C51: =IF(H50="cylindrical",((C50/C21)*4/PI())^0.5,((C50/C21)/H21)^0.5) | D51: m | E51: =IF(H50="cylindrical","          Actual Tank Diam:","         Actual Tank Width:") | H51: 5.0 | I51: m
+A52: =IF(H50="cylindrical","","  Calculated Tank Length =") | C52: =IF(H50="cylindrical","",(C50/C21)/C51) | D52: m | E52: =IF(H50="cylindrical","    Not Used for Cylindrical:","       Actual Tank Length:") | H52: 5.0 | I52: m
+A53:            Tank Wall Height = | C53: =C21+C19 | D53: m | E53:     Actual Tank liquid Volume = | H53: =IF(H50="rectangular",C21*H51*H52,C21*PI()*(H51/2)^2) | I53: m3 
+A55:       Anoxic Det'n time,  t = | C55: =H53*C20*24/Qo | D55: hr | F55: Anoxic Tank Mixing Power = | H55: =H53*C20*H18/1000 | I55: kW
+A57:   4.  Calculate Reaeration Volume, and Dimensions
+A58:        (User Input is needed in the Blue Cells.  The shape is kept the same as the anoxic tank(s).)
+A59:  Reaertion Volume, Vreaer  = | C59: =Qo*H20/(24*60) | D59: m3  | E59:  Min. Reaer. Vol/tank, Vtank  = | H59: =C59/C20 | I59: m3 
+A60: =IF(H50="cylindrical","Calculated Tank Diam.  =","              Tank Width =") | C60: =IF(H50="cylindrical",((H59/C21)*4/PI())^0.5,H51) | D60: m | E60: =IF(H50="cylindrical","          Actual Tank Diam:","         Actual Tank Width:") | H60: 5.0 | I60: m
+A61: =IF(H50="cylindrical","","  Calculated Tank Length =") | C61: =IF(H50="cylindrical","",(H59/C60)/C21) | D61: m | E61: =IF(H50="cylindrical","    Not Used for Cylindrical:","       Actual Tank Length:") | H61: 0.7 | I61: m
+A62:            Tank Wall Height = | C62: =C21+C19 | D62: m | E62:     Actual Tank liquid Volume = | H62: =IF(H50="rectangular",C21*H60*H61,C21*PI()*(H60/2)^2) | I62: m3 
+A64:       Anoxic Det'n time,  t = | C64: =H62*C20*60*24/Qo | D64: min
+A66:   5.  Calculate Sludge Recycle Rate and Sludge Wasting Rate | K66:    Qr = Qo(MLSS - TSSo)/(TSSw - MLSS)
+A68:  A.S. Recycle Rate, Qr  = | C68: =Qo*(MLSS-TSSo)/(TSSw-MLSS) | D68: m3/d | F68:  Waste A.S. Rate, Qw2  = | H68: =((TankNumber*H53*MLSS/SRT)-(Qo*TSSe))/(TSSw-TSSe) | I68: m3/d | K68:    Qw = [(V*MLSS/SRT) - QoTSSe]/(TSSw - TSSe)
+B73:        Find more Excel spreadsheets for engineering at
+D74: EngineeringExcelTemplates.com
+B77: Copyright © 2015 Harlan H. Bengtson. All Rights Reserved.
+

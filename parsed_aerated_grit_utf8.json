@@ -1,0 +1,1133 @@
+{
+  "Contents": [
+    {
+      "row": 1,
+      "cells": [
+        {
+          "coord": "C1",
+          "value": "Workbook Contents",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "coord": "A3",
+          "value": "Click on tabs at the bottom of the screen to access the following:",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "coord": "B5",
+          "value": "Tab 1. Contents (current tab)",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "coord": "B7",
+          "value": "Tab 2. Aerated Grit Chamber Design",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "coord": "B9",
+          "value": "Tab 3. Estimation of Peaking Factor",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "coord": "A12",
+          "value": "Why you shouldn\u2019t give copies of this workbook away",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "coord": "A13",
+          "value": "We at EngineeringExcelTemplates.com hope that you find this workbook useful. \u00a0If you ",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "coord": "A14",
+          "value": "would like us to develop additional useful spreadsheets for you in the future, then encourage ",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "coord": "A15",
+          "value": "your friends and colleagues to buy their own copies, rather than allowing them to copy ",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "coord": "A16",
+          "value": "the spreadsheet you purchased. \u00a0We have deliberately set our prices so low that no one ",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "coord": "A17",
+          "value": "can really claim that they can\u2019t afford to pay. \u00a0But low prices will work for us\u2014that is, we ",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "coord": "A18",
+          "value": "can stay in business\u2014only if we can sell enough copies. \u00a0Bottom line: the more you get ",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "coord": "A19",
+          "value": "other people to pay for their own copies, the more low-cost useful spreadsheets will be ",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "cells": [
+        {
+          "coord": "A20",
+          "value": "available for you in the future.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "coord": "A23",
+          "value": "This workbook is provided \"as is\", without warranty of any kind, express or",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "coord": "A24",
+          "value": "implied.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "cells": [
+        {
+          "coord": "B30",
+          "value": "       Find more Excel spreadsheets for engineering at",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "cells": [
+        {
+          "coord": "D31",
+          "value": "EngineeringExcelTemplates.com",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "cells": [
+        {
+          "coord": "B36",
+          "value": "Copyright \u00a9 2014 Engineering Excel Templates. All Rights Reserved.",
+          "formula": null
+        }
+      ]
+    }
+  ],
+  "Aerated Grit Chamber Design": [
+    {
+      "row": 1,
+      "cells": [
+        {
+          "coord": "A1",
+          "value": "Aerated Grit Chamber Design Calculations - S.I. units",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "coord": "A3",
+          "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes",
+          "formula": null
+        },
+        {
+          "coord": "L3",
+          "value": "Aerated Grit Chambers - Typical Parameter Values",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "coord": "A5",
+          "value": "Inputs",
+          "formula": null
+        },
+        {
+          "coord": "F5",
+          "value": "Calculations",
+          "formula": null
+        },
+        {
+          "coord": "L5",
+          "value": "Parameter",
+          "formula": null
+        },
+        {
+          "coord": "M5",
+          "value": "Range",
+          "formula": null
+        },
+        {
+          "coord": "N5",
+          "value": "Typical Value",
+          "formula": null
+        },
+        {
+          "coord": "O5",
+          "value": "Unit",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "coord": "A7",
+          "value": "Design Ave Flow Rate, Q =",
+          "formula": null
+        },
+        {
+          "coord": "C7",
+          "value": 10500.0,
+          "formula": null
+        },
+        {
+          "coord": "D7",
+          "value": "m3/d",
+          "formula": null
+        },
+        {
+          "coord": "F7",
+          "value": "Peak Hourly Flow Rate, Qp =",
+          "formula": null
+        },
+        {
+          "coord": "H7",
+          "value": 34230,
+          "formula": "=C7*C9"
+        },
+        {
+          "coord": "I7",
+          "value": "m3/d",
+          "formula": null
+        },
+        {
+          "coord": "L7",
+          "value": "Detention time",
+          "formula": null
+        },
+        {
+          "coord": "M7",
+          "value": "2 - 5",
+          "formula": null
+        },
+        {
+          "coord": "N7",
+          "value": 3.0,
+          "formula": null
+        },
+        {
+          "coord": "O7",
+          "value": "min",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "coord": "L8",
+          "value": " (at peak hourly flow rate)",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "cells": [
+        {
+          "coord": "A9",
+          "value": "  Peaking Factor, PF =",
+          "formula": null
+        },
+        {
+          "coord": "C9",
+          "value": 3.26,
+          "formula": null
+        },
+        {
+          "coord": "F9",
+          "value": "Grit Chamber Volume, V =",
+          "formula": null
+        },
+        {
+          "coord": "H9",
+          "value": 71.3125,
+          "formula": "=C15*(H7/(24*60))"
+        },
+        {
+          "coord": "I9",
+          "value": "m3 ",
+          "formula": null
+        },
+        {
+          "coord": "L9",
+          "value": "Tank Depth",
+          "formula": null
+        },
+        {
+          "coord": "M9",
+          "value": "2 - 5",
+          "formula": null
+        },
+        {
+          "coord": "O9",
+          "value": "m",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "coord": "A10",
+          "value": "   (Peak hourly flow/Average Flow)",
+          "formula": null
+        },
+        {
+          "coord": "F10",
+          "value": "             (for each tank)",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 11,
+      "cells": [
+        {
+          "coord": "A11",
+          "value": "           Tank Depth, D =",
+          "formula": null
+        },
+        {
+          "coord": "C11",
+          "value": 2.5,
+          "formula": null
+        },
+        {
+          "coord": "D11",
+          "value": "m",
+          "formula": null
+        },
+        {
+          "coord": "F11",
+          "value": "         Tank Width,  W =",
+          "formula": null
+        },
+        {
+          "coord": "H11",
+          "value": 3.08355855,
+          "formula": "=((H9/C11)/C13)^(1/2)"
+        },
+        {
+          "coord": "I11",
+          "value": "m",
+          "formula": null
+        },
+        {
+          "coord": "L11",
+          "value": "Tank Width",
+          "formula": null
+        },
+        {
+          "coord": "M11",
+          "value": "2.5 - 7",
+          "formula": null
+        },
+        {
+          "coord": "O11",
+          "value": "m",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 13,
+      "cells": [
+        {
+          "coord": "A13",
+          "value": "  Length-Width Ratio , L:W =",
+          "formula": null
+        },
+        {
+          "coord": "C13",
+          "value": 3.0,
+          "formula": null
+        },
+        {
+          "coord": "F13",
+          "value": "         Tank Length,  L =",
+          "formula": null
+        },
+        {
+          "coord": "H13",
+          "value": 9.250675651,
+          "formula": "=C13*H11"
+        },
+        {
+          "coord": "I13",
+          "value": "m",
+          "formula": null
+        },
+        {
+          "coord": "L13",
+          "value": "Tank Depth",
+          "formula": null
+        },
+        {
+          "coord": "M13",
+          "value": "7.5 - 20",
+          "formula": null
+        },
+        {
+          "coord": "O13",
+          "value": "m",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "coord": "A14",
+          "value": "Design Detention Time",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 15,
+      "cells": [
+        {
+          "coord": "A15",
+          "value": "    at Peak Flow Rate, t =",
+          "formula": null
+        },
+        {
+          "coord": "C15",
+          "value": 3.0,
+          "formula": null
+        },
+        {
+          "coord": "D15",
+          "value": "min",
+          "formula": null
+        },
+        {
+          "coord": "E15",
+          "value": "     Width-Depth Ratio , W:D =",
+          "formula": null
+        },
+        {
+          "coord": "H15",
+          "value": 1.23342342,
+          "formula": "=H11/C11"
+        },
+        {
+          "coord": "I15",
+          "value": "m",
+          "formula": null
+        },
+        {
+          "coord": "L15",
+          "value": "Width:Depth ratio",
+          "formula": null
+        },
+        {
+          "coord": "M15",
+          "value": "1:1 - 5:1",
+          "formula": null
+        },
+        {
+          "coord": "N15",
+          "value": "1.5:1",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "coord": "A16",
+          "value": "Air Supply per",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "coord": "A17",
+          "value": "       Unit of Length , Qa/L =",
+          "formula": null
+        },
+        {
+          "coord": "C17",
+          "value": 0.3,
+          "formula": null
+        },
+        {
+          "coord": "D17",
+          "value": "m3/min-m",
+          "formula": null
+        },
+        {
+          "coord": "F17",
+          "value": " Required Air Supply , Qa =",
+          "formula": null
+        },
+        {
+          "coord": "H17",
+          "value": 2.775202695,
+          "formula": "=C17*H13"
+        },
+        {
+          "coord": "I17",
+          "value": "m3/min",
+          "formula": null
+        },
+        {
+          "coord": "L17",
+          "value": "Length:Width ratio",
+          "formula": null
+        },
+        {
+          "coord": "M17",
+          "value": "3:1 - 5:1",
+          "formula": null
+        },
+        {
+          "coord": "N17",
+          "value": "4:1",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 18,
+      "cells": [
+        {
+          "coord": "F18",
+          "value": "         (per tank)",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 19,
+      "cells": [
+        {
+          "coord": "A19",
+          "value": "  Number of Grit Chambers =",
+          "formula": null
+        },
+        {
+          "coord": "C19",
+          "value": 2.0,
+          "formula": null
+        },
+        {
+          "coord": "E19",
+          "value": "    Total Req. Air Supply , Qatot =",
+          "formula": null
+        },
+        {
+          "coord": "H19",
+          "value": 5.550405391,
+          "formula": "=H17*C19"
+        },
+        {
+          "coord": "I19",
+          "value": "m3/min",
+          "formula": null
+        },
+        {
+          "coord": "L19",
+          "value": "Required Air Supply",
+          "formula": null
+        },
+        {
+          "coord": "M19",
+          "value": "0.2 - 0.5",
+          "formula": null
+        },
+        {
+          "coord": "O19",
+          "value": "m3/min-m",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 20,
+      "cells": [
+        {
+          "coord": "L20",
+          "value": "  (per unit of length)",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "cells": [
+        {
+          "coord": "A22",
+          "value": "NOTES:",
+          "formula": null
+        },
+        {
+          "coord": "B22",
+          "value": "1.  The next worksheet may be used to estimate the peaking factor based on the design",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "coord": "B23",
+          "value": "      average flow rate.  If you use that worksheet, enter the result in cell C9 above.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "coord": "K24",
+          "value": "SOURCE:  The information in this table came from Table 5-17, p 389 in:",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 25,
+      "cells": [
+        {
+          "coord": "B25",
+          "value": "2.  Ranges and typical values for most of the user input parameters and some of",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        {
+          "coord": "B26",
+          "value": "     the output calculated values, are given in the table at the right.",
+          "formula": null
+        },
+        {
+          "coord": "K26",
+          "value": "Metcalf & Eddy,  Wastewater Engineering Treatment and Reuse, 4th Ed, McGraw Hill, 2003,",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "cells": [
+        {
+          "coord": "B28",
+          "value": "3. If the calculated values of W, L, and/or W:D are not acceptable (within range), the",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "cells": [
+        {
+          "coord": "B29",
+          "value": "    input value(s) of tank depth, Length:Width ratio, and/or number of grit chambers",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "cells": [
+        {
+          "coord": "B30",
+          "value": "    should be changed.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 35,
+      "cells": [
+        {
+          "coord": "B35",
+          "value": "       Find more Excel spreadsheets for engineering at",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 36,
+      "cells": [
+        {
+          "coord": "C36",
+          "value": "EngineeringExcelTemplates.com",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 41,
+      "cells": [
+        {
+          "coord": "B41",
+          "value": "Copyright \u00a9 2014 Engineering Excel Templates. All Rights Reserved.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 53,
+      "cells": [
+        {
+          "coord": "C53",
+          "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx",
+          "formula": null
+        }
+      ]
+    }
+  ],
+  "Est. of Peaking Factor": [
+    {
+      "row": 1,
+      "cells": [
+        {
+          "coord": "A1",
+          "value": "Estimation of Peaking Factor - S.I. units",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "cells": [
+        {
+          "coord": "A3",
+          "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "cells": [
+        {
+          "coord": "A5",
+          "value": "Inputs",
+          "formula": null
+        },
+        {
+          "coord": "F5",
+          "value": "Calculations",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "cells": [
+        {
+          "coord": "A7",
+          "value": "Design Ave Flow Rate, Q =",
+          "formula": null
+        },
+        {
+          "coord": "C7",
+          "value": 10500.0,
+          "formula": null
+        },
+        {
+          "coord": "D7",
+          "value": "m3/d",
+          "formula": null
+        },
+        {
+          "coord": "F7",
+          "value": "  Peaking Factor, PF =",
+          "formula": null
+        },
+        {
+          "coord": "H7",
+          "value": 3.256359608,
+          "formula": "=-(0.4343*LN(C7))+7.2776"
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "cells": [
+        {
+          "coord": "F8",
+          "value": "   (Peak hourly flow/Average Flow)",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 10,
+      "cells": [
+        {
+          "coord": "A10",
+          "value": "NOTE:  The peaking factor is calculated from the following equation:",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 12,
+      "cells": [
+        {
+          "coord": "A12",
+          "value": "  PF  =  - 0.4343 Ln(Q)  +  7.2776",
+          "formula": null
+        },
+        {
+          "coord": "E12",
+          "value": " (Q is in m3/d)",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 14,
+      "cells": [
+        {
+          "coord": "A14",
+          "value": "SOURCE:  This equation was derived using the graph shown at the right with data from:",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 16,
+      "cells": [
+        {
+          "coord": "A16",
+          "value": "Metcalf & Eddy,  Wastewater Engineering Treatment and Reuse, 4th Ed, McGraw Hill, 2003,",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 17,
+      "cells": [
+        {
+          "coord": "A17",
+          "value": "Figure 3-13, p 202.",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 22,
+      "cells": [
+        {
+          "coord": "B22",
+          "value": "       Find more Excel spreadsheets for engineering at",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 23,
+      "cells": [
+        {
+          "coord": "C23",
+          "value": "EngineeringExcelTemplates.com",
+          "formula": null
+        },
+        {
+          "coord": "M23",
+          "value": "Peaking",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 24,
+      "cells": [
+        {
+          "coord": "K24",
+          "value": "Population",
+          "formula": null
+        },
+        {
+          "coord": "L24",
+          "value": "m3/d",
+          "formula": null
+        },
+        {
+          "coord": "M24",
+          "value": "Factor",
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 26,
+      "cells": [
+        {
+          "coord": "K26",
+          "value": 5000.0,
+          "formula": null
+        },
+        {
+          "coord": "L26",
+          "value": 1892.705,
+          "formula": "=K26*0.378541"
+        },
+        {
+          "coord": "M26",
+          "value": 4.0,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 27,
+      "cells": [
+        {
+          "coord": "K27",
+          "value": 10000.0,
+          "formula": null
+        },
+        {
+          "coord": "L27",
+          "value": 3785.41,
+          "formula": "=K27*0.378541"
+        },
+        {
+          "coord": "M27",
+          "value": 3.7,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 28,
+      "cells": [
+        {
+          "coord": "B28",
+          "value": "Copyright \u00a9 2014 Engineering Excel Templates. All Rights Reserved.",
+          "formula": null
+        },
+        {
+          "coord": "K28",
+          "value": 20000.0,
+          "formula": null
+        },
+        {
+          "coord": "L28",
+          "value": 7570.82,
+          "formula": "=K28*0.378541"
+        },
+        {
+          "coord": "M28",
+          "value": 3.4,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 29,
+      "cells": [
+        {
+          "coord": "K29",
+          "value": 50000.0,
+          "formula": null
+        },
+        {
+          "coord": "L29",
+          "value": 18927.05,
+          "formula": "=K29*0.378541"
+        },
+        {
+          "coord": "M29",
+          "value": 3.0,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 30,
+      "cells": [
+        {
+          "coord": "K30",
+          "value": 100000.0,
+          "formula": null
+        },
+        {
+          "coord": "L30",
+          "value": 37854.1,
+          "formula": "=K30*0.378541"
+        },
+        {
+          "coord": "M30",
+          "value": 2.7,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 31,
+      "cells": [
+        {
+          "coord": "K31",
+          "value": 200000.0,
+          "formula": null
+        },
+        {
+          "coord": "L31",
+          "value": 75708.2,
+          "formula": "=K31*0.378541"
+        },
+        {
+          "coord": "M31",
+          "value": 2.4,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 32,
+      "cells": [
+        {
+          "coord": "K32",
+          "value": 500000.0,
+          "formula": null
+        },
+        {
+          "coord": "L32",
+          "value": 189270.5,
+          "formula": "=K32*0.378541"
+        },
+        {
+          "coord": "M32",
+          "value": 2.0,
+          "formula": null
+        }
+      ]
+    },
+    {
+      "row": 33,
+      "cells": [
+        {
+          "coord": "K33",
+          "value": 1000000.0,
+          "formula": null
+        },
+        {
+          "coord": "L33",
+          "value": 378541,
+          "formula": "=K33*0.378541"
+        },
+        {
+          "coord": "M33",
+          "value": 1.7,
+          "formula": null
+        }
+      ]
+    }
+  ]
+}

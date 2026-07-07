@@ -1,0 +1,1250 @@
+﻿
+--- Sheet: 1. Introduction ---
+C1: Value: Workbook Contents
+L1: Value: Introduction to the MBBR worksheets in this workbook:
+A3: Value: Click on tabs at the bottom of the screen to access the following:
+L3: Value: Two worksheets are provided to carry out basin sizing and aeration calculations as well as
+L4: Value: alkalinity requirements for a Pre-Anoxic Denitrification process and for a Post-Anoxic 
+B5: Value: Tab 1. Introduction (current tab)
+L5: Value: Denitrification process.  The worksheets include calculations for the BOD removal stage
+L6: Value: and nitrification stage as well as for the anoxic tank.
+B7: Value: Tab 2. Pre-Anoxic Denitrification
+L8: Value: Basin sizing is based on a carrier surface area loading rate (SALR).  For BOD removal and
+B9: Value: Tab 3. Post-Anoxic Denitrification
+L9: Value: denitrification, the design SALR value is selected by the user based on the treatment 
+L10: Value: objective, (e.g. high rate BOD removal, normal rate BOD removal, or low rate BOD removal.
+B11: Value: Tab 4. Derivation of Saturation DO vs T Equation
+L11: Value: Typical SALR values are provided on the worksheets.  For nitrification, the design SALR is 
+L12: Value: calculated from a kinetic model based on the D.O. level to be maintained in the reactor
+L13: Value: and the target effluent ammonia nitrogen concentration.
+A14: Value: Why you shouldnÆt give copies of this workbook away
+A15: Value: We at EngineeringExcelTemplates.com hope that you find this workbook useful. áIf you 
+L15: Value: Note that the estimated effluent concentration for BOD, or nitrate nitrogen from each
+A16: Value: would like us to develop additional useful spreadsheets for you in the future, then encourage 
+L16: Value: BOD removal or denitrification stage is calculated by using an estimated value for the 
+A17: Value: your friends and colleagues to buy their own copies, rather than allowing them to copy 
+L17: Value: SARR/SALR (surface area removal rate/surface area loading rate).  The estimated value
+A18: Value: the spreadsheet you purchased. áWe have deliberately set our prices so low that no one 
+L18: Value: for the SARR/SALR is based on an appropriate graph or table from one of the references 
+A19: Value: can really claim that they canÆt afford to pay. áBut low prices will work for usùthat is, we 
+L19: Value: as shown on the worksheets.
+A20: Value: can stay in businessùonly if we can sell enough copies. áBottom line: the more you get 
+A21: Value: other people to pay for their own copies, the more low-cost useful spreadsheets will be 
+L21: Value: The basin sizing calculations require values for several MBBR carrier properties:  (specific
+A22: Value: available for you in the future.
+L22: Value: surface area in m2/m3 and % void space).  Values to be used in the design calculations
+L23: Value: should come from your carrier supplier.
+A24: Value: This workbook is provided "as is", without warranty of any kind, express or
+A25: Value: implied.
+L25: Value: The aeration/blower calculations are made for a coarse bubble diffuser system.
+L26: Value: Coarse bubble diffusers are typically used, because they work better
+L27: Value: with the suspended carrier media.
+B31: Value:        Find more Excel spreadsheets for engineering at
+D32: Value: EngineeringExcelTemplates.com
+B35: Value: Copyright ⌐ 2018 Harlan H. Bengtson. All Rights Reserved.
+
+--- Sheet: 2. Pre-Anoxic Denitrif. ---
+A1: Value: MBBR Process Design Calculations - S.I. units
+M1: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A2: Value:        Pre-Anoxic Denitrification Process
+A4: Value: Instructions: Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes
+M4: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A6: Value: I. Wastewater Parameter Inputs
+M6: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A8: Value: 1. Parameters for All Three Stages
+M8: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A10: Value: Design ww Flow Rate, Qo =
+C10: Value: 760.0
+D10: Value: m3/d
+F10: Value:     Prim. Effl. BOD, So =
+H10: Value: 180.0
+I10: Value: mg/L
+A11: Value:    Prim. Effl. TKN Conc. =
+C11: Value: 25.0
+D11: Value: mg/L
+F11: Value:  Prim. Effl. NO3-N Conc. =
+H11: Value: 0.0
+I11: Value: mg/L
+A12: Value:        Peak Hour Factor =
+C12: Value: 4.0
+D12: Value:            Prim. Effl. Alkalinity =
+G12: Value: 140.0
+H12: Value:  mg/L as CaCO3
+K12: Value: Estimation of SARR/SALR Ratio:  Default data points for derivation of a SARR vs SALR
+M12: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+K13: Value: equation are provided for The denitrification and BOD removal stages.  They may be 
+A14: Value: 2. Parameters for First (Pre-Anoxic) Stage:
+K14: Value: replaced by values from user data if such data is available.
+V14: Value: NOTE:  This graph was prepared using values from a similar graph in
+F15: Value: Data points for SARR/SALR vs SALR
+V15: Value: Rusten and Paulsrud's presentation (Ref #6 below).
+A16: Value:   Target Effl. NO3-N Conc. =
+C16: Value: 9.0
+D16: Value: mg/L
+F16: Value:            SALR (g/m2/d):
+H16: Value: 0.2
+I16: Value: 0.5
+L16: Value: Typical Design Values for Carrier Surface Area Loading Rate (SALR):
+A17: Value:   Est. of NO3-N Recycle Rato:
+C17: Value: 1.5227817745803365
+F17: Value:             SARR/SALR:
+H17: Value: 0.95
+I17: Value: 0.94
+L17: Value:    (from References (2) below)
+A18: Value:   (QR/Qo) - An estimate is needed here to start
+E18: Value: (default values above are from a graph of Pre-Anoxic
+J18: Value: http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf
+L18: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A19: Value:   the iterative calculation in Sec IV below
+E19: Value:      SARR vs SALR in ref #6 below right)
+L19: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A20: Value:  Design Value of NO3-N Surface
+E20: Value:         (The graph is shown at the right.)
+A21: Value:  Area Loading Rate (SALR) =
+C21: Value: 0.9
+D21: Value: g/m2/d
+F21: Value:          Slope, SARR/SALR vs SALR:
+I21: Formula: =SLOPE(H17:I17,H16:I16)
+A22: Value: See information on typical design
+F22: Value:      Intercept, SARR/SALR vs SALR:
+I22: Formula: =INTERCEPT(H17:I17,H16:I16)
+K22: Value: http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf
+A23: Value:      values for SALR at right.
+F23: Value:                 Est. of SARR/SALR Rato =
+I23: Formula: =(I21*C21)+I22
+E24: Value:    (Surf. Area Removal Rate/Surf. Area Loading Rate)
+S24: Value:   Nitrification SARR:
+A25: Value: 3. Parameters for Second (BOD Removal) Stage:
+F26: Value: Data points for SARR/SALR vs SALR
+M26: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A27: Value:  Design Value of BOD Surface
+F27: Value:            SALR (g/m2/d):
+H27: Value: 7.5
+I27: Value: 15.0
+A28: Value:   Area Loading Rate (SALR) =
+C28: Value: 6.0
+D28: Value: g/m2/d
+F28: Value:             SARR/SALR:
+H28: Value: 0.925
+I28: Value: 0.875
+M28: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A29: Value: See information on typical design
+E29: Value: (default values above are from the table of typical values
+M29: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A30: Value:      values for SALR at right.
+E30: Value:   of % BOD removal vs SALR shown at the right from ref #2)
+M30: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A31: Value:    Est. of SARR/SALR Rato =
+C31: Formula: =(I31*C28)+I32
+F31: Value:          Slope, SARR/SALR vs SALR:
+I31: Formula: =SLOPE(H28:I28,H27:I27)
+A32: Value:    (Surf. Area Removal Rate/Surf. Area Loading Rate)
+F32: Value:      Intercept, SARR/SALR vs SALR:
+I32: Formula: =INTERCEPT(H28:I28,H27:I27)
+A34: Value: 4. Parameters for Third (Nitrification) Stage:
+M34: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+K35: Value: Nitrification SARR:
+S35: Value: Adapted from Metcalf & Eddy, 5th Ed, Fig 9-25
+A36: Value:       Min Design Temp., T =
+C36: Value: 15.0
+D36: Value: oC
+E36: Value: Target Effl NH4-N Conc, NH4-Ne  =
+H36: Value: 3.3
+I36: Value: mg/L
+K36: Value: D.O.
+L36: Value: SARRmax
+M36: Value: N @ SARRmax
+E37: Value:    Click on cell H26 and on arrow to select D.O Conc.
+K37: Value: mg/L
+L37: Value: g/m2/d
+M37: Value: mg/L
+O37: Value: The values in the table at the left come from Figure 9-25 in Metcalf & Eddy,
+F38: Value:     D.O Conc. in Reactor =
+H38: Value: 3.0
+I38: Value: mg/L
+K38: Value: 2.0
+L38: Value: 0.61
+M38: Value: 0.5
+O38: Value: Wastewater Engineering, Treatment and Resource Recovery, 5th Ed.
+A39: Value: 5. Preliminary Calculations - Design SALR value for Nitrification
+K39: Value: 3.0
+L39: Value: 0.88
+M39: Value: 0.8
+O39: Value:       The N values at SARRmax were read from Figure 9-25.  The SARRmax
+K40: Value: 4.0
+L40: Value: 1.03
+M40: Value: 1.0
+O40: Value: values were calculated for those N values using Eqn 9-48 from Metcalf & Eddy,
+A41: Value:     % NH4-N removal =
+C41: Formula: =(C11-H36)/C11
+F41: Value:   NH4-Ne @ SARRmax =
+H41: Formula: =M44
+I41: Value: mg/L
+K41: Value: 5.0
+L41: Value: 1.23
+M41: Value: 1.3
+O41: Value: 5th Ed:   SARR =  [N/(2.2 + N)]*3.3,  where N is the bulk liquid (effluent)
+A42: Value:      Maximum SARR =
+C42: Formula: =L44
+D42: Value: g/m2/d
+E42: Value: SARR @ NH4-Ne, 15oC, SARR15  =
+H42: Formula: =IF(H36>H41,C42,(H36/(2.2+H36))*3.3)
+I42: Value: g/m2/d
+K42: Value: 6.0
+L42: Value: 1.41
+M42: Value: 1.65
+O42: Value: NH4-N concentration.
+E43: Value: SARR @ NH4-Ne, T oC, SARRT  =
+H43: Formula: =H42*(C44^(C36-15))
+I43: Value: g/m2/d
+O43: Value:       SARR temperature correction coefficients being used are:  q = 1.058 for DO limited 
+A44: Value:  SARR Temp. Coeff, q  =
+C44: Formula: =IF(H36>H41,1.058,1.098)
+D44: Value:             Design Value for nitrification SALR  =
+H44: Formula: =H43/C41
+I44: Value: g/m2/d
+J44: Value: http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf
+K44: Formula: =H38
+L44: Formula: =VLOOKUP(K44,K38:M42,2)
+M44: Formula: =VLOOKUP(K44,K38:M42,3)
+O44: Value: conditions and q = 1.098 for ammonia limited conditions.  (per Salvetti et al - see ref list below)
+J45: Value: http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf
+O45: Value: SARR temperature adjustments are made with:
+S45: Value: SARRT = SARR15q(T - 15)
+A46: Value: II. Determine whether to use Pre-Anoxic or Post-Anoxic Denitrification
+O47: Value:      SALR is calculated as SARR/% removal.
+A48: Value: Carbon:Nitrogen Ratio, C/N =
+C48: Formula: =H10/C11
+E48: Formula: =IF(C48<4,"Use Worksheet 3 for Post-Anoxic",IF(C49>0.75,"Use Worksheet 3 for Post-Anoxic","Use this Worksheet for Pre-Anoxic"))
+A49: Value: Target % N removal =
+C49: Formula: =(C11-C16)/C11
+E49: Value: Denitrification calculations
+K49: Value: Criteria for Determining whether to use Pre- or Post-Denitrification:
+K50: Value:      (from references 1 and 2 below)
+A51: Value: III. Carrier and Tank Shape Parameter Inputs for all Three Stages
+K51: Value: 1.  Pre-Denitirication is suitable if  C/N  >  4  and   Target % Removal of N  <  75%
+A53: Value: Carrier Spec. Surf. Area =
+C53: Value: 500.0
+D53: Value: m2/m3 
+E53: Value: Click on green box and then  on
+K53: Value: 2.  Post-Denitirication should be used if  C/N  <  4  or   Target % Removal of N  >  75%
+A54: Value:         (from carrier mfr/vendor)
+E54: Value:   arrow to Select Tank Shape:
+H54: Value: rectangular
+A55: Value: Liquid Depth in Tank =
+C55: Value: 2.4
+D55: Value: m
+F55: Value:   Carrier % Void Space =
+H55: Value: 0.6
+A56: Value:          Tank L:W ratio =
+C56: Value: 1.5
+F56: Value:  (from carrier mfr/vendor - only needed to
+A57: Value:  (target L:W - only used if tank is rectangular)
+F57: Value:    calculate hydraulic detention time)
+G57: Value: http://www.accessengineeringlibrary.com/browse/biofilm-reactors-wef-mop-35/p2001c2fa9970211001
+H57: Value: http://www.accessengineeringlibrary.com/browse/biofilm-reactors-wef-mop-35/p2001c2fa9970211001
+A59: Value: IV. Calculation of Carrier Volume and Required Tank Volume & Dimensions
+A61: Value: 1. First Stage (Pre-Anoxic Tank) Calculations 
+F61: Value: (Carrier fill % is typically between 30% and 70%.  Lower
+F62: Value: values are more conservative, allowing future capacity
+H62: Value: http://www.accessengineeringlibrary.com/browse/biofilm-reactors-wef-mop-35/p2001c2fa9970211001
+A63: Value: Design Carrier Fill % =
+C63: Value: 0.4
+D63: Value:  (for first stage)
+F63: Value: expansion or reduction of SALR by adding more carrier.
+A64: Value:   NO3-N Daily Loading =
+C64: Formula: =(C10*H11)+(C10*C17*C16)
+D64: Value: g/day
+F64: Value:  Calculated Tank Volume =
+H64: Formula: =C66/C$63
+I64: Value: m3 
+K64: Value:     Equations used for Tank Sizing - Pre-Anoxic Stage
+A65: Value: Carrier Surf. Area needed =
+C65: Formula: =C64/C21
+D65: Value: m2 
+F65: Formula: =IF(H54="cylindrical","Calculated Tank Diam.  =","  Calculated Tank Width =")
+H65: Formula: =IF(H$54="cylindrical",((H64/C$55)*4/PI())^0.5,((H64/C$55)/C$56)^0.5)
+I65: Value: m
+A66: Value: Calculated Carrier Volume =
+C66: Formula: =C65/C53
+D66: Value: m3 
+F66: Formula: =IF(H54="cylindrical","","  Calculated Tank Length =")
+H66: Formula: =IF(H$54="cylindrical","",(H64/C$55)/H65)
+I66: Value: m
+K66: Value:    NO3-N Daily Loading = Qo*Prim Effl NO3-N + Qo*NO3-N Recycle Ratio*Target Effl NO3-N
+A67: Value:       Tank Liquid Volume =
+C67: Formula: =H64-((1-H$55)*C66)
+D67: Value: m3 
+E67: Value:     Nominal Hydraulic Retention Time at
+K67: Value:   Carrier Surf. Area needed = Nitrate Daily Loading/SALR_PreAnoxic
+F68: Value:   Design Average Flow =
+H68: Formula: =C67/(C$10/(24*60))
+I68: Value: min
+K68: Value:   Carrier Volume needed = Carrier Surf Area/Carrier Spec Surf Area
+A69: Value:   Estimate of NO3-N Surface Area
+F69: Value:       Peak Hourly Flow =
+H69: Formula: =H68/C$12
+I69: Value: min
+K69: Value:   Required Tank Volume = Carrier Volume/Des Carrier Fill PerCent
+A70: Value:        Removal Rate, SARR =
+C70: Formula: =I23*C21
+D70: Value: g/m2/d
+K70: Value:   Tank Width & Length calculated from:  Tank Volume = L*W*Liquid Depth
+A71: Value:   Req'd NO3-N Removal Rate:
+C71: Formula: =C10*(C11-C16-H36)
+D71: Value: g/day
+E71: Value:        Est. of NO3-N Removal Rate:
+H71: Formula: =C70*C65
+I71: Value: g/day
+K71: Value:   Or, Tank Diameter calculated from:  Tank Volume = (pD2/4)Liquid Depth
+A72: Value:     (for Effl. NO3-N = Target Value)
+E72: Value:        Est. Rem Rate - Req'd Rate:
+H72: Formula: =H71-C71
+I72: Value: g/day
+K73: Value:   Tank Liquid Volume = Tank Volume-((1-Carrier PerCent Void)*Carrier Volume)
+A74: Value: NOTE:  Use Excel's "Goal Seek" to find QR/Qo as follows:  Place the cursor on cell H72 and click on
+K74: Value:   Nominal HRT at Des Ave Flow = Tank Liq Vol/(WW Flow Rate/(24*60))
+A75: Value: "Goal Seek" (in the "tools" menu of older versions and under "Data - What if Analysis" in newer
+K75: Value:   Nominal HRT at Peak Hourly Flow = Hydr Det Time at Des Ave Flow/Peak Hour Factor
+A76: Value: versions of Excel).  Enter values to "Set cell:"  H72, "To value:"  0, "By changing cell:" c17, and
+K76: Value:   Estimated  SARR = SALR(SARR/SALR)
+A77: Value: click on "OK".  The calculated value of QR/Qo will appear in cell C17 and cell H72 should equal zero
+K77: Value:   Required NO3-N Removal Rate = Qo*(Prim Effl TKN - Effl N03-N - Effl NH3-N)
+A78: Value: if the process worked properly.  Note that an initial estimate of QR/Qo is needed in cell C17 to start
+K78: Value:   Estimated NO3-N Removal Rate = SARR*Carrier Surf Area
+A79: Value: the iterative process. 
+A81: Value: 2. Second Stage (BOD Removal) Calculations
+F82: Value:        Est. of Effl BOD Conc.:
+H82: Value: 10.78577899585094
+I82: Value: mg/L
+K82: Value:     Equations used for Tank Sizing - BOD Removal Stage
+A83: Value: Design Carrier Fill % =
+C83: Value: 0.7275658231587436
+D83: Value:  (for second stage)
+A84: Value:   BOD Daily Loading =
+C84: Formula: =C10*H10-(0.67*(20/7)*C71)+C10*H17*H82
+D84: Value: g/day
+F84: Value:  Calculated Tank Volume =
+H84: Formula: =C87/C$83
+I84: Value: m3 
+K84: Value:    BOD Daily Loading = (Qo*So) + (Qo*Recycle Rato*Se) - (0.67*(20/7)*NO3-N removal rate)
+F85: Formula: =IF(H54="cylindrical","Calculated Tank Diam.  =","  Calculated Tank Width =")
+H85: Formula: =IF(H$54="cylindrical",((H84/C$55)*4/PI())^0.5,((H84/C$55)/C$56)^0.5)
+I85: Value: m
+K85: Value:   Carrier Surf. Area needed = BOD Daily Loading/SALR_BOD
+A86: Value: Carrier Surf. Area needed =
+C86: Formula: =C84/C28
+D86: Value: m2 
+F86: Formula: =IF(H54="cylindrical","","  Calculated Tank Length =")
+H86: Formula: =IF(H$54="cylindrical","",(H84/C$55)/H85)
+I86: Value: m
+K86: Value:   Carrier Volume needed,  Required Tank Volume, and Tank dimensions
+A87: Value: Calculated Carrier Volume =
+C87: Formula: =C86/C$53
+D87: Value: m3 
+E87: Value:     Nominal Hydraulic Retention Time at
+K87: Value:        use the same equations shown above.
+A88: Value:          Tank Liquid Volume =
+C88: Formula: =H84-((1-H$55)*C87)
+D88: Value: m3 
+F88: Value:     Design Average Flow =
+H88: Formula: =C88/(C$10/(24*60))
+I88: Value: min
+F89: Value:        Peak Hourly Flow =
+H89: Formula: =H88/C$12
+I89: Value: min
+K89: Value:   Tank Liquid Volume, Nominal HRTs, and Estimated SARR are
+A90: Value:   Estimate of BOD Surface Area
+E90: Value:           Calculated Effl BOD Conc.:
+H90: Formula: =((C84-C92)/C10)
+I90: Value: mg/L
+K90: Value:           calculated as shown above.
+A91: Value:        Removal Rate, SARR =
+C91: Formula: =C31*C28
+D91: Value: g/m2/d
+F91: Value:   If the calculated Effl. BOD conc. Is too high, the
+K91: Value:   Estimated BOD Removal Rate = SARR*Carrier Surf Area
+A92: Value:     Est. of BOD Removal Rate:
+C92: Formula: =C91*C86
+D92: Value: g/day
+F92: Value:    design value of SALR (in cell C28) should be reduced.
+K92: Value:   Calculated Eff. BOD Conc. =  (BOD Daily Loading - BOD Removal Rate)/Qo
+D93: Value:           Estimated - Calculated Effl BOD Conc. =
+H93: Formula: =H82-H90
+I93: Value: mg/L
+A94: Value: NOTE:  Use Excel's "Goal Seek" to find BODe as follows:  Place the cursor on cell H93 and click on
+A95: Value: "Goal Seek" (in the "tools" menu of older versions and under "Data - What if Analysis" in newer
+K95: Value:     Equations used for Tank Sizing - Nitrification Stage
+A96: Value: versions of Excel).  Enter values to "Set cell:"  H93, "To value:"  0, "By changing cell:" H82, and
+A97: Value: click on "OK".  The calculated value of BODe will appear in cell H82 and cell H93 should equal zero
+K97: Value:    NH3-N Daily Loading = Qo*Prim Effl NH3-N + Qo*Recycle Ratio*Effl NH3-N
+A98: Value: if the process worked properly.  Note that an initial estimate of BODe is needed in cell H82 to start
+K98: Value:   Carrier Surf. Area needed = NH3-N Daily Loading/SALR_NH3-N
+A99: Value: the iterative process. 
+K99: Value:   Carrier Volume needed,  Required Tank Volume, and Tank dimensions
+K100: Value:        use the same equations shown above.
+A101: Value:            1st stage tank volume - 2nd stage tank volume =
+F101: Formula: =H64-H84
+A102: Value: To make the 2nd stage tank volume the same as the first stage tank volume, use
+K102: Value:   Tank Liquid Volume, Nominal HRTs, and Estimated SARR are
+A103: Value: Excel's Goal Seek process to set cell F101 equal to zero by changing the value in cell C83.
+K103: Value:           calculated as shown above.
+A104: Value: 3. Third Stage (Nitrification) Calculations
+K104: Value:   Estimated NH3-N Removal Rate = SARR*Carrier Surf Area
+F105: Value:       Tank Liquid Volume =
+H105: Formula: =H106-((1-H$55)*C109)
+I105: Value: m3 
+K105: Value:   Calculated Eff. NH3-N Conc. =  (NH3-N Daily Loading - NH3-N Removal Rate)/Qo
+A106: Value: Design Carrier Fill % =
+C106: Value: 0.6477370687252669
+D106: Value:  (for third stage)
+F106: Value:  Calculated Tank Volume =
+H106: Formula: =C109/C$106
+I106: Value: m3 
+A107: Value:   NH3-N Daily Loading =
+C107: Formula: =C10*C11+C10*C17*H36
+D107: Value: g/day
+A108: Value: Carrier Surf. Area needed =
+C108: Formula: =C107/H44
+D108: Value: m2 
+F108: Formula: =IF(H54="cylindrical","Calculated Tank Diam.  =","  Calculated Tank Width =")
+H108: Formula: =IF(H$54="cylindrical",((H106/C$55)*4/PI())^0.5,((H106/C$55)/C$56)^0.5)
+I108: Value: m
+K108: Value: Rules of Thumb for Estimating Oxygen/Air Requirements - Coarse Bubble Diffusers:
+A109: Value: Calculated Carrier Volume =
+C109: Formula: =C108/C$53
+D109: Value: m3 
+F109: Formula: =IF(H54="cylindrical","","  Calculated Tank Length =")
+H109: Formula: =IF(H$54="cylindrical","",(H106/C$55)/H108)
+I109: Value: m
+K109: Value: Source: 
+A110: Value:   Estimate of NH3-N Surface Area
+E110: Value:     Nominal Hydraulic Retention Time at
+K110: Value: http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf
+F111: Value:     Design Average Flow =
+H111: Formula: =H105/(C$10/(24*60))
+I111: Value: min
+K112: Value: 1.  The typical AOR/SOR  (or AOTE/SOTE) is 0.50 for a coarse bubble aertion system.
+A113: Value: 1st stage tank volume - 
+F113: Value:        Peak Hourly Flow =
+H113: Formula: =H111/C$12
+I113: Value: min
+N113: Value:   (or 0.33 for a fine bubble aeration system)
+A114: Value:      3rd stage tank volume =
+C114: Formula: =H64-H106
+K114: Value: 2.  The typical SOTE is 2.5% per meter of diffuser submergence for a coarse bubble system
+A115: Value: To make the 3rd stage tank volume the same as the first
+F115: Value:     Check on BOD SALR:
+H115: Formula: =C10*H90/(C108)
+I115: Value: g/m2/d
+M115: Value: (or 6.6 % per meter of diffuser submergence for a fine bubble system)
+A116: Value: stage tank volume, use Excel's Goal Seek process to set
+F116: Value:   (BOD SALR should be < 0.5 g/m2/d in order
+K116: Value: 3.  Air weighs 1.275 kg/m3 (at 0oC and 1 bar) and contains 23% oxygen by weight, thus:
+A117: Value: cell C108 to zero by changing the value in cell C100.
+F117: Value:      to achieve a good nitrification rate)
+A118: Value: V. Calculation of Oxygen/Air/Blower Requirements - BOD Removal Stage
+K118: Value: 4.  Air contains 0.293 kg of oxygen/m3.
+A120: Value: 1. Inputs:  (Values of "Rule of Thumb" Constants to be used in Calculations - See notes at right)
+K120: Value: 5. For biological treatment with SRT from 5 to 10 days, kg oxygen required /kg BOD removed
+K121: Value:       is typically in the range from 0.92 - 1.1 kg O2/kg BOD.  Higher SRT results in a higher value
+A122: Value:    O2 needed per lb BOD =
+C122: Value: 1.5
+D122: Value:  kg O2/kg BOD
+F122: Value:    Depth of Diffusers =
+H122: Value: 2.3
+I122: Value: m
+K122: Value:       of kg O2 required/kg BOD removed.  (For a very high SRT, as is typical for an MBBR process,
+A123: Value:    O2 needed per lb NH3-N =
+C123: Value: 4.57
+D123: Value:  kg O2/kg NH3-N
+F123: Value:     Normal Temperature =
+H123: Value: 0.0
+I123: Value: oC
+K123: Value:       this value would be about 1.5 kg O2/kg BOD removed.)
+A124: Value: SOTE as Function of Depth =
+C124: Value: 0.025
+D124: Value:  % per m depth
+F124: Value:          Normal Pressure =
+H124: Value: 1.0
+I124: Value: bar
+A125: Value:         AOTE/SOTE   =
+C125: Value: 0.5
+F125: Value:   Atmospheric Pressure =
+H125: Value: 1.014
+I125: Value: bar
+K125: Value: 6.  The oxidation of 1 kg of ammonia nitrogen typically requires 4.1 to 4.6 kg of oxygen.
+A126: Value: Press. Drop across Diffuser =
+C126: Value: 0.03
+D126: Value: bar
+F126: Value:       Air Density at STP  =
+H126: Value: 1.2
+I126: Value: kg/m3 
+A127: Value:         (from mfr/vendor)
+F127: Value:         O2 Content in Air =
+H127: Value: 0.277
+I127: Value: kg/m3 
+A129: Value: 2. Second Stage (BOD Removal) Calculations:
+A131: Value:   Oxygen Requirement =
+C131: Formula: =C122*C84/1000
+D131: Value: kg/day
+G131: Value:     AOTE =
+H131: Formula: =C132*C125
+K131: Value:     Equations used for Oxygen/Air/Blower Calculations
+B132: Value:     SOTE =
+C132: Formula: =C124*H122
+F132: Value:         Air Requirement =
+H132: Formula: =((C131/H131)/H127)/(24)
+I132: Value: Nm3/hr
+A133: Value:   Blower Outlet Pressure =
+C133: Formula: =H125+(C126)+(1000*9.91*H122/100000)
+D133: Value:   bar absolute
+K133: Value:    Oxygen Requirement (kg/day) = Qo(4.57(NH4-No - NH4-Ne)/(1000 g/kg)
+A135: Value: VI. Calculation of Oxygen/Air/Blower Requirements - Nitrification Stage
+K135: Value:    Pressure at Mid-Depth = Patm(100 kPa/bar)  +  [g4H2O(ddiff/2)]
+K136: Value:   AOTE = SOTE*a*F[(B(PD/Pstd)Cs - D.O.)/Css]q(tww - 20)
+A137: Value: Inputs:
+A138: Value: Std O2 transf effic, SOTE =
+C138: Value: 0.056
+F138: Value: Des. Barom. Press., Patm =
+H138: Value: 1.014
+I138: Value: bar
+A139: Value:   (from diffuser mfr or vendor)
+F139: Value:   (ambient pressue at site)
+K139: Value:   Nm3/hr = (kg/day O2/AOTE)*MWair/[O2 fract in air)(MWO2)(rair)(24 hr/day)]
+A140: Value: Diffuser Fouling Factor, F =
+C140: Value: 0.8
+F140: Value: Ratio of D.O. saturation in WW to that in clean
+A141: Value: Ratio of oxygen transfer rate in wastewater
+F141: Value:   water at same T & P, B =
+H141: Value: 1.0
+K141: Value:   m3/hr = Nm3/hr[(Tww + 273.15)/(Tnorm + 273.15)](Pnorm/PB2)
+A142: Value:   to that in clean water, a =
+C142: Value: 0.6
+F142: Value: Pressure drop across
+A143: Value:    Depth of diffuser, ddiff =
+C143: Value: 2.5
+D143: Value:    m
+F143: Value:               diffuser, DPdiff =
+H143: Value: 0.021
+I143: Value: bar
+K143: Value:   PB2 = Patm + DPdiff(100 kPa/Bar) + gH2O*ddiff
+A144: Value:    Norm. Air Density, rair =
+C144: Value: 1.275
+D144: Value: kg/m3
+F144: Value:   (from diffuser mfr or vendor)
+A145: Value:    (at 0oC, 1 bar)
+A146: Value: Calculations
+K146: Value: References for additional background information:
+A148: Value:   Oxygen Requirement =
+C148: Formula: =C10*(4.57*(C11-H36)/1000)
+D148: Value: kg/day
+F148: Value: Act O2 transf effic, AOTE =
+H148: Formula: =C138*C142*C140*(((H141*(C149/(1.014*100))*C151)-H38)/9.17)*(1.024^((C36)-20))
+K148: Value: 1. Odegaard, Hallvard, "Compact Wastewater Treatment with MBBR."  DSD International Conference
+A149: Value: Pressure at mid Depth, PD =
+C149: Formula: =(H138*100)+(9.79*C143/2)
+D149: Value: kPa
+F149: Value: Des. Air Flow Rate, Nm3/hr =
+H149: Formula: =(C148/H148)*28.97/(0.209*32*C144*24)
+I149: Value: Nm3/hr
+K149: Value: Hong Kong, 12.  11-14-2014.
+O149: Value: http://www.dsdic2014.hk/ppt/Presentation_(B4-1).pdf
+A150: Value: D.O sat'n conc. for clean water at ww
+F150: Value: Des. Air Flow Rate, m3/hr =
+H150: Formula: =H149*(H124)/(H123+273.15)*((C36+273.15)/H151)
+I150: Value: m3/hr
+A151: Value:   temp. and 1 atm,  Cs  =
+C151: Formula: =(-0.00007044*(C36^3))+(0.00765*(C36^2))-(0.4006*C36)+14.6
+D151: Value: mg/L
+E151: Value:      Blower Outlet Pressure, PB2 =
+H151: Formula: =(((H138+H143)*100)+(9.79*C143))/100
+I151: Value: bar
+K151: Value: 2. Odegaard, H., "The Moving Bed Biofilm Reactor," in Igasrashi, T, Watanabe, Y., Asano, T. and
+A152: Value:   (Derivation of equation for sat'n D.O. vs T is shown on worksheet 4)
+K152: Value: Tambo, N., Water Environmental Engineering and Reuse of Water, Hokkaido Press 1999, p 250-305.
+K153: Value: http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf
+A154: Value: VII. Calculation of Alkalinity Requirements
+K155: Value: 3. Steichen & Phillips, H., M, Black & Veach, Process and Practical Design Considerations for
+A156: Value: Input:
+B156: Value:                  Target Effluent Alkalinity =
+F156: Value: 80.0
+G156: Value: mg/L
+K156: Value: IFAS and MBBR Technologies, Headworks International Presentation, 03/18/2010
+K157: Value: http://www.headworksinternational.com/userfiles/file/Webinar/BV_Webinar_Slides.pdf
+A158: Value: Constants needed for Calculations:
+K159: Value: 4.  McQuarrie, J.P. and Boltz, J.P., Moving Bed Biofilm Reactor Technology: Process Applications,
+A160: Value:      Equiv Wt. of CaCO3 =
+C160: Value: 50.0
+D160: Value: g/equiv.
+F160: Value:      Equiv Wt. of NaHCO3 =
+H160: Value: 84.0
+I160: Value: g/equiv.
+K160: Value:      Design and Performance, Water Environment Research, Vol 83, No. 6. June 2011.
+A162: Value:        Alkalinity used for Nitrification =
+D162: Value: 7.14
+E162: Value:   g CaCO3/g NH3-N removed
+K162: Value: 5. Bjornberg, Corey,  "Moving Bed Biofilm Reactor for Nitrification/Denitrification"
+A163: Value:    Alkalinity produced by Denitrification =
+D163: Value: 3.57
+E163: Value:   g CaCO3/g NO3-N removed
+K163: Value: https://www.ndsu.edu/pubweb/nrg/outreach/Moving%20Bed%20Biofilm%20Reactor%20for%20Denitrification%20Corey.pdf
+A165: Value: Calculations
+K165: Value: 6. Rusten, B. and Paulsrud, B.,  Improved Nutrient Removal with Biofilm Reactors,
+K166: Value:       Aquateam - Norwegian Water Technology Center, Oslo, Norway.
+A167: Value:                   Alkalinity to be added =
+D167: Formula: =F156+((C11-H36)*D162)-G12-D163*(C11-C16)
+E167: Value:    mg/L as CaCO3
+A168: Value:            Daily Alkalinity Requirement =
+D168: Formula: =C10*D167/1000
+E168: Value:    kg/day as CaCO3
+K168: Value: 7. Metcalf & Eddy, "Wastewater Engineering Treatment and Resource Recovery", 5th Ed, McGraw-Hill, 2014
+A170: Value:      For sodium bicarbonate use to add alkalinity:
+K170: Value: 8. Salvetti, R., A. Azzellino, R. Canziani, and L. Bonomo (2006), "Effect of Temperature on Tertiary
+K171: Value:     Nitrification in Moving-Bed Biofilm Reactors," Water Res.,  40,  15,  298-2993.
+A172: Value:            Daily NaHCO3 Requirement =
+D172: Formula: =D168*H160/C160
+E172: Value:    kg/day NaHCO3
+K173: Value: 9. Bengtson, Harlan H., 
+M173: Value: Spreadsheets for MBBR Denitrification Design Calculations,
+K174: Value: an Amazon Kindle ebook.
+A176: Value:        Find more Excel spreadsheets for engineering at
+K176: Value: 10. Bengtson, Harlan H., 
+M176: Value: Spreadsheets for MBBR Process Design Calculations,
+B177: Value: EngineeringExcelTemplates.com
+K177: Value: available as a paperback book and as an Amazon Kindle ebook.
+K179: Value: 11. Bengtson, Harlan H., 
+M179: Value: Biological Wastewater Treatment Process Design Calculations
+A180: Value: Copyright ⌐ 2018 Harlan H. Bengtson. All Rights Reserved.
+K180: Value: available as a paperback book and as an Amazon Kindle ebook.
+A200: Value: cylindrical
+A201: Value: rectangular
+A205: Value: 2.0
+A206: Value: 3.0
+A207: Value: 4.0
+A208: Value: 5.0
+A209: Value: 6.0
+
+--- Sheet: 3. Post-Anoxic Denitrif ---
+A1: Value: MBBR Process Design Calculations - S.I. units
+A2: Value:        Post-Anoxic Denitrification Process
+A4: Value: Instructions: Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes
+A6: Value: I. Wastewater Parameter Inputs
+A8: Value: 1. Parameters for All Three Stages
+A10: Value: Design ww Flow Rate, Qo =
+C10: Value: 760.0
+D10: Value: m3/d
+F10: Value:     Prim. Effl. BOD, So =
+H10: Value: 180.0
+I10: Value: mg/L
+A11: Value:    Prim. Effl. TKN Conc. =
+C11: Value: 35.0
+D11: Value: mg/L
+F11: Value:  Prim. Effl. NO3-N Conc. =
+H11: Value: 0.0
+I11: Value: mg/L
+K11: Value: Estimation of SARR/SALR Ratio:  Default data points for derivation of a SARR vs SALR
+A12: Value:        Peak Hour Factor =
+C12: Value: 4.0
+D12: Value:            Prim. Effl. Alkalinity =
+G12: Value: 140.0
+H12: Value:  mg/L as CaCO3
+K12: Value: equation are provided for The denitrification and BOD removal stages.  They may be 
+K13: Value: replaced by values from user data if such data is available.
+A14: Value: 2. Parameters for First (BOD Removal) Stage:
+F15: Value: Data points for SARR/SALR vs SALR
+K15: Value: Typical Design Values for Carrier Surface Loading Rate (SALR):
+R15: Value:   Nitrification SARR:  ( adapted from Metcalf & Eddy, 5th Ed, Figure 9-25 )
+A16: Value: Design Value of BOD Surface
+F16: Value:            SALR (g/m2/d):
+H16: Value: 7.5
+I16: Value: 15.0
+K16: Value:    (from Reference (2) below)
+A17: Value: Area Loading Rate (SALR) =
+C17: Value: 6.0
+D17: Value: g/m2/d
+F17: Value:             SARR/SALR:
+H17: Value: 0.925
+I17: Value: 0.875
+A18: Value: See information on typical design
+E18: Value: (default values above are from the table of typical values
+A19: Value:      values for SALR at right.
+E19: Value:   of % BOD removal vs SALR shown at the right from ref #2)
+A20: Value:    Est. of SARR/SALR Rato =
+C20: Formula: =(I20*C17)+I21
+F20: Value:          Slope, SARR/SALR vs SALR:
+I20: Formula: =SLOPE(H17:I17,H16:I16)
+A21: Value:    (Surf. Area Removal Rate/Surf. Area Loading Rate)
+F21: Value:      Intercept, SARR/SALR vs SALR:
+I21: Formula: =INTERCEPT(H17:I17,H16:I16)
+A23: Value: 3. Parameters for Second (Nitrification) Stage:
+K24: Value: Nitrification SARR:
+A25: Value:     Influent NH4-N Conc. =
+C25: Value: 25.0
+D25: Value: mg/L
+E25: Value: Target Effl NH4-N Conc, NH4-Ne  =
+H25: Value: 3.3
+I25: Value: mg/L
+K25: Value: D.O.
+L25: Value: SARRmax
+M25: Value: N @ SARRmax
+A26: Value:       Min Design Temp., T =
+C26: Value: 15.0
+D26: Value: oC
+E26: Value:    Click on cell H26 and on arrow to select D.O Conc.
+K26: Value: mg/L
+L26: Value: g/m2/d
+M26: Value: mg/L
+O26: Value: The values in the table at the left come from Figure 9-25 in Metcalf & Eddy,
+F27: Value:         D.O Conc. in Reactor =
+H27: Value: 3.0
+I27: Value: mg/L
+K27: Value: 2.0
+L27: Value: 0.61
+M27: Value: 0.5
+O27: Value: Wastewater Engineering, Treatment and Resource Recovery, 5th Ed.
+A28: Value: 4. Preliminary Calculations - Design Nitrification SALR value
+K28: Value: 3.0
+L28: Value: 0.88
+M28: Value: 0.8
+O28: Value:       The N values at SARRmax were read from Figure 9-25.  The SARRmax
+K29: Value: 4.0
+L29: Value: 1.03
+M29: Value: 1.0
+O29: Value: values were calculated for those N values using Eqn 9-48 from Metcalf & Eddy,
+A30: Value:     % NH4-N removal =
+C30: Formula: =(C25-H25)/C25
+F30: Value:   NH4-Ne @ SARRmax =
+H30: Formula: =M33
+I30: Value: mg/L
+K30: Value: 5.0
+L30: Value: 1.23
+M30: Value: 1.3
+O30: Value: 5th Ed:   SARR =  [N/(2.2 + N)]*3.3,  where N is the bulk liquid (effluent)
+A31: Value:      Maximum SARR =
+C31: Formula: =L33
+D31: Value: g/m2/d
+E31: Value: SARR @ NH4-Ne, 15oC, SARR15  =
+H31: Formula: =IF(H25>H30,C31,(H25/(2.2+H25))*3.3)
+I31: Value: g/m2/d
+K31: Value: 6.0
+L31: Value: 1.41
+M31: Value: 1.65
+O31: Value: NH4-N concentration.
+E32: Value: SARR @ NH4-Ne, T oC, SARRT  =
+H32: Formula: =H31*(C33^(C26-15))
+I32: Value: g/m2/d
+O32: Value:       SARR temperature correction coefficients being used are:  q = 1.058 for DO limited 
+A33: Value:  SARR Temp. Coeff, q  =
+C33: Formula: =IF(H25>H30,1.058,1.098)
+D33: Value:             Design Value for nitrification SALR  =
+H33: Formula: =H32/C30
+I33: Value: g/m2/d
+K33: Formula: =H27
+L33: Formula: =VLOOKUP(K33,K27:M31,2)
+M33: Formula: =VLOOKUP(K33,K27:M31,3)
+O33: Value: conditions and q = 1.098 for ammonia limited conditions.  (per Salvetti et al - see ref list below)
+O34: Value: SARR temperature adjustments are made with:
+T34: Value: SARRT = SARR15q(T - 15)
+A35: Value: 5. Parameters for Third (Post-Anoxic) Stage:
+F36: Value: Data points for SARR/SALR vs SALR
+O36: Value:      SALR is calculated as SARR/% removal.
+A37: Value:   Target Effl. NO3-N Conc. =
+C37: Value: 4.0
+D37: Value: mg/L
+F37: Value:            SALR (g/m2/d):
+H37: Value: 1.0
+I37: Value: 1.8
+A38: Value: Design Value of BOD Surface
+F38: Value:             SARR/SALR:
+H38: Value: 0.9
+I38: Formula: =1.6/1.8
+A39: Value: Area Loading Rate (SALR) =
+C39: Value: 2.0
+D39: Value: g/m2/d
+F39: Value: (default values above are from a graph of
+A40: Value: See information on typical design
+F40: Value: Post-Anoxic  SARR vs SALR in ref #6 below right)
+A41: Value:      values for SALR at right.
+F41: Value:    (The graph is shown at the right.)
+A42: Value:    Est. of SARR/SALR Rato =
+C42: Formula: =(I42*C39)+I43
+F42: Value:          Slope, SARR/SALR vs SALR:
+I42: Formula: =SLOPE(H38:I38,H37:I37)
+A43: Value:    (Surf. Area Removal Rate/Surf. Area Loading Rate)
+F43: Value:      Intercept, SARR/SALR vs SALR:
+I43: Formula: =INTERCEPT(H38:I38,H37:I37)
+A45: Value: II. Determine whether to use Pre-Anoxic or Post-Anoxic Denitrification
+A47: Value: Carbon:Nitrogen Ratio, C/N =
+C47: Formula: =H10/C11
+E47: Formula: =IF(C47<4,"Use this Worksheet for Post-Anoxic",IF(C48>0.75,"Use this Worksheet for Post-Anoxic","Use Worksheet 2 for Pre-Anoxic"))
+A48: Value: Target % N removal =
+C48: Formula: =(C11-C37)/C11
+E48: Value: Denitrification calculations
+K48: Value: NOTE:  This graph was prepared using values from a similar graph in
+K49: Value: Rusten and Paulsrud's presentation (Ref #6 below).
+A50: Value: III. Carrier and Tank Shape Parameter Inputs for all Three Stages
+K51: Value: Criteria for Determining whether to use Pre- or Post-Denitrification:
+A52: Value: Carrier Spec. Surf. Area =
+C52: Value: 500.0
+D52: Value: m2/m3 
+E52: Value: Click on green box and then  on
+K52: Value:      (from references 1 and 2 below)
+A53: Value:         (from carrier mfr/vendor)
+E53: Value:   arrow to Select Tank Shape:
+H53: Value: rectangular
+A54: Value: Liquid Depth in Tank =
+C54: Value: 2.4
+D54: Value: m
+F54: Value:   Carrier % Void Space =
+H54: Value: 0.6
+K54: Value: 1.  Pre-Denitirication is suitable if  C/N  >  4  and   Target % Removal of N  <  75%
+A55: Value:          Tank L:W ratio =
+C55: Value: 1.5
+F55: Value:  (from carrier mfr/vendor - only needed to
+A56: Value:  (target L:W - only used if tank is rectangular)
+F56: Value:    calculate hydraulic detention time)
+H56: Value: http://www.accessengineeringlibrary.com/browse/biofilm-reactors-wef-mop-35/p2001c2fa9970211001
+K56: Value: 2.  Post-Denitirication should be used if  C/N  <  4  or   Target % Removal of N  >  75%
+A58: Value: IV. Calculation of Carrier Volume and Required Tank Volume & Dimensions
+K58: Value:     Equations used for Tank Sizing - BOD Removal Stage
+A60: Value: 1. First Stage (BOD Removal) Calculations 
+F60: Value: (Carrier fill % is typically between 30% and 70%.  Lower
+K60: Value:    BOD Daily Loading = (Qo*So)
+F61: Value: values are more conservative, allowing future capacity
+K61: Value:   Carrier Surf. Area needed = BOD Daily Loading/SALR_BOD
+A62: Value: Design Carrier Fill % =
+C62: Value: 0.6
+D62: Value:  (for first stage)
+F62: Value: expansion or reduction of SALR by adding more carrier.
+K62: Value:   Carrier Volume needed = Carrier Surf Area/Carrier Spec Surf Area
+A63: Value:      BOD Daily Loading =
+C63: Formula: =C$10*H10
+D63: Value: g/day
+K63: Value:   Required Tank Volume = Carrier Volume/Des Carrier Fill PerCent
+F64: Value:  Required Tank Volume =
+H64: Formula: =C66/C$62
+I64: Value: m3 
+K64: Value:   Tank Width & Length calculated from:  Tank Volume = L*W*Liquid Depth
+A65: Value: Carrier Surf. Area needed =
+C65: Formula: =C63/C17
+D65: Value: m2 
+F65: Formula: =IF(H53="cylindrical","Calculated Tank Diam.  =","  Calculated Tank Width =")
+H65: Formula: =IF(H$53="cylindrical",((H64/C$54)*4/PI())^0.5,((H64/C$54)/C$55)^0.5)
+I65: Value: m
+K65: Value:   Or, Tank Diameter calculated from:  Tank Volume = (pD2/4)Liquid Depth
+A66: Value: Calculated Carrier Volume =
+C66: Formula: =C65/C$52
+D66: Value: m3 
+F66: Formula: =IF(H53="cylindrical","","  Calculated Tank Length =")
+H66: Formula: =IF(H$53="cylindrical","",(H64/C$54)/H65)
+I66: Value: m
+A67: Value:        Tank Liquid Volume =
+C67: Formula: =H64-((1-H$54)*C66)
+D67: Value: m3 
+E67: Value:     Nominal Hydraulic Retention Time at
+K67: Value:   Tank Liquid Volume = Tank Volume-((1-Carrier PerCent Void)*Carrier Volume)
+F68: Value:     Design Average Flow =
+H68: Formula: =C67/(C$10/(24*60))
+I68: Value: min
+K68: Value:   Nominal HRT at Des Ave Flow = Tank Liq Vol/(WW Flow Rate/(24*60))
+A69: Value:   Estimate of BOD Surface Area
+F69: Value:        Peak Hourly Flow =
+H69: Formula: =H68/C$12
+I69: Value: min
+K69: Value:   Nominal HRT at Peak Hourly Flow = Hydr Det Time at Des Ave Flow/Peak Hour Factor
+A70: Value:        Removal Rate, SARR =
+C70: Formula: =C20*C17
+D70: Value: g/m2/d
+E70: Value:           Calculated Effl BOD Conc.:
+H70: Formula: =(C63-C71)/C10
+I70: Value: mg/L
+K70: Value:   Estimated  SARR = SALR(SARR/SALR)
+A71: Value:     Est. of BOD Removal Rate:
+C71: Formula: =C70*C65
+D71: Value: g/day
+F71: Value:   If the calculated Effl. BOD conc. Is too high, the
+K71: Value:   Estimated BOD Removal Rate = SARR*Carrier Surf Area
+F72: Value: design value of SALR (in cell C17) should be reduced.
+K72: Value:   Calculated Eff. BOD Conc. =  (BOD Daily Loading - BOD Removal Rate)/Qo
+A74: Value: 2. Second Stage (Nitrification) Calculations 
+K74: Value:     Equations used for Tank Sizing - Nitrification Stage
+A76: Value: Design Carrier Fill % =
+C76: Value: 0.6999925966356966
+D76: Value:  (for second stage)      Tank Liquid Volume =
+H76: Formula: =H77-((1-H$54)*C80)
+I76: Value: m3 
+K76: Value:    NH3-N Daily Loading = Qo*Prim Effl NH3-N
+A77: Value:   NH3-N Daily Loading =
+C77: Formula: =C$10*(C11)
+D77: Value: g/day
+F77: Value:  Required Tank Volume =
+H77: Formula: =C80/C$76
+I77: Value: m3 
+K77: Value:   Carrier Surf. Area needed = NH3-N Daily Loading/SALR_NH3-N
+F78: Formula: =IF(H53="cylindrical","Calculated Tank Diam.  =","  Calculated Tank Width =")
+H78: Formula: =IF(H$53="cylindrical",((H77/C$54)*4/PI())^0.5,((H77/C$54)/C$55)^0.5)
+I78: Value: m
+K78: Value:   Carrier Volume needed,  Required Tank Volume, and Tank dimensions
+A79: Value: Carrier Surf. Area needed =
+C79: Formula: =C77/H33
+D79: Value: m2 
+F79: Formula: =IF(H53="cylindrical","","  Calculated Tank Length =")
+H79: Formula: =IF(H$53="cylindrical","",(H77/C$54)/H78)
+I79: Value: m
+K79: Value:        use the same equations shown above.
+A80: Value: Calculated Carrier Volume =
+C80: Formula: =C79/C$52
+D80: Value: m3 
+E81: Value:     Nominal Hydraulic Retention Time at
+K81: Value:   Tank Liquid Volume, Nominal HRTs, and Estimated SARR are
+A82: Value: 1st stage tank volume - 
+F82: Value:     Design Average Flow =
+H82: Formula: =H76/(C$10/(24*60))
+I82: Value: min
+K82: Value:           calculated as shown above.
+A83: Value:      - 2nd stage tank volume =
+C83: Formula: =H64-H77
+F83: Value:        Peak Hourly Flow =
+H83: Formula: =H82/C$12
+I83: Value: min
+K83: Value:   Estimated NH3-N Removal Rate = SARR*Carrier Surf Area
+A84: Value: To make the 2nd stage tank volume the same as the
+K84: Value:   Calculated Eff. NH3-N Conc. =  (NH3-N Daily Loading - NH3-N Removal Rate)/Qo
+A85: Value: first stage, use Excel's Goal Seek process to set cell
+F85: Value:      Check on BOD SALR:
+H85: Formula: =C10*H70/(C79)
+I85: Value: g/m2/d
+A86: Value: C83 equal to zero by changing the value in cell C76.
+F86: Value:   (BOD SALR should be < 0.5 g/m2/d in order
+F87: Value:      to achieve a good nitrification rate)
+A88: Value: 3. Third Stage (Post-Anoxic) Calculations 
+K88: Value:     Equations used for Tank Sizing - Post-Anoxic Stage
+A90: Value: Design Carrier Fill % =
+C90: Value: 0.3169999849606866
+D90: Value:  (for third stage)     Required Tank Volume =
+H90: Formula: =C93/C$90
+I90: Value: m3 
+K90: Value:    NO3-N Daily Loading = Qo*Prim Effl NO3-N 
+A91: Value:   NO3-N Daily Loading =
+C91: Formula: =C$10*(C11-H25)
+D91: Value: g/day
+F91: Formula: =IF(H79="cylindrical","Calculated Tank Diam.  =","  Calculated Tank Width =")
+H91: Formula: =IF(H$53="cylindrical",((H90/C$54)*4/PI())^0.5,((H90/C$54)/C$55)^0.5)
+I91: Value: m
+K91: Value:   Carrier Surf. Area needed = Nitrate Daily Loading/SALR_PreAnoxic
+A92: Value: Carrier Surf. Area needed =
+C92: Formula: =C91/C39
+D92: Value: m2 
+F92: Formula: =IF(H79="cylindrical","","  Calculated Tank Length =")
+H92: Formula: =IF(H$53="cylindrical","",(H90/C$54)/H91)
+I92: Value: m
+K92: Value:   Carrier Volume needed,  Required Tank Volume, and Tank dimensions
+A93: Value: Calculated Carrier Volume =
+C93: Formula: =C92/C$52
+D93: Value: m3 
+E93: Value:     Nominal Hydraulic Retention Time at
+K93: Value:        use the same equations shown above.
+A94: Value:      Tank Liquid Volume =
+C94: Formula: =H90-((1-H$54)*C93)
+D94: Value: m3 
+F94: Value:     Design Average Flow =
+H94: Formula: =C94/(C$10/(24*60))
+I94: Value: min
+A95: Value:   Estimate of NO3-N Surface Area
+F95: Value:        Peak Hourly Flow =
+H95: Formula: =H94/C$12
+I95: Value: min
+K95: Value:   Tank Liquid Volume, Nominal HRTs, and Estimated SARR are
+A96: Value:        Removal Rate, SARR =
+C96: Formula: =C42*C39
+D96: Value: g/m2/d
+E96: Value:        Calculated Effl NO3-N Conc.:
+H96: Formula: =(C91-C97)/C10
+I96: Value: mg/L
+K96: Value:           calculated as shown above.
+A97: Value:   Est. of NO3-N Removal Rate:
+C97: Formula: =C96*C92
+D97: Value: g/day
+F97: Value:   If the calculated Effl. NO3-N conc. Is
+K97: Value:   Required NO3-N Removal Rate = Qo*(Prim Effl TKN - Effl N03-N - Effl NH3-N)
+A98: Value: 1st stage tank volume - 
+F98: Value:     too high, the design value of SALR
+K98: Value:   Estimated NO3-N Removal Rate = SARR*Carrier Surf Area
+A99: Value:      3rd stage tank volume =
+C99: Formula: =H64-H90
+F99: Value:     (in cell C36) should be reduced.
+K99: Value:   Calculated Eff. NO3-N Conc. =  (NO3-N Daily Loading - NO3-N Removal Rate)/Qo
+A100: Value: To make the 3rd stage tank volume the same as the first
+A101: Value: stage tank volume, use Excel's Goal Seek process to set
+A102: Value: cell C99 equal to zero by changing the value in cell C90.
+K102: Value: Rules of Thumb for Estimating Oxygen/Air Requirements - Coarse Bubble Diffusers:
+K103: Value: Source: 
+A104: Value: V. Calculation of Oxygen/Air/Blower Requirements - BOD Removal Stage
+K104: Value: http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf
+A106: Value: 1. Inputs:  (Values of "Rule of Thumb" Constants to be used in Calculations - See notes at right)
+K106: Value: 1.  The typical AOR/SOR  (or AOTE/SOTE) is 0.50 for a coarse bubble aertion system.
+N107: Value:   (or 0.33 for a fine bubble aeration system)
+A108: Value:    O2 needed per kg BOD =
+C108: Value: 1.5
+D108: Value:  kg O2/kg BOD
+F108: Value:    Depth of Diffusers =
+H108: Value: 2.3
+I108: Value: m
+K108: Value: 2.  The typical SOTE is 2.5% per meter of diffuser submergence for a coarse bubble system
+A109: Value:    O2 needed per lb NH3-N =
+C109: Value: 4.57
+D109: Value:  kg O2/kg NH3-N
+F109: Value:     Normal Temperature =
+H109: Value: 0.0
+I109: Value: oC
+M109: Value: (or 6.6 % per meter of diffuser submergence for a fine bubble system)
+A110: Value: SOTE as Function of Depth =
+C110: Value: 0.025
+D110: Value:  % per m depth
+F110: Value:          Normal Pressure =
+H110: Value: 1.0
+I110: Value: bar
+K110: Value: 3.  Air weighs 1.275 kg/m3 (at 0oC and 1 bar) and contains 23% oxygen by weight, thus:
+A111: Value:         AOTE/SOTE   =
+C111: Value: 0.5
+F111: Value:   Atmospheric Pressure =
+H111: Value: 1.014
+I111: Value: bar
+A112: Value: Press. Drop across Diffuser =
+C112: Value: 0.03
+D112: Value: bar
+F112: Value:       Air Density at STP  =
+H112: Value: 1.2
+I112: Value: kg/m3 
+K112: Value: 4.  Air contains 0.293 kg of oxygen/m3.
+A113: Value:         (from mfr/vendor)
+F113: Value:         O2 Content in Air =
+H113: Value: 0.277
+I113: Value: kg/m3 
+K114: Value: 5. For biological treatment with SRT from 5 to 10 days, kg oxygen required /kg BOD removed
+A115: Value: 2. First Stage (BOD Removal) Calculations:
+K115: Value:       is typically in the range from 0.92 - 1.1 kg O2/kg BOD.  Higher SRT results in a higher value
+K116: Value:       of kg O2 required/kg BOD removed.  (For a very high SRT, as is typical for an MBBR process,
+A117: Value:   Oxygen Requirement =
+C117: Formula: =C108*C63/1000
+D117: Value: kg/day
+G117: Value:     AOTE =
+H117: Formula: =C118*C111
+K117: Value:       this value would be about 1.5 kg O2/kg BOD removed.)
+B118: Value:     SOTE =
+C118: Formula: =C110*H108
+F118: Value:         Air Requirement =
+H118: Formula: =((C117/H117)/H113)/(24)
+I118: Value: Nm3/hr
+A119: Value:   Blower Outlet Pressure =
+C119: Formula: =H111+(C112)+(1000*9.81*H108/100000)
+D119: Value:   bar absolute
+K119: Value: 6.  The oxidation of 1 kg of ammonia nitrogen typically requires 4.1 to 4.6 kg of oxygen.
+A121: Value: VI. Calculation of Oxygen/Air/Blower Requirements - Nitrification Stage
+K122: Value: References for additional background information:
+A123: Value: Inputs:
+A124: Value: Std O2 transf effic, SOTE =
+C124: Value: 0.056
+F124: Value: Des. Barom. Press., Patm =
+H124: Value: 1.014
+I124: Value: bar
+K124: Value: 1. Odegaard, Hallvard, "Compact Wastewater Treatment with MBBR."  DSD International Conference
+A125: Value:   (from diffuser mfr or vendor)
+F125: Value:   (ambient pressue at site)
+K125: Value: Hong Kong, 12.  11-14-2014.
+O125: Value: http://www.dsdic2014.hk/ppt/Presentation_(B4-1).pdf
+A126: Value: Diffuser Fouling Factor, F =
+C126: Value: 0.8
+F126: Value: Ratio of D.O. saturation in WW to that in clean
+A127: Value: Ratio of oxygen transfer rate in wastewater
+F127: Value:   water at same T & P, B =
+H127: Value: 1.0
+K127: Value: 2. Odegaard, H., "The Moving Bed Biofilm Reactor," in Igasrashi, T, Watanabe, Y., Asano, T. and
+A128: Value:   to that in clean water, a =
+C128: Value: 0.6
+F128: Value: Pressure drop across
+K128: Value: Tambo, N., Water Environmental Engineering and Reuse of Water, Hokkaido Press 1999, p 250-305.
+A129: Value:    Depth of diffuser, ddiff =
+C129: Value: 2.5
+D129: Value:    m
+F129: Value:               diffuser, DPdiff =
+H129: Value: 0.021
+I129: Value: bar
+K129: Value: http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf
+A130: Value:    Std. Air Density, rair =
+C130: Value: 1.2
+D130: Value: kg/m3
+F130: Value:   (from diffuser mfr or vendor)
+A131: Value:    (at 0oC, 1 bar)
+K131: Value: 3. Steichen & Phillips, H., M, Black & Veach, Process and Practical Design Considerations for
+A132: Value: Calculations
+K132: Value: IFAS and MBBR Technologies, Headworks International Presentation, 03/18/2010
+K133: Value: http://www.headworksinternational.com/userfiles/file/Webinar/BV_Webinar_Slides.pdf
+A134: Value:   Oxygen Requirement =
+C134: Formula: =C10*(4.57*(C25-H25)/1000)
+D134: Value: kg/day
+F134: Value: Act O2 transf effic, AOTE =
+H134: Formula: =C124*C128*C126*(((H127*(C135/(1.014*100))*C137)-H30)/9.17)*(1.024^((C28)-20))
+A135: Value: Pressure at mid Depth, PD =
+C135: Formula: =(H124*100)+(9.79*C129/2)
+D135: Value: kPa
+F135: Value: Des. Air Flow Rate, Nm3/hr =
+H135: Formula: =(C134/H134)*28.97/(0.209*32*C130*24)
+I135: Value: Nm3/hr
+K135: Value: 4.  McQuarrie, J.P. and Boltz, J.P., Moving Bed Biofilm Reactor Technology: Process Applications,
+A136: Value: D.O sat'n conc. for clean water at ww
+F136: Value: Des. Air Flow Rate, m3/hr =
+H136: Formula: =H135*(H110)/(H109+273.15)*((C26+273.15)/H137)
+I136: Value: m3/hr
+K136: Value:      Design and Performance, Water Environment Research, Vol 83, No. 6. June 2011.
+M136: Value: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A137: Value:   temp. and 1 atm,  Cs  =
+C137: Formula: =(-0.00007044*(C26^3))+(0.00765*(C26^2))-(0.4006*C26)+14.6
+D137: Value: mg/L
+E137: Value:      Blower Outlet Pressure, PB2 =
+H137: Formula: =(((H124+H129)*100)+(9.79*C129))/100
+I137: Value: bar
+A138: Value:   (Derivation of equation for sat'n D.O. vs T is shown on worksheet 4)
+K138: Value: 5. Bjornberg, Corey,  "Moving Bed Biofilm Reactor for Nitrification/Denitrification"
+K139: Value: https://www.ndsu.edu/pubweb/nrg/outreach/Moving%20Bed%20Biofilm%20Reactor%20for%20Denitrification%20Corey.pdf
+A141: Value: VII. Calculation of Alkalinity Requirements
+K141: Value: 6. Rusten, B. and Paulsrud, B.,  Improved Nutrient Removal with Biofilm Reactors,
+K142: Value:       Aquateam - Norwegian Water Technology Center, Oslo, Norway.
+A143: Value: Input:
+B143: Value:                  Target Effluent Alkalinity =
+F143: Value: 80.0
+G143: Value: mg/L
+A145: Value: Constants needed for Calculations:
+K145: Value: Source for information about Carbon Sources for Denitrification and Required Dosages:
+K146: Value: https://www.werf.org/c/KnowledgeAreas/NutrientRemoval/compendium/05-Tertiary_Denitrification_Processes.aspx
+A147: Value:      Equiv Wt. of CaCO3 =
+C147: Value: 50.0
+D147: Value: g/equiv.
+F147: Value:      Equiv Wt. of NaHCO3 =
+H147: Value: 84.0
+I147: Value: g/equiv.
+A149: Value:        Alkalinity used for Nitrification =
+D149: Value: 7.14
+E149: Value:   g CaCO3/g NH3-N removed
+A150: Value:    Alkalinity produced by Denitrification =
+D150: Value: 3.57
+E150: Value:   g CaCO3/g NO3-N removed
+K150: Value:        Find more Excel spreadsheets for engineering at
+M151: Value: EngineeringExcelTemplates.com
+A152: Value: Calculations
+A154: Value:                   Alkalinity to be added =
+D154: Formula: =F143+((C11-H25)*D149)-G12-D150*(C11-H96)
+E154: Value:    mg/L as CaCO3
+K154: Value: Copyright ⌐ 2018 Engineering Excel Templates. All Rights Reserved.
+A155: Value:            Daily Alkalinity Requirement =
+D155: Formula: =C10*D154/1000
+E155: Value:    kg/day as CaCO3
+A157: Value:      For sodium bicarbonate use to add alkalinity:
+A159: Value:            Daily NaHCO3 Requirement =
+D159: Formula: =D155*H147/C147
+E159: Value:    kg/day NaHCO3
+A161: Value: VII. Calculation of Carbon Source Requirements
+A163: Value: Inputs:
+B163: Value:                     Carbon Source to be used:
+F163: Value: Methanol
+B164: Value: COD Requirement for Denitrification =
+F164: Value: 4.6
+G164: Value:   kg COD/kg NO3-N removed
+B165: Value:       COD Content of Carbon Source =
+F165: Value: 1.5
+G165: Value:   kg COD/kg Carbon Source
+A167: Value: Calculations
+A169: Value:                   Carbon Source Dosage =
+D169: Formula: =F164/F165
+E169: Value:   kg Carbon Source/kg NO3-N removed
+A170: Value:      Daily Carbon Source Requirement =
+D170: Formula: =C91*D169/1000
+E170: Value:    kg/day
+A200: Value: cylindrical
+A201: Value: rectangular
+A205: Value: 2.0
+A206: Value: 3.0
+A207: Value: 4.0
+A208: Value: 5.0
+A209: Value: 6.0
+
+--- Sheet: 4. Satn DO vs T ---
+B3: Value: Derivation of Equation for Saturation DO Concentration at WW Temperature:
+C5: Value: Sat'n DO
+B6: Value: T, oC
+C6: Value: mg/L
+B7: Value: 0.0
+C7: Value: 14.62
+B8: Value: 1.0
+C8: Value: 14.22
+B9: Value: 2.0
+C9: Value: 13.83
+B10: Value: 3.0
+C10: Value: 13.46
+B11: Value: 4.0
+C11: Value: 13.11
+B12: Value: 5.0
+C12: Value: 12.77
+B13: Value: 6.0
+C13: Value: 12.45
+B14: Value: 7.0
+C14: Value: 12.14
+B15: Value: 8.0
+C15: Value: 11.84
+B16: Value: 9.0
+C16: Value: 11.56
+B17: Value: 10.0
+C17: Value: 11.29
+B18: Value: 11.0
+C18: Value: 11.03
+B19: Value: 12.0
+C19: Value: 10.78
+B20: Value: 13.0
+C20: Value: 10.54
+B21: Value: 14.0
+C21: Value: 10.3
+B22: Value: 15.0
+C22: Value: 10.08
+B23: Value: 16.0
+C23: Value: 9.87
+B24: Value: 17.0
+C24: Value: 9.66
+D24: Value:              Source for DO vs T data:    USGS website at:
+B25: Value: 18.0
+C25: Value: 9.47
+B26: Value: 19.0
+C26: Value: 9.28
+E26: Value: http://water.usgs.gov/software/DOTABLES/
+B27: Value: 20.0
+C27: Value: 9.09
+B28: Value: 21.0
+C28: Value: 8.92
+B29: Value: 22.0
+C29: Value: 8.74
+B30: Value: 23.0
+C30: Value: 8.58
+B31: Value: 24.0
+C31: Value: 8.42
+B32: Value: 25.0
+C32: Value: 8.26
+B33: Value: 26.0
+C33: Value: 8.11
+B34: Value: 27.0
+C34: Value: 7.97
+B35: Value: 28.0
+C35: Value: 7.83
+B36: Value: 29.0
+C36: Value: 7.69
+B37: Value: 30.0
+C37: Value: 7.56
+B38: Value: 31.0
+C38: Value: 7.43
+B39: Value: 32.0
+C39: Value: 7.3
+B40: Value: 33.0
+C40: Value: 7.18
+B41: Value: 34.0
+C41: Value: 7.06
+B42: Value: 35.0
+C42: Value: 6.95

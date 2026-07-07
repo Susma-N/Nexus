@@ -1,0 +1,6128 @@
+{
+  "1. Contents": [
+    {
+      "coord": "C1",
+      "value": "Workbook Contents"
+    },
+    {
+      "coord": "I2",
+      "value": "NOTE:  The calculations in these worksheets follow the steps used in Examples 8-3, 8-7, 8-10 and 8-13 in:"
+    },
+    {
+      "coord": "A3",
+      "value": "Click on tabs at the bottom of the screen to access the following:"
+    },
+    {
+      "coord": "K4",
+      "value": " Metcalf & Eddy/Aecom, Wastewater Engineering Treatment and Resource Recovery, "
+    },
+    {
+      "coord": "B5",
+      "value": "Tab 1. Contents (current tab)"
+    },
+    {
+      "coord": "K5",
+      "value": "  5th Ed., McGraw-Hill, 20014."
+    },
+    {
+      "coord": "B7",
+      "value": "Tab 2. User Inputs and Constants"
+    },
+    {
+      "coord": "B9",
+      "value": "Tab 3. CMAS - Nitrification (and BOD Removal)"
+    },
+    {
+      "coord": "B11",
+      "value": "Tab 4. CMAS - Pre-Anoxic Denitrification"
+    },
+    {
+      "coord": "B13",
+      "value": "Tab 5. A2O EBPR Process"
+    },
+    {
+      "coord": "B15",
+      "value": "Tab 6. CMAS - Post-Anoxic Denitrification"
+    },
+    {
+      "coord": "B17",
+      "value": "Tab 7. rbCOD/P vs VFA/rbCOD Equation"
+    },
+    {
+      "coord": "A22",
+      "value": "Why you shouldn\u2019t give copies of this workbook away"
+    },
+    {
+      "coord": "A23",
+      "value": "We at EngineeringExcelTemplates.com hope that you find this workbook useful. \u00a0If you "
+    },
+    {
+      "coord": "A24",
+      "value": "would like us to develop additional useful spreadsheets for you in the future, then encourage "
+    },
+    {
+      "coord": "A25",
+      "value": "your friends and colleagues to buy their own copies, rather than allowing them to copy "
+    },
+    {
+      "coord": "A26",
+      "value": "the spreadsheet you purchased. \u00a0We have deliberately set our prices so low that no one "
+    },
+    {
+      "coord": "A27",
+      "value": "can really claim that they can\u2019t afford to pay. \u00a0But low prices will work for us\u2014that is, we "
+    },
+    {
+      "coord": "A28",
+      "value": "can stay in business\u2014only if we can sell enough copies. \u00a0Bottom line: the more you get "
+    },
+    {
+      "coord": "A29",
+      "value": "other people to pay for their own copies, the more low-cost useful spreadsheets will be "
+    },
+    {
+      "coord": "A30",
+      "value": "available for you in the future."
+    },
+    {
+      "coord": "A33",
+      "value": "This workbook is provided \"as is\", without warranty of any kind, express or"
+    },
+    {
+      "coord": "A34",
+      "value": "implied."
+    },
+    {
+      "coord": "B41",
+      "value": "       Find more Excel spreadsheets for engineering at"
+    },
+    {
+      "coord": "D42",
+      "value": "EngineeringExcelTemplates.com"
+    },
+    {
+      "coord": "B45",
+      "value": "Copyright \u00a9 2020 Harlan H. Bengtson. All Rights Reserved."
+    }
+  ],
+  "2. User Inputs and Constants": [
+    {
+      "coord": "A1",
+      "value": "Completely Mixed Activated Sludge Design Calculations - S.I. units"
+    },
+    {
+      "coord": "J1",
+      "value": "     Activated Sludge Kinetic Coefficients for heterotrophic bacteria at 20oC (for BOD removal)"
+    },
+    {
+      "coord": "A2",
+      "value": "   User Inputs"
+    },
+    {
+      "coord": "A3",
+      "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+    },
+    {
+      "coord": "K3",
+      "value": "Coefficient"
+    },
+    {
+      "coord": "M3",
+      "value": "Unit"
+    },
+    {
+      "coord": "O3",
+      "value": "Typical Value"
+    },
+    {
+      "coord": "Q3",
+      "value": "Range*"
+    },
+    {
+      "coord": "L4",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A5",
+      "value": "User Inputs - Wastewater Parameters/Characteristics"
+    },
+    {
+      "coord": "K5",
+      "value": "                 mm"
+    },
+    {
+      "coord": "M5",
+      "value": "kg VSS/day/kg VSS"
+    },
+    {
+      "coord": "O5",
+      "value": "6.0"
+    },
+    {
+      "coord": "Q5",
+      "value": "3.0 - 13.2"
+    },
+    {
+      "coord": "A7",
+      "value": "Design ww Flow Rate, Qo ="
+    },
+    {
+      "coord": "C7",
+      "value": "4000.0"
+    },
+    {
+      "coord": "D7",
+      "value": "m3/d"
+    },
+    {
+      "coord": "F7",
+      "value": " Prim. Effl. TSS, TSSo ="
+    },
+    {
+      "coord": "H7",
+      "value": "70.0"
+    },
+    {
+      "coord": "I7",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K7",
+      "value": "                 Ks"
+    },
+    {
+      "coord": "M7",
+      "value": "mg/L bCOD"
+    },
+    {
+      "coord": "O7",
+      "value": "8.0"
+    },
+    {
+      "coord": "Q7",
+      "value": "5.0 - 40.0"
+    },
+    {
+      "coord": "F8",
+      "value": " Prim. Effl. VSS, VSSo ="
+    },
+    {
+      "coord": "H8",
+      "value": "60.0"
+    },
+    {
+      "coord": "I8",
+      "value": "mg/L"
+    },
+    {
+      "coord": "A9",
+      "value": "  Prim. Effl. BOD, BODo ="
+    },
+    {
+      "coord": "C9",
+      "value": "160.0"
+    },
+    {
+      "coord": "D9",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K9",
+      "value": "   Y"
+    },
+    {
+      "coord": "M9",
+      "value": "kg VSS/day/kg bCOD"
+    },
+    {
+      "coord": "O9",
+      "value": "0.45"
+    },
+    {
+      "coord": "Q9",
+      "value": "0.30 - 0.50"
+    },
+    {
+      "coord": "A10",
+      "value": "          sBOD, sBODo ="
+    },
+    {
+      "coord": "C10",
+      "value": "70.0"
+    },
+    {
+      "coord": "D10",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F10",
+      "value": " Prim. Effl. Acetate, VFAo ="
+    },
+    {
+      "coord": "H10",
+      "value": "15.0"
+    },
+    {
+      "coord": "I10",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F11",
+      "value": " Prim. Effl. TKN, TKNo ="
+    },
+    {
+      "coord": "H11",
+      "value": "35.0"
+    },
+    {
+      "coord": "I11",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K11",
+      "value": "                 kd"
+    },
+    {
+      "coord": "M11",
+      "value": "kg VSS/day/kg VSS"
+    },
+    {
+      "coord": "O11",
+      "value": "0.12"
+    },
+    {
+      "coord": "Q11",
+      "value": "0.06 - 0.20"
+    },
+    {
+      "coord": "A12",
+      "value": "  Prim. Effl. COD, CODo ="
+    },
+    {
+      "coord": "C12",
+      "value": "300.0"
+    },
+    {
+      "coord": "D12",
+      "value": "mg/L"
+    },
+    {
+      "coord": "E12",
+      "value": "   TKN peak/ave factor , FS ="
+    },
+    {
+      "coord": "H12",
+      "value": "1.5"
+    },
+    {
+      "coord": "M12",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A13",
+      "value": "          sCOD, sCODo ="
+    },
+    {
+      "coord": "C13",
+      "value": "132.0"
+    },
+    {
+      "coord": "D13",
+      "value": "mg/L"
+    },
+    {
+      "coord": "E13",
+      "value": "   Prim. Effl. NH4-N, NH4-No ="
+    },
+    {
+      "coord": "H13",
+      "value": "25.0"
+    },
+    {
+      "coord": "I13",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K13",
+      "value": "                 fd"
+    },
+    {
+      "coord": "M13",
+      "value": "dimensionless"
+    },
+    {
+      "coord": "O13",
+      "value": "0.15"
+    },
+    {
+      "coord": "Q13",
+      "value": "0.08 - 0.20"
+    },
+    {
+      "coord": "A14",
+      "value": "          rbCOD, rbCODo ="
+    },
+    {
+      "coord": "C14",
+      "value": "75.0"
+    },
+    {
+      "coord": "D14",
+      "value": "mg/L"
+    },
+    {
+      "coord": "E14",
+      "value": "     Prim. Effl. Tot. Phos, TPo ="
+    },
+    {
+      "coord": "H14",
+      "value": "6.0"
+    },
+    {
+      "coord": "I14",
+      "value": "mg/L"
+    },
+    {
+      "coord": "O14",
+      "value": "          * Range of values is from M&E 4th Ed"
+    },
+    {
+      "coord": "K15",
+      "value": "q values for temperature corrections"
+    },
+    {
+      "coord": "A16",
+      "value": "      ratio, bCOD/BOD ="
+    },
+    {
+      "coord": "C16",
+      "value": "1.6"
+    },
+    {
+      "coord": "E16",
+      "value": "     Prim. Effl. Alkalinity, Alko ="
+    },
+    {
+      "coord": "H16",
+      "value": "140.0"
+    },
+    {
+      "coord": "I16",
+      "value": "  mg/L as CaCO3"
+    },
+    {
+      "coord": "K17",
+      "value": "            for mm"
+    },
+    {
+      "coord": "M17",
+      "value": "dimensionless"
+    },
+    {
+      "coord": "O17",
+      "value": "1.07"
+    },
+    {
+      "coord": "Q17",
+      "value": "1.03 - 1.08"
+    },
+    {
+      "coord": "A18",
+      "value": " SRT for BOD Rem., SRT ="
+    },
+    {
+      "coord": "C18",
+      "value": "5.0"
+    },
+    {
+      "coord": "D18",
+      "value": "days"
+    },
+    {
+      "coord": "F18",
+      "value": "Design MLSS,, XTSS ="
+    },
+    {
+      "coord": "H18",
+      "value": "2000.0"
+    },
+    {
+      "coord": "I18",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K18",
+      "value": "             for kd"
+    },
+    {
+      "coord": "M18",
+      "value": "dimensionless"
+    },
+    {
+      "coord": "O18",
+      "value": "1.04"
+    },
+    {
+      "coord": "Q18",
+      "value": "1.03 - 1.08"
+    },
+    {
+      "coord": "A19",
+      "value": " Aeration WW Temp., Tww ="
+    },
+    {
+      "coord": "C19",
+      "value": "12.0"
+    },
+    {
+      "coord": "D19",
+      "value": "oC"
+    },
+    {
+      "coord": "G19",
+      "value": "           to"
+    },
+    {
+      "coord": "H19",
+      "value": "3000.0"
+    },
+    {
+      "coord": "I19",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K19",
+      "value": "            for Ks"
+    },
+    {
+      "coord": "M19",
+      "value": "dimensionless"
+    },
+    {
+      "coord": "O19",
+      "value": "1.0"
+    },
+    {
+      "coord": "Q19",
+      "value": "1.0"
+    },
+    {
+      "coord": "A21",
+      "value": "User Inputs - Biological Kinetic Coefficients"
+    },
+    {
+      "coord": "F21",
+      "value": "(See typical values at right)"
+    },
+    {
+      "coord": "K21",
+      "value": " From Table 8-14,  Metcalf & Eddy/Aecom, Wastewater Engineering Treatment"
+    },
+    {
+      "coord": "K22",
+      "value": "and Resource Recovery,  5th Ed., McGraw-Hill, 20014."
+    },
+    {
+      "coord": "A23",
+      "value": "  1.  For BOD Removal:"
+    },
+    {
+      "coord": "E23",
+      "value": "       Resid. biomass fract., fd ="
+    },
+    {
+      "coord": "H23",
+      "value": "0.15"
+    },
+    {
+      "coord": "A24",
+      "value": "     Synth. Yield Coeff, Y ="
+    },
+    {
+      "coord": "C24",
+      "value": "0.45"
+    },
+    {
+      "coord": "D24",
+      "value": " g VSS/g bCOD"
+    },
+    {
+      "coord": "F24",
+      "value": "  Half Veloc. Coeff., Ks ="
+    },
+    {
+      "coord": "H24",
+      "value": "8.0"
+    },
+    {
+      "coord": "I24",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K24",
+      "value": "     Activated Sludge Nitrification Kinetic Coefficients at 20oC "
+    },
+    {
+      "coord": "A25",
+      "value": "  Temp coeff, q, for mm ="
+    },
+    {
+      "coord": "C25",
+      "value": "1.07"
+    },
+    {
+      "coord": "D25",
+      "value": "      Max spec. grwth rate at 20oC, mm20 ="
+    },
+    {
+      "coord": "H25",
+      "value": "6.0"
+    },
+    {
+      "coord": "I25",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "A26",
+      "value": "  Temp coeff, q, for kd ="
+    },
+    {
+      "coord": "C26",
+      "value": "1.04"
+    },
+    {
+      "coord": "D26",
+      "value": "     Endog. decay coeff. at 20oC, kd20 ="
+    },
+    {
+      "coord": "H26",
+      "value": "0.12"
+    },
+    {
+      "coord": "I26",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "K26",
+      "value": "Coefficient"
+    },
+    {
+      "coord": "M26",
+      "value": "Unit"
+    },
+    {
+      "coord": "O26",
+      "value": "Typical Value"
+    },
+    {
+      "coord": "Q26",
+      "value": "Range*"
+    },
+    {
+      "coord": "A28",
+      "value": "  2.  For Nitrification:"
+    },
+    {
+      "coord": "K28",
+      "value": "                 mmn"
+    },
+    {
+      "coord": "M28",
+      "value": "kg VSS/day/kg VSS"
+    },
+    {
+      "coord": "O28",
+      "value": "0.9"
+    },
+    {
+      "coord": "Q28",
+      "value": "0.2 - 0.90"
+    },
+    {
+      "coord": "A29",
+      "value": "     Synth. Yield Coeff, Yn ="
+    },
+    {
+      "coord": "C29",
+      "value": "0.15"
+    },
+    {
+      "coord": "D29",
+      "value": " g VSS/g NOx"
+    },
+    {
+      "coord": "A30",
+      "value": "  Temp coeff, q, for mmn ="
+    },
+    {
+      "coord": "C30",
+      "value": "1.072"
+    },
+    {
+      "coord": "D30",
+      "value": "      Max spec. grwth rate at 20oC, mmn20 ="
+    },
+    {
+      "coord": "H30",
+      "value": "0.9"
+    },
+    {
+      "coord": "I30",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "K30",
+      "value": "                 Kn"
+    },
+    {
+      "coord": "M30",
+      "value": "      mg/L NH4-N"
+    },
+    {
+      "coord": "O30",
+      "value": "0.5"
+    },
+    {
+      "coord": "Q30",
+      "value": "0.50 - 1.0"
+    },
+    {
+      "coord": "A31",
+      "value": "  Temp coeff, q, for kdn ="
+    },
+    {
+      "coord": "C31",
+      "value": "1.029"
+    },
+    {
+      "coord": "D31",
+      "value": "     Endog. decay coeff. at 20oC, kdn20 ="
+    },
+    {
+      "coord": "H31",
+      "value": "0.17"
+    },
+    {
+      "coord": "I31",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "A32",
+      "value": "  Temp coeff, q, for Ksn ="
+    },
+    {
+      "coord": "C32",
+      "value": "1.0"
+    },
+    {
+      "coord": "D32",
+      "value": "         Half Veloc. Coeff. At 20oC, Ksn ="
+    },
+    {
+      "coord": "H32",
+      "value": "0.5"
+    },
+    {
+      "coord": "I32",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K32",
+      "value": "                 Yn"
+    },
+    {
+      "coord": "M32",
+      "value": "   kg VSS/kg NH4-N"
+    },
+    {
+      "coord": "O32",
+      "value": "0.15"
+    },
+    {
+      "coord": "Q32",
+      "value": "0.10 - 0.15"
+    },
+    {
+      "coord": "A34",
+      "value": "Constants Used in the Calculations"
+    },
+    {
+      "coord": "K34",
+      "value": "                 kdn"
+    },
+    {
+      "coord": "M34",
+      "value": "kg VSS/day/kg VSS"
+    },
+    {
+      "coord": "O34",
+      "value": "0.17"
+    },
+    {
+      "coord": "Q34",
+      "value": "0.05 - 0.15"
+    },
+    {
+      "coord": "M35",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A36",
+      "value": "    Ratio of BOD5 to BODu, f ="
+    },
+    {
+      "coord": "C36",
+      "value": "0.67"
+    },
+    {
+      "coord": "D36",
+      "value": "         BODu equiv. of VSS ="
+    },
+    {
+      "coord": "G36",
+      "value": "1.42"
+    },
+    {
+      "coord": "H36",
+      "value": "  g BODu/g VSS"
+    },
+    {
+      "coord": "K36",
+      "value": "                 Ko"
+    },
+    {
+      "coord": "M36",
+      "value": "mg/L"
+    },
+    {
+      "coord": "O36",
+      "value": "0.5"
+    },
+    {
+      "coord": "Q36",
+      "value": "0.40 - 0.60"
+    },
+    {
+      "coord": "O37",
+      "value": "          * Range of values is from M&E 4th Ed"
+    },
+    {
+      "coord": "K38",
+      "value": "q values for temperature corrections"
+    },
+    {
+      "coord": "K39",
+      "value": "            for mmn"
+    },
+    {
+      "coord": "M39",
+      "value": "dimensionless"
+    },
+    {
+      "coord": "O39",
+      "value": "1.072"
+    },
+    {
+      "coord": "Q39",
+      "value": "1.06 - 1.123"
+    },
+    {
+      "coord": "K40",
+      "value": "             for kdn"
+    },
+    {
+      "coord": "M40",
+      "value": "dimensionless"
+    },
+    {
+      "coord": "O40",
+      "value": "1.029"
+    },
+    {
+      "coord": "Q40",
+      "value": "1.03 - 1.08"
+    },
+    {
+      "coord": "J42",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "K42",
+      "value": "            for Kn"
+    },
+    {
+      "coord": "M42",
+      "value": "dimensionless"
+    },
+    {
+      "coord": "O42",
+      "value": "1.0"
+    },
+    {
+      "coord": "Q42",
+      "value": "1.03 - 1.123"
+    },
+    {
+      "coord": "B44",
+      "value": "       Find more Excel spreadsheets for engineering at"
+    },
+    {
+      "coord": "K44",
+      "value": " From Table 8-14,  Metcalf & Eddy/Aecom, Wastewater Engineering Treatment"
+    },
+    {
+      "coord": "D45",
+      "value": "EngineeringExcelTemplates.com"
+    },
+    {
+      "coord": "K45",
+      "value": "and Resource Recovery,  5th Ed., McGraw-Hill, 20014."
+    },
+    {
+      "coord": "B48",
+      "value": "Copyright \u00a9 2020 Harlan H. Bengtson. All Rights Reserved."
+    },
+    {
+      "coord": "B70",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B80",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B89",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K89",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "M93",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K97",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "C102",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H106",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "H107",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "K114",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "G115",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "J121",
+      "value": "http://p2000a1f99976_93002"
+    },
+    {
+      "coord": "G123",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E128",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "M128",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E129",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "M129",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M130",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G135",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "H135",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "G136",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "B141",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "B142",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "B143",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "J143",
+      "value": "http://www.engineeringexceltemplates.com/"
+    },
+    {
+      "coord": "K143",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "C144",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "J144",
+      "value": "http://www.engineeringexceltemplates.com/"
+    },
+    {
+      "coord": "M145",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "H147",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "B149",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "B150",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K150",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "B151",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K151",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "B152",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K152",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "G154",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "G155",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "H155",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G156",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "G157",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "K157",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "K158",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "M159",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "F160",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "D161",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "F161",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "D162",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N162",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "I163",
+      "value": "http://p2000a1f99976_93002"
+    },
+    {
+      "coord": "I164",
+      "value": "http://p2000a1f99976_93002"
+    },
+    {
+      "coord": "M166",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H167",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "I167",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "M167",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H168",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "M168",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M169",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M170",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L175",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "D176",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L176",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K177",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "L177",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K178",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "L178",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K179",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "L179",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L191",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G195",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "G196",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "G197",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "L198",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M198",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G203",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G204",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L204",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G205",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L205",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M205",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L207",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E208",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "L208",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E209",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "L209",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E210",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "M210",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E211",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "M211",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M212",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L214",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G215",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "H215",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "L215",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G216",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "H216",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "L216",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G217",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "H217",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "L217",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G218",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "K223",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "M223",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "C224",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K224",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "C225",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K225",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "C226",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M230",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N230",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N237",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L271",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L272",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L273",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L278",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M278",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L279",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M279",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L280",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M280",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M285",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M286",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M287",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    }
+  ],
+  "3. CMAS - Nitrification": [
+    {
+      "coord": "A1",
+      "value": "Completely Mixed Activated Sludge Nitrification Calculations - S.I. units"
+    },
+    {
+      "coord": "Q1",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R1",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A3",
+      "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+    },
+    {
+      "coord": "L3",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L4",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A5",
+      "value": "User Inputs"
+    },
+    {
+      "coord": "F5",
+      "value": "           Design MLSS, ="
+    },
+    {
+      "coord": "H5",
+      "value": "3000.0"
+    },
+    {
+      "coord": "I5",
+      "value": "mg/L"
+    },
+    {
+      "coord": "A6",
+      "value": "   Target effluent concentrations:"
+    },
+    {
+      "coord": "F6",
+      "value": " Prim. Effl. TKN, TKNo ="
+    },
+    {
+      "coord": "H6",
+      "formula": "=TKNo",
+      "value": "35"
+    },
+    {
+      "coord": "I6",
+      "value": "mg/L"
+    },
+    {
+      "coord": "B7",
+      "value": "  BODe ="
+    },
+    {
+      "coord": "C7",
+      "value": "15.0"
+    },
+    {
+      "coord": "D7",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F7",
+      "value": "Initial Estimate of NOx ="
+    },
+    {
+      "coord": "H7",
+      "value": "28.176682006671662"
+    },
+    {
+      "coord": "I7",
+      "value": "mg/L"
+    },
+    {
+      "coord": "B8",
+      "value": "  TSSe ="
+    },
+    {
+      "coord": "C8",
+      "value": "15.0"
+    },
+    {
+      "coord": "D8",
+      "value": "mg/L"
+    },
+    {
+      "coord": "E8",
+      "value": "Waste/recycle A.S. conc. TSSw  ="
+    },
+    {
+      "coord": "H8",
+      "value": "6500.0"
+    },
+    {
+      "coord": "I8",
+      "value": "mg/L"
+    },
+    {
+      "coord": "B9",
+      "value": "NH4-Ne ="
+    },
+    {
+      "coord": "C9",
+      "value": "0.5"
+    },
+    {
+      "coord": "D9",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F9",
+      "value": "  Liquid Depth in Tank ="
+    },
+    {
+      "coord": "H9",
+      "value": "5.0"
+    },
+    {
+      "coord": "I9",
+      "value": "m"
+    },
+    {
+      "coord": "A10",
+      "value": "            Tank Freeboard  ="
+    },
+    {
+      "coord": "C10",
+      "value": "0.5"
+    },
+    {
+      "coord": "D10",
+      "value": "m"
+    },
+    {
+      "coord": "F10",
+      "value": "         Tank L:W ratio ="
+    },
+    {
+      "coord": "H10",
+      "value": "1.0"
+    },
+    {
+      "coord": "A11",
+      "value": "  Number of Aeration Tanks ="
+    },
+    {
+      "coord": "C11",
+      "value": "3.0"
+    },
+    {
+      "coord": "E11",
+      "value": "       (target L:W - only used if tank is rectangular)"
+    },
+    {
+      "coord": "A12",
+      "value": "   NOTE:  An initial estimate is needed for NOx in cell H7 to start an iterative calculation of"
+    },
+    {
+      "coord": "A13",
+      "value": "   NOx below.  80% of the primary effluent TKN is suggested for this initial estimate."
+    },
+    {
+      "coord": "A14",
+      "value": "Calculations - Reator design for BOD Removal and Nitrification"
+    },
+    {
+      "coord": "A16",
+      "value": "  1.  Calculate Design SRT"
+    },
+    {
+      "coord": "A17",
+      "value": "                   mmn at Tww ="
+    },
+    {
+      "coord": "C17",
+      "formula": "=mumn20*(Thetamumn^(Tww-20))",
+      "value": "0.5160410219"
+    },
+    {
+      "coord": "D17",
+      "value": " g VSS/d/g VSS"
+    },
+    {
+      "coord": "F17",
+      "value": "             Ksn at Tww ="
+    },
+    {
+      "coord": "H17",
+      "formula": "=KSN20*(ThetaKsn^(Tww-20))",
+      "value": "0"
+    },
+    {
+      "coord": "I17",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K17",
+      "value": "Equations used for the calculations:  (note that conversion factors are needed in some of the equations)"
+    },
+    {
+      "coord": "A18",
+      "value": "                   kdn at Tww ="
+    },
+    {
+      "coord": "C18",
+      "formula": "=KDN20*(Thetakdn^(Tww-20))",
+      "value": "0"
+    },
+    {
+      "coord": "D18",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "G18",
+      "value": "    mn ="
+    },
+    {
+      "coord": "H18",
+      "formula": "=(C17*NH4Ne/(H17+NH4Ne))*(DO/(0.5+DO))-C18",
+      "value": "0.4128328175"
+    },
+    {
+      "coord": "I18",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "A19",
+      "value": "              Theoretical SRT  ="
+    },
+    {
+      "coord": "C19",
+      "formula": "=1/H18",
+      "value": "2.422288049"
+    },
+    {
+      "coord": "D19",
+      "value": "days"
+    },
+    {
+      "coord": "F19",
+      "value": "  Design SRT,  SRT  ="
+    },
+    {
+      "coord": "H19",
+      "formula": "=FS*C19",
+      "value": "3.633432073"
+    },
+    {
+      "coord": "I19",
+      "value": "days"
+    },
+    {
+      "coord": "L19",
+      "value": "mnm at Tww =  mnm,20 qTww - 20"
+    },
+    {
+      "coord": "Q19",
+      "value": "Kn at Tww =  Kn,20 qTww - 20"
+    },
+    {
+      "coord": "A21",
+      "value": "  2.  Calculate the Biomass Production Rate"
+    },
+    {
+      "coord": "L21",
+      "value": "kdn at Tww =  kdn,20 qTww - 20"
+    },
+    {
+      "coord": "P21",
+      "value": " (Tww must be in oC for these calculations)"
+    },
+    {
+      "coord": "A22",
+      "value": "                   mm at Tww ="
+    },
+    {
+      "coord": "C22",
+      "formula": "=MUM20*(Thetamum^(Tww-20))",
+      "value": "0"
+    },
+    {
+      "coord": "D22",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "F22",
+      "value": "              kd at Tww ="
+    },
+    {
+      "coord": "H22",
+      "formula": "=KD20*(Thetakd^(Tww-20))",
+      "value": "0"
+    },
+    {
+      "coord": "I22",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "B23",
+      "value": "  bCODo ="
+    },
+    {
+      "coord": "C23",
+      "formula": "=1.6*BODo",
+      "value": "256"
+    },
+    {
+      "coord": "D23",
+      "value": "mg/L"
+    },
+    {
+      "coord": "G23",
+      "value": "       S ="
+    },
+    {
+      "coord": "H23",
+      "formula": "=Ks*(1+(H22*H19))/(H19*(C22-H22)-1)",
+      "value": "-8"
+    },
+    {
+      "coord": "I23",
+      "value": " mg bCOD/L"
+    },
+    {
+      "coord": "L23",
+      "value": "mn  =  [ mnmN/(Kn + N) ] [ DO/(Ko + DO) ]"
+    },
+    {
+      "coord": "Q23",
+      "value": "    Theroetical SRT  =  1/mn"
+    },
+    {
+      "coord": "A25",
+      "value": "  Biomass Production Rate, PX,bio ="
+    },
+    {
+      "coord": "D25",
+      "formula": "=(Qo*Y*(C23-H23)*(1/1000)/(1+(H22*H19)))+(fd*H22*Qo*Y*(C23-H23)*H19*(1/1000)/(1+(H22*H19)))+(Qo*Yn*H7*(1/1000)/(1+(C18*H19)))",
+      "value": "492.1060092"
+    },
+    {
+      "coord": "E25",
+      "value": "  kg VSS/day"
+    },
+    {
+      "coord": "L25",
+      "value": "Design SRT = (FS)(Theoretical SRT)               FS = TKNpeak/TKNaverage"
+    },
+    {
+      "coord": "M26",
+      "value": " "
+    },
+    {
+      "coord": "A27",
+      "value": "  3.  Determine the Amount of Nitrogen Oxidized to Nitrate"
+    },
+    {
+      "coord": "L27",
+      "value": "PX,bio = QY(So - S)/(1 + kdSRT)  +  fdkdQY(So - S)SRT/(1 + kdSRT)  +  QYn(NOx)/(1 + kdnSRT)"
+    },
+    {
+      "coord": "A29",
+      "value": "     Calculated amount of nitrogen oxidized to nitrate, NOx ="
+    },
+    {
+      "coord": "F29",
+      "formula": "=TKNo-NH4Ne-(0.12*Pxbio*(1000)/Qo)",
+      "value": "19.73681972"
+    },
+    {
+      "coord": "G29",
+      "value": "mg/L"
+    },
+    {
+      "coord": "L29",
+      "value": "S = Ks[1 + (kd)SRT]/[SRT(mm - kd) - 1"
+    },
+    {
+      "coord": "M29",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B30",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K30",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "M30",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A31",
+      "value": "                 Difference between estimated and calculated values for NOx ="
+    },
+    {
+      "coord": "G31",
+      "formula": "=H7-F29",
+      "value": "8.439862283"
+    },
+    {
+      "coord": "H31",
+      "value": "mg/L"
+    },
+    {
+      "coord": "L31",
+      "value": "NOx = TKN - Ne - 0.12PX,bio/Q"
+    },
+    {
+      "coord": "A32",
+      "value": "          Goal Seek Result:"
+    },
+    {
+      "coord": "A33",
+      "value": "        Amount of nitrogen oxidized to nitrate, NOx ="
+    },
+    {
+      "coord": "E33",
+      "formula": "=IF(ABS(G31)<0.001,F29,\"Redo Goal Seek\")",
+      "value": "Redo Goal Seek"
+    },
+    {
+      "coord": "G33",
+      "value": "mg/L"
+    },
+    {
+      "coord": "L33",
+      "value": "PX,VSS = PX,bio + Q(nbVSS)"
+    },
+    {
+      "coord": "P33",
+      "value": "PX,TSS = PX,VSS + Q(TSSo - VSSo)"
+    },
+    {
+      "coord": "G34",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "A35",
+      "value": "NOTE:  This is an iterative solution.  You must use Excel's \"Goal Seek\" to find the NOx value as"
+    },
+    {
+      "coord": "M35",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A36",
+      "value": "follows:  Place the cursor on cell G31 and click on \"goal seek\" (in the \"tools\" menu of older versions"
+    },
+    {
+      "coord": "B36",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K36",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "M36",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A37",
+      "value": "and under \"Data What If Analysis\" in newer versions of Excel).  Enter values to \"Set cell:\"  G31, \"To"
+    },
+    {
+      "coord": "A38",
+      "value": "value:\" 0, \"By changing cell:\" H7, and click on \"OK\".  The calculated value of NOx will appear in cell"
+    },
+    {
+      "coord": "A39",
+      "value": "G33 and cell G31 should be zero if the process worked properly.  Note that cell H7 needs an initial"
+    },
+    {
+      "coord": "A40",
+      "value": "estimate for NOx in order for the iterative solution to work properly."
+    },
+    {
+      "coord": "G40",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "C41",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "A42",
+      "value": "  4.  Determine the Production Rate and Mass of VSS and TSS in the Aeration Basin"
+    },
+    {
+      "coord": "J42",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "L42",
+      "value": "V = Mass of MLSS/MLSS"
+    },
+    {
+      "coord": "A44",
+      "value": "           bpCOD/pCOD ="
+    },
+    {
+      "coord": "C44",
+      "formula": "=(bCODoverBOD)*(BODo-sBODo)/(CODo-sCODo)",
+      "value": "0.8571428571"
+    },
+    {
+      "coord": "F44",
+      "value": "  nbVSS ="
+    },
+    {
+      "coord": "G44",
+      "formula": "=(1-C44)*VSSo",
+      "value": "8.571428571"
+    },
+    {
+      "coord": "H44",
+      "value": "mg/L"
+    },
+    {
+      "coord": "L44",
+      "value": "Mass of MLVSS = (PX,VSS) SRT"
+    },
+    {
+      "coord": "A45",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "B45",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A46",
+      "value": "              Aeration Tank VSS Production Rate, PX,VSS ="
+    },
+    {
+      "coord": "F46",
+      "formula": "=Pxbio+(Qo*G44/1000)",
+      "value": "526.3917235"
+    },
+    {
+      "coord": "G46",
+      "value": "  kg VSS/day"
+    },
+    {
+      "coord": "K46",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "L46",
+      "value": "Mass of MLSS = (PX,TSS) SRT"
+    },
+    {
+      "coord": "A47",
+      "value": "              Aeration Tank TSS Production Rate, PX,TSS ="
+    },
+    {
+      "coord": "C47",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "F47",
+      "formula": "=(Pxbio/0.85)+(Qo*G44/1000)+(Qo*(TSSo-VSSo)/1000)",
+      "value": "653.2339604"
+    },
+    {
+      "coord": "G47",
+      "value": "  kg TSS/day"
+    },
+    {
+      "coord": "J48",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "M48",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A49",
+      "value": "       Mass of  MLVSS ="
+    },
+    {
+      "coord": "C49",
+      "formula": "=F46*SRT",
+      "value": "1912.608571"
+    },
+    {
+      "coord": "D49",
+      "value": "  kg VSS"
+    },
+    {
+      "coord": "F49",
+      "value": "       Mass of  MLSS ="
+    },
+    {
+      "coord": "H49",
+      "formula": "=F47*SRT",
+      "value": "2373.481223"
+    },
+    {
+      "coord": "I49",
+      "value": "  kg TSS"
+    },
+    {
+      "coord": "A51",
+      "value": "  5. Calculate Aeration Tank Volume and dimensions, Detention Time, and MLVSS"
+    },
+    {
+      "coord": "B51",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B52",
+      "value": "(User Input needed in Blue Cells)"
+    },
+    {
+      "coord": "K52",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "A53",
+      "value": " Req. Aeration  Vol.,  Vaer ="
+    },
+    {
+      "coord": "C53",
+      "formula": "=H49*1000/H5",
+      "value": "791.1604077"
+    },
+    {
+      "coord": "D53",
+      "value": "m3"
+    },
+    {
+      "coord": "E53",
+      "value": "Click on green box and then  on"
+    },
+    {
+      "coord": "I53",
+      "value": "http://p2000a1f99976_93002"
+    },
+    {
+      "coord": "L53",
+      "value": "detention time:  t = V/Q"
+    },
+    {
+      "coord": "A54",
+      "value": " Req. Vol. per tank,  Vtank ="
+    },
+    {
+      "coord": "C54",
+      "formula": "=C53/C11",
+      "value": "263.7201359"
+    },
+    {
+      "coord": "D54",
+      "value": "m3"
+    },
+    {
+      "coord": "E54",
+      "value": "  arrow to Select Tank Shape:"
+    },
+    {
+      "coord": "H54",
+      "value": "rectangular"
+    },
+    {
+      "coord": "M54",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A55",
+      "formula": "=IF(H54=\"cylindrical\",\"Calculated Tank Diam.  =\",\"  Calculated Tank Width =\")",
+      "value": "  Calculated Tank Width ="
+    },
+    {
+      "coord": "C55",
+      "formula": "=IF(H54=\"cylindrical\",((C54/H9)*4/PI())^0.5,((C54/H9)/H10)^0.5)",
+      "value": "7.262508325"
+    },
+    {
+      "coord": "D55",
+      "value": "m"
+    },
+    {
+      "coord": "E55",
+      "formula": "=IF(H54=\"cylindrical\",\"          Actual Tank Diam:\",\"         Actual Tank Width:\")",
+      "value": "         Actual Tank Width:"
+    },
+    {
+      "coord": "H55",
+      "value": "12.5"
+    },
+    {
+      "coord": "I55",
+      "value": "m"
+    },
+    {
+      "coord": "L55",
+      "value": "F/M  =  QSo/XV"
+    },
+    {
+      "coord": "A56",
+      "formula": "=IF(H54=\"cylindrical\",\"\",\"  Calculated Tank Length =\")",
+      "value": "  Calculated Tank Length ="
+    },
+    {
+      "coord": "C56",
+      "formula": "=IF(H54=\"cylindrical\",\"\",(C54/H9)/C55)",
+      "value": "7.262508325"
+    },
+    {
+      "coord": "D56",
+      "value": "m"
+    },
+    {
+      "coord": "E56",
+      "formula": "=IF(H54=\"cylindrical\",\"    Not Used for Cylindrical:\",\"       Actual Tank Length:\")",
+      "value": "       Actual Tank Length:"
+    },
+    {
+      "coord": "H56",
+      "value": "12.5"
+    },
+    {
+      "coord": "I56",
+      "value": "m"
+    },
+    {
+      "coord": "A57",
+      "value": "           Tank Wall Height ="
+    },
+    {
+      "coord": "C57",
+      "formula": "=H9+C10",
+      "value": "5.5"
+    },
+    {
+      "coord": "D57",
+      "value": "m"
+    },
+    {
+      "coord": "E57",
+      "value": "    Actual Tank liquid Volume ="
+    },
+    {
+      "coord": "H57",
+      "formula": "=IF(H54=\"rectangular\",H9*H55*H56,H9*PI()*(H55/2)^2)",
+      "value": "781.25"
+    },
+    {
+      "coord": "I57",
+      "value": "m3 "
+    },
+    {
+      "coord": "L57",
+      "value": "Vol BOD loading  =  QSo/V"
+    },
+    {
+      "coord": "A59",
+      "value": "      Aeration Det'n time,  t ="
+    },
+    {
+      "coord": "B59",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "C59",
+      "formula": "=H57*C11*24/Qo",
+      "value": "14.0625"
+    },
+    {
+      "coord": "D59",
+      "value": "hr"
+    },
+    {
+      "coord": "F59",
+      "value": "                  MLVSS, ="
+    },
+    {
+      "coord": "H59",
+      "formula": "=H5*C49/H49",
+      "value": "2417.472554"
+    },
+    {
+      "coord": "I59",
+      "value": "mg/L"
+    },
+    {
+      "coord": "B60",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A61",
+      "value": "  6.  Calculate F/M and Volumetric BOD Loading"
+    },
+    {
+      "coord": "A63",
+      "value": "         F/M ="
+    },
+    {
+      "coord": "B63",
+      "formula": "=Qo*BODo/(H59*C53)",
+      "value": "0.3346215267"
+    },
+    {
+      "coord": "C63",
+      "value": "  g BOD/d/g MLVSS"
+    },
+    {
+      "coord": "F63",
+      "value": "    Vol. BOD Loading  ="
+    },
+    {
+      "coord": "H63",
+      "formula": "=Qo*BODo*(1/1000)/C53",
+      "value": "0.8089383566"
+    },
+    {
+      "coord": "I63",
+      "value": "  kg BOD/d/m3"
+    },
+    {
+      "coord": "M63",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "A65",
+      "value": "  7.  Calculate Sludge Recycle Rate and Sludge Wasting Rate"
+    },
+    {
+      "coord": "B65",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B66",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A67",
+      "value": " A.S. Recycle Rate, Qr  ="
+    },
+    {
+      "coord": "C67",
+      "formula": "=Qo*(MLSS_Nitrif-TSSo)/(TSSw_Nitrif-MLSS_Nitrif)",
+      "value": "3348.571429"
+    },
+    {
+      "coord": "D67",
+      "value": "m3/d"
+    },
+    {
+      "coord": "F67",
+      "value": " Waste A.S. Rate, Qw  ="
+    },
+    {
+      "coord": "H67",
+      "formula": "=((TankNumber_Nitrif*H57*MLSS_Nitrif/SRT)-(Qo*TSSe))/(TSSw_Nitrif-TSSe)",
+      "value": "289.1524799"
+    },
+    {
+      "coord": "I67",
+      "value": "m3/d"
+    },
+    {
+      "coord": "J67",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "L67",
+      "value": "   Qr = Qo(MLSS - TSSo)/(TSSw - MLSS)"
+    },
+    {
+      "coord": "L68",
+      "value": "   Qw = [(V*MLSS/SRT) - QoTSSe]/(TSSw - TSSe)"
+    },
+    {
+      "coord": "A69",
+      "value": "  8.  Oxygen/Air Requirement and Blower Calculations"
+    },
+    {
+      "coord": "B69",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B70",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A71",
+      "value": "A. Simplified Estimates using \"Rules of Thumb\" shown at right"
+    },
+    {
+      "coord": "B71",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K72",
+      "value": "Rules of Thumb for Estimating Oxygen/Air Requirements for Coarse or Fine Bubble Diffusers"
+    },
+    {
+      "coord": "A73",
+      "value": "i)  INPUTS (Values of \"Rule of Thumb\" Constants for the Calculations)"
+    },
+    {
+      "coord": "D73",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K73",
+      "value": "Source: "
+    },
+    {
+      "coord": "L73",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "C74",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "D74",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "I74",
+      "value": "http://p2000a1f99976_93002"
+    },
+    {
+      "coord": "K74",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "A75",
+      "value": "   O2 needed per kg BOD ="
+    },
+    {
+      "coord": "C75",
+      "value": "1.3"
+    },
+    {
+      "coord": "D75",
+      "value": " kg O2/kg BOD"
+    },
+    {
+      "coord": "F75",
+      "value": "   Depth of Diffusers ="
+    },
+    {
+      "coord": "H75",
+      "value": "4.4"
+    },
+    {
+      "coord": "I75",
+      "value": "m"
+    },
+    {
+      "coord": "A76",
+      "value": "   O2 needed per kg NH4-N ="
+    },
+    {
+      "coord": "C76",
+      "value": "4.57"
+    },
+    {
+      "coord": "D76",
+      "value": " kg O2/kg NH4-N"
+    },
+    {
+      "coord": "F76",
+      "value": "  Normal Temperature ="
+    },
+    {
+      "coord": "H76",
+      "value": "0.0"
+    },
+    {
+      "coord": "I76",
+      "value": "oC"
+    },
+    {
+      "coord": "K76",
+      "value": "1.  The typical AOR/SOR  (or AOTE/SOTE) is 0.50 for a coarse bubble aertion system."
+    },
+    {
+      "coord": "A77",
+      "value": "SOTE as Function of Depth ="
+    },
+    {
+      "coord": "C77",
+      "value": "0.0656"
+    },
+    {
+      "coord": "D77",
+      "value": " % per m depth"
+    },
+    {
+      "coord": "F77",
+      "value": "      Normal Pressure ="
+    },
+    {
+      "coord": "H77",
+      "value": "1.0"
+    },
+    {
+      "coord": "I77",
+      "value": "bar"
+    },
+    {
+      "coord": "K77",
+      "value": "2.  The typical AOR/SOR  (or AOTE/SOTE) is 0.33 for a fine bubble aertion system."
+    },
+    {
+      "coord": "A78",
+      "value": "        AOTE/SOTE   ="
+    },
+    {
+      "coord": "C78",
+      "value": "0.33"
+    },
+    {
+      "coord": "F78",
+      "value": "  Atmospheric Pressure ="
+    },
+    {
+      "coord": "H78",
+      "value": "1.014"
+    },
+    {
+      "coord": "I78",
+      "value": "bar"
+    },
+    {
+      "coord": "K78",
+      "value": "3.  The typical SOTE is 0.75% per foot (2.46%/m) of diffuser submergence for a coarse bubble system"
+    },
+    {
+      "coord": "S78",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A79",
+      "value": "Press. Drop across Diffuser ="
+    },
+    {
+      "coord": "C79",
+      "value": "0.03"
+    },
+    {
+      "coord": "D79",
+      "value": "bar"
+    },
+    {
+      "coord": "F79",
+      "value": "      Air Density at STP  ="
+    },
+    {
+      "coord": "H79",
+      "value": "1.275"
+    },
+    {
+      "coord": "I79",
+      "value": "kg/m3 "
+    },
+    {
+      "coord": "K79",
+      "value": "4.  The typical SOTE is 2.0% per foot (6.56%/m) of diffuser submergence for a fine bubble system"
+    },
+    {
+      "coord": "A80",
+      "value": "        (from mfr/vendor)"
+    },
+    {
+      "coord": "F80",
+      "value": "        O2 Content in Air ="
+    },
+    {
+      "coord": "H80",
+      "value": "0.293"
+    },
+    {
+      "coord": "I80",
+      "value": "kg/m3 "
+    },
+    {
+      "coord": "K80",
+      "value": "5.  Air weighs 1.275 kg/m3 (at 0oC and 1 bar) and contains 23% oxygen by weight, thus:"
+    },
+    {
+      "coord": "S80",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "K81",
+      "value": "6.  Air contains 0.2930 kg of oxygen/m3."
+    },
+    {
+      "coord": "A82",
+      "value": "ii)  Calculations"
+    },
+    {
+      "coord": "F82",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "K82",
+      "value": "7.  For biological treatment with SRT from 5 to 10 days, kg oxygen required /kg BOD removed"
+    },
+    {
+      "coord": "A83",
+      "value": "Press. at mid depth, PD  ="
+    },
+    {
+      "coord": "C83",
+      "formula": "=AtmosPress+(9.81*(DiffuserDepth/2)/100)",
+      "value": "1.22982"
+    },
+    {
+      "coord": "D83",
+      "value": "bar"
+    },
+    {
+      "coord": "F83",
+      "value": "  NH3-N Daily Loading ="
+    },
+    {
+      "coord": "H83",
+      "formula": "=(Qo*(NH4No-C9)/1000)/24",
+      "value": "4.083333333"
+    },
+    {
+      "coord": "I83",
+      "value": "kg/hr"
+    },
+    {
+      "coord": "K83",
+      "value": "      is typically in the range from 0.92 - 1.1 kg O2/kg BOD.  Higher SRT results in a higher value"
+    },
+    {
+      "coord": "A84",
+      "value": "BOD Daily Loading ="
+    },
+    {
+      "coord": "C84",
+      "formula": "=(Qo*(BODo-C7)/1000)/24",
+      "value": "24.16666667"
+    },
+    {
+      "coord": "D84",
+      "value": "kg/hr"
+    },
+    {
+      "coord": "G84",
+      "value": " AOTE ="
+    },
+    {
+      "coord": "H84",
+      "formula": "=C86*C78",
+      "value": "0.0952512"
+    },
+    {
+      "coord": "K84",
+      "value": "      of kg O2 required/kg BOD removed."
+    },
+    {
+      "coord": "S84",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A85",
+      "value": "  Oxygen Requirement ="
+    },
+    {
+      "coord": "C85",
+      "formula": "=(C75*C84)+(C76*H83)",
+      "value": "50.0775"
+    },
+    {
+      "coord": "D85",
+      "value": "kg/hr"
+    },
+    {
+      "coord": "F85",
+      "value": "        Air Requirement ="
+    },
+    {
+      "coord": "H85",
+      "formula": "=((C85/H84)/H80)",
+      "value": "1794.339276"
+    },
+    {
+      "coord": "I85",
+      "value": "Nm3/hr"
+    },
+    {
+      "coord": "K85",
+      "value": "8.  The oxidation of 1 kg of ammonia nitrogen typically requires 4.1 to 4.6 kg of oxygen."
+    },
+    {
+      "coord": "B86",
+      "value": "    SOTE ="
+    },
+    {
+      "coord": "C86",
+      "formula": "=C77*H75",
+      "value": "0.28864"
+    },
+    {
+      "coord": "F86",
+      "value": "Blower Outlet Pressure ="
+    },
+    {
+      "coord": "H86",
+      "formula": "=H78+(C79)+(H75*9.81*1000/100000)",
+      "value": "1.47564"
+    },
+    {
+      "coord": "I86",
+      "value": "bar"
+    },
+    {
+      "coord": "L87",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N87",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R87",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A88",
+      "value": "B. More Detailed Estimates using Biological Kinetics and Diffuser Parameters"
+    },
+    {
+      "coord": "R88",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A90",
+      "value": "i)  INPUTS"
+    },
+    {
+      "coord": "A92",
+      "value": "Std O2 Transf. Effic.,  SOTE  = "
+    },
+    {
+      "coord": "C92",
+      "value": "0.29"
+    },
+    {
+      "coord": "E92",
+      "value": "    Ratio of oxygen transfer rate in wastewater"
+    },
+    {
+      "coord": "K92",
+      "value": "See derivation of equation for Saturated D.O. vs Tempreature at 1 atm on Worksheet 3."
+    },
+    {
+      "coord": "A93",
+      "value": "  (from diffuser mfr or vendor)"
+    },
+    {
+      "coord": "E93",
+      "value": "          to that in clean water, a ="
+    },
+    {
+      "coord": "H93",
+      "value": "0.65"
+    },
+    {
+      "coord": "L93",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R93",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A94",
+      "value": "     Diffuser fouling factor, F ="
+    },
+    {
+      "coord": "C94",
+      "value": "0.9"
+    },
+    {
+      "coord": "E94",
+      "value": "Ratio of saturated D.O. in wastewater to that in"
+    },
+    {
+      "coord": "K94",
+      "value": "Oxygen demand  =  Ro =  Q(So - S) - 1.42PX,bio + 4.33Q(NOx)"
+    },
+    {
+      "coord": "M94",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R94",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A95",
+      "value": "Sat'n DO at 20oC, 1 atm, Css ="
+    },
+    {
+      "coord": "C95",
+      "value": "9.08"
+    },
+    {
+      "coord": "D95",
+      "value": "mg/L"
+    },
+    {
+      "coord": "E95",
+      "value": " clean water at same T & P, b ="
+    },
+    {
+      "coord": "H95",
+      "value": "0.95"
+    },
+    {
+      "coord": "B96",
+      "value": "                    D.O. conc. To be maintained for WW trtmt operation, CL ="
+    },
+    {
+      "coord": "H96",
+      "value": "2.0"
+    },
+    {
+      "coord": "I96",
+      "value": "mg/L"
+    },
+    {
+      "coord": "K96",
+      "value": " AOTE  =  SOTE*a*F*[(B*(PD/Pstd)*Cs -CL)/Css]q(Tww-20)"
+    },
+    {
+      "coord": "A98",
+      "value": "ii)  Calculations"
+    },
+    {
+      "coord": "K98",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "L98",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "A100",
+      "value": "Sat'n  DO at Tww, 1 atm, Cs ="
+    },
+    {
+      "coord": "C100",
+      "formula": "=(-0.00007044*Tww^3)+(0.00765*Tww^2)-(0.4006*Tww)+14.6",
+      "value": "10.77267968"
+    },
+    {
+      "coord": "D100",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F100",
+      "value": "Press. at mid depth, PD  ="
+    },
+    {
+      "coord": "H100",
+      "formula": "=AtmosPress+(9.81*(DiffuserDepth/2)/100)",
+      "value": "1.22982"
+    },
+    {
+      "coord": "I100",
+      "value": "bar"
+    },
+    {
+      "coord": "K100",
+      "value": "Alkalinity to be added  =  Influent Alk - Alk used + Alk residual desired"
+    },
+    {
+      "coord": "M100",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A101",
+      "value": "         Observed Yield, Yobs ="
+    },
+    {
+      "coord": "C101",
+      "formula": "=Y/(1+(kdatTww*H19))",
+      "value": "0.45"
+    },
+    {
+      "coord": "D101",
+      "value": " kg VSS/kg BOD5"
+    },
+    {
+      "coord": "F101",
+      "value": "     O2 Utilization Rate ="
+    },
+    {
+      "coord": "H101",
+      "formula": "=((Qo/24)*(BODo-C102)*(1/1000)*((1/Ratio_f)-(1.42*C101)))+(4.57*(Qo/24)*(TKNo-C9)*(1/1000))",
+      "value": "48.54058644"
+    },
+    {
+      "coord": "I101",
+      "value": "kg/hr"
+    },
+    {
+      "coord": "A102",
+      "value": "  Effl. Soluble BOD, sBODe ="
+    },
+    {
+      "coord": "C102",
+      "formula": "=C7-(0.67*1.42*(C49/H49)*C8)",
+      "value": "3.500083062"
+    },
+    {
+      "coord": "D102",
+      "value": "mg/L"
+    },
+    {
+      "coord": "E102",
+      "value": "        Des. Air Flow Rate, Nm3/hr:"
+    },
+    {
+      "coord": "H102",
+      "formula": "=(H101/C104)*28.97/(0.209*32*1.2)",
+      "value": "1212.387402"
+    },
+    {
+      "coord": "I102",
+      "value": "Nm3/hr"
+    },
+    {
+      "coord": "K102",
+      "value": "Alkalinity used for nitrification  =  (7.14 g CaCO3/g NH3-N) NOx"
+    },
+    {
+      "coord": "A103",
+      "value": "Actual O2 Transfer"
+    },
+    {
+      "coord": "E103",
+      "value": "        Des. Air Flow Rate, m3/hr:"
+    },
+    {
+      "coord": "H103",
+      "formula": "=H102*(H77/H104)*((Tww+273.15)/(H76+273.15))",
+      "value": "857.6955699"
+    },
+    {
+      "coord": "I103",
+      "value": "m3/hr"
+    },
+    {
+      "coord": "A104",
+      "value": "          Efficiency, AOTE ="
+    },
+    {
+      "coord": "C104",
+      "formula": "=SOTE*Alphanitrif*Factor_F*((Beta*(H100/H77)*C100-H96)/C95)*(Thetakd^(Tww-20))",
+      "value": "0.1445222082"
+    },
+    {
+      "coord": "F104",
+      "value": "Blower Outlet Pressure ="
+    },
+    {
+      "coord": "H104",
+      "formula": "=H$78+(C$79)+(9.81*H$75/100)",
+      "value": "1.47564"
+    },
+    {
+      "coord": "I104",
+      "value": "bar"
+    },
+    {
+      "coord": "K104",
+      "value": "Alk needed as sodium bicarbonate = Alk needed as CaCO3(84/50)"
+    },
+    {
+      "coord": "L104",
+      "value": "http://www.xylemwatersolutions.com/scs/sweden/sv-se/produkter/cirkulationspumpar/documents/san3.pdf"
+    },
+    {
+      "coord": "A106",
+      "value": "  9. Calculate Alkalinity Requirement"
+    },
+    {
+      "coord": "A108",
+      "value": "    Alk. used for nitrification ="
+    },
+    {
+      "coord": "C108",
+      "formula": "=7.14*NOX",
+      "value": "140.9208928"
+    },
+    {
+      "coord": "D108",
+      "value": " mg/L as CaCO3"
+    },
+    {
+      "coord": "F108",
+      "value": "   Resid. Alk. to maintain:"
+    },
+    {
+      "coord": "H108",
+      "value": "80.0"
+    },
+    {
+      "coord": "I108",
+      "value": " mg/L as CaCO3"
+    },
+    {
+      "coord": "F109",
+      "value": "                    (User Entered Value)"
+    },
+    {
+      "coord": "A110",
+      "value": "             Alkalinity needed ="
+    },
+    {
+      "coord": "C110",
+      "formula": "=C108+H108-ALKo",
+      "value": "80.92089283"
+    },
+    {
+      "coord": "D110",
+      "value": " mg/L as CaCO3"
+    },
+    {
+      "coord": "F110",
+      "value": "         Alkalinity needed ="
+    },
+    {
+      "coord": "H110",
+      "formula": "=Qo*C110/1000",
+      "value": "323.6835713"
+    },
+    {
+      "coord": "I110",
+      "value": " kg/day as CaCO3"
+    },
+    {
+      "coord": "A112",
+      "value": "               Sodium bicarbonate needed per day to maintain alkalinity  ="
+    },
+    {
+      "coord": "G112",
+      "formula": "=H110*84/50",
+      "value": "543.7883998"
+    },
+    {
+      "coord": "H112",
+      "value": " kg/day  NaHCO3"
+    },
+    {
+      "coord": "C113",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "I115",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B119",
+      "value": "       Find more Excel spreadsheets for engineering at"
+    },
+    {
+      "coord": "C119",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "C120",
+      "value": "EngineeringExcelTemplates.com"
+    },
+    {
+      "coord": "B123",
+      "value": "Copyright \u00a9 2020 Harlan H Bengtson. All Rights Reserved."
+    },
+    {
+      "coord": "C129",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H129",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "C135",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H135",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "L151",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M153",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "F154",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "F155",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "N156",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L157",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L158",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M158",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M159",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A160",
+      "value": "cylindrical"
+    },
+    {
+      "coord": "B160",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "F160",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "M160",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A161",
+      "value": "rectangular"
+    },
+    {
+      "coord": "F161",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "H161",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "I161",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "M161",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H162",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "N162",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "D163",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L164",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M164",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M165",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B166",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M166",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B167",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "C167",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H167",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "I167",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "L167",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M167",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H168",
+      "value": "http://p2001c2fa9960220001"
+    },
+    {
+      "coord": "D169",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L169",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "D170",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E170",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M171",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L172",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B173",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "C173",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L173",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R173",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "C174",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L174",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M174",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L175",
+      "value": "http://netedu.xauat.edu.cn/jpkc/netedu/jpkc2009/szylyybh/content/wlzy/7/3/The%20Moving%20Bed%20Biofilm%20Reactor.pdf"
+    },
+    {
+      "coord": "D176",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E176",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E177",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L177",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M177",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H178",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L178",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L179",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M179",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R179",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "C180",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L180",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M180",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R180",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "S180",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L181",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M181",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "Q182",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R182",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "E183",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L183",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M183",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H184",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L184",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M184",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N184",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H185",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L185",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M185",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L186",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M186",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R186",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "S186",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L187",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M187",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "S187",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M188",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "Q188",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R188",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "Q189",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R189",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "S189",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L190",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M190",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N190",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "H191",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L191",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M191",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N191",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L192",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M192",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M193",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "S193",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M194",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "Q195",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R195",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "S195",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R196",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "S196",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M197",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N197",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L198",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M198",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M199",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R202",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "S202",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M205",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M217",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M223",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M224",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N224",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M230",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N230",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N231",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "N237",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65499",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65500",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65505",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65506",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B65508",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B65509",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "D65511",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "D65512",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B65514",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B65515",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65515",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65516",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "D65517",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M65517",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "D65518",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M65518",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G65519",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G65520",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65520",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65521",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R65521",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65522",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R65522",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65523",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M65523",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65524",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M65524",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G65525",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65525",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M65525",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "G65526",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65526",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M65526",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65527",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R65527",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65528",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R65528",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65529",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65530",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "Q65530",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R65530",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65531",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M65531",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "Q65531",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R65531",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65532",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "M65532",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65533",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "L65534",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "Q65536",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "R65536",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    }
+  ],
+  "4. CMAS - Pre-Anoxic Denitrif.": [
+    {
+      "coord": "A1",
+      "value": "Completely Mixed Activated Sludge Denitrification Calculations - S.I. units"
+    },
+    {
+      "coord": "A2",
+      "value": "    PreAnoxic Denitrification"
+    },
+    {
+      "coord": "A3",
+      "value": "This spreadsheet makes the design calculations for a preanoxic denitrification basin to go"
+    },
+    {
+      "coord": "A4",
+      "value": "with the CMAS system designed for BOD removal and Nitrification in Worksheet 3."
+    },
+    {
+      "coord": "A5",
+      "value": "  (The wastewater parameters/characteristics and biological kinetic coefficients entered on"
+    },
+    {
+      "coord": "A6",
+      "value": "     Worksheet 2 will also be used in this worksheet.)"
+    },
+    {
+      "coord": "A8",
+      "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+    },
+    {
+      "coord": "A9",
+      "value": "Inputs - Additional Design Parameters"
+    },
+    {
+      "coord": "F9",
+      "value": "Mixing energy"
+    },
+    {
+      "coord": "F10",
+      "value": "         for anoxic reactor  ="
+    },
+    {
+      "coord": "H10",
+      "value": "10.0"
+    },
+    {
+      "coord": "I10",
+      "value": "  kW/103 m3"
+    },
+    {
+      "coord": "A11",
+      "value": "    Nitrate conc. in RAS  ="
+    },
+    {
+      "coord": "C11",
+      "value": "6.0"
+    },
+    {
+      "coord": "D11",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F11",
+      "value": "                     RAS ratio ="
+    },
+    {
+      "coord": "H11",
+      "value": "0.5"
+    },
+    {
+      "coord": "A12",
+      "value": "        Effl.  nitrate conc. Ne  ="
+    },
+    {
+      "coord": "C12",
+      "value": "6.0"
+    },
+    {
+      "coord": "D12",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F12",
+      "value": "Design % Excess"
+    },
+    {
+      "coord": "A13",
+      "value": "   Temp. Coeff for SDNR ="
+    },
+    {
+      "coord": "C13",
+      "value": "1.026"
+    },
+    {
+      "coord": "F13",
+      "value": "            Nitrif. Capacity ="
+    },
+    {
+      "coord": "H13",
+      "value": "0.2"
+    },
+    {
+      "coord": "A14",
+      "value": "Prelim. est. of det. Time, tan:"
+    },
+    {
+      "coord": "C14",
+      "value": "1.8950534955374667"
+    },
+    {
+      "coord": "D14",
+      "value": "hr"
+    },
+    {
+      "coord": "F14",
+      "value": "  Liquid Depth in Tank ="
+    },
+    {
+      "coord": "H14",
+      "value": "5.0"
+    },
+    {
+      "coord": "I14",
+      "value": "m"
+    },
+    {
+      "coord": "A15",
+      "value": "            Tank Freeboard  ="
+    },
+    {
+      "coord": "C15",
+      "value": "0.5"
+    },
+    {
+      "coord": "D15",
+      "value": "m"
+    },
+    {
+      "coord": "F15",
+      "value": "         Tank L:W ratio ="
+    },
+    {
+      "coord": "H15",
+      "value": "1.0"
+    },
+    {
+      "coord": "J15",
+      "value": "Equations used for the calculations:  (note that conversion factors are needed in some of the equations)"
+    },
+    {
+      "coord": "A16",
+      "value": "         Number of Tanks ="
+    },
+    {
+      "coord": "C16",
+      "value": "3.0"
+    },
+    {
+      "coord": "E16",
+      "value": "       (target L:W - only used if tank is rectangular)"
+    },
+    {
+      "coord": "A17",
+      "value": "NOTE:  A preliminary estimate for anoxic detention time is needed in cell C14 to start an"
+    },
+    {
+      "coord": "K17",
+      "value": "Active biomass conc:   Xb = [ Q(SRT)/V ][ Y(So - S)/(1 + kd(SRT) ]"
+    },
+    {
+      "coord": "A18",
+      "value": "iterative calculation of minimum anoxic detention time below."
+    },
+    {
+      "coord": "K18",
+      "value": "Internal Recycle Ratio:   IR  =  (NOx/Ne)  -  1.0  -  R"
+    },
+    {
+      "coord": "A19",
+      "value": "Calculations - Preanoxic basin design for denitrification"
+    },
+    {
+      "coord": "K20",
+      "value": "Flow rate to anoxic tank:    Qanox = IR(Q)  +  R(Q)"
+    },
+    {
+      "coord": "A21",
+      "value": "  1.  Calculate active biomass concentration and IR ratio"
+    },
+    {
+      "coord": "K21",
+      "value": "NOx feed rate = (Qanox)(NOXRAS)"
+    },
+    {
+      "coord": "A22",
+      "value": "  Active biomass conc.,  Xb ="
+    },
+    {
+      "coord": "C22",
+      "formula": "=Qo*SRT*Y*bCODo/((AerVol)*(1+(kdatTww*SRT)))",
+      "value": "2116.24025"
+    },
+    {
+      "coord": "D22",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F22",
+      "value": "                IR ratio,  IR ="
+    },
+    {
+      "coord": "H22",
+      "formula": "=(NOX/C12)-1-H11",
+      "value": "1.789469954"
+    },
+    {
+      "coord": "K23",
+      "value": "Anoxic volume:     Vanox  =  t Qo         ( t = estimated detention time )"
+    },
+    {
+      "coord": "A24",
+      "value": "  2.  Calculate feed rate of NO4-N to anoxic tank and anoxic tank volume"
+    },
+    {
+      "coord": "K25",
+      "value": "F/M  =  QSo/XV"
+    },
+    {
+      "coord": "A26",
+      "value": "    Flow rate to anoxic tank ="
+    },
+    {
+      "coord": "C26",
+      "formula": "=(H22*Qo)+(H11*Qo)",
+      "value": "9157.879816"
+    },
+    {
+      "coord": "D26",
+      "value": "m3/d"
+    },
+    {
+      "coord": "F26",
+      "value": " NOX rate to anoxic tank ="
+    },
+    {
+      "coord": "H26",
+      "formula": "=C26*C11",
+      "value": "54947.2789"
+    },
+    {
+      "coord": "I26",
+      "value": "g/day"
+    },
+    {
+      "coord": "A27",
+      "value": "        (flow containing nitrate)"
+    },
+    {
+      "coord": "F27",
+      "value": "Anoxic tank volume, Van ="
+    },
+    {
+      "coord": "H27",
+      "formula": "=(Qo)*C14/24",
+      "value": "315.8422493"
+    },
+    {
+      "coord": "I27",
+      "value": "m3"
+    },
+    {
+      "coord": "K27",
+      "value": "Rate at which NO3-N can be reduced:   NOr  =  Vanox(SDNR)(MLVSS)"
+    },
+    {
+      "coord": "F28",
+      "value": "  (based on detention time value in cell C15)"
+    },
+    {
+      "coord": "A29",
+      "value": "  3.  Calculate the F/M ratio"
+    },
+    {
+      "coord": "K29",
+      "value": "Coefficients for SDNR Equation"
+    },
+    {
+      "coord": "A31",
+      "value": "       Anoxic tank F/M ratio ="
+    },
+    {
+      "coord": "C31",
+      "formula": "=Qo*BODo/((H27)*C22)",
+      "value": "0.9575132223"
+    },
+    {
+      "coord": "D31",
+      "value": "  g BOD/d/g MLVSS"
+    },
+    {
+      "coord": "K31",
+      "value": "rbCOD/bCOD"
+    },
+    {
+      "coord": "L31",
+      "value": "bo"
+    },
+    {
+      "coord": "M31",
+      "value": "b1"
+    },
+    {
+      "coord": "A33",
+      "value": "  4.  Calculate the SDNR"
+    },
+    {
+      "coord": "F33",
+      "value": "      (User Entered Values Needed Here)"
+    },
+    {
+      "coord": "K33",
+      "value": "0.1"
+    },
+    {
+      "coord": "L33",
+      "value": "0.186"
+    },
+    {
+      "coord": "M33",
+      "value": "0.078"
+    },
+    {
+      "coord": "K34",
+      "value": "0.2"
+    },
+    {
+      "coord": "L34",
+      "value": "0.213"
+    },
+    {
+      "coord": "M34",
+      "value": "0.118"
+    },
+    {
+      "coord": "A35",
+      "value": "       rbCOD/bCOD ratio ="
+    },
+    {
+      "coord": "C35",
+      "formula": "=rbCODo/bCODo",
+      "value": "0.29296875"
+    },
+    {
+      "coord": "D35",
+      "value": "           Next lower rbCOD/bCOD value from table:"
+    },
+    {
+      "coord": "I35",
+      "value": "0.2"
+    },
+    {
+      "coord": "K35",
+      "value": "0.3"
+    },
+    {
+      "coord": "L35",
+      "value": "0.235"
+    },
+    {
+      "coord": "M35",
+      "value": "0.141"
+    },
+    {
+      "coord": "D36",
+      "value": "          Next higher rbCOD/bCOD value from table:"
+    },
+    {
+      "coord": "I36",
+      "value": "0.3"
+    },
+    {
+      "coord": "K36",
+      "value": "0.4"
+    },
+    {
+      "coord": "L36",
+      "value": "0.242"
+    },
+    {
+      "coord": "M36",
+      "value": "0.152"
+    },
+    {
+      "coord": "K37",
+      "value": "0.5"
+    },
+    {
+      "coord": "L37",
+      "value": "0.27"
+    },
+    {
+      "coord": "M37",
+      "value": "0.162"
+    },
+    {
+      "coord": "A38",
+      "value": "      SDNR for rbCOD/bCOD ="
+    },
+    {
+      "coord": "C38",
+      "formula": "=I35",
+      "value": "0.2"
+    },
+    {
+      "coord": "D38",
+      "value": "    is equal to:"
+    },
+    {
+      "coord": "F38",
+      "formula": "=IF(C$31<0.5,0.24*C$31,L39+(M39*LN(C$31)))",
+      "value": "0.2078769416"
+    },
+    {
+      "coord": "A39",
+      "value": "      SDNR for rbCOD/bCOD ="
+    },
+    {
+      "coord": "C39",
+      "formula": "=I36",
+      "value": "0.3"
+    },
+    {
+      "coord": "D39",
+      "value": "    is equal to:"
+    },
+    {
+      "coord": "F39",
+      "formula": "=IF(C$31<0.5,0.24*C$31,L40+(M40*LN(C$31)))",
+      "value": "0.2288783794"
+    },
+    {
+      "coord": "K39",
+      "formula": "=I35",
+      "value": "0.2"
+    },
+    {
+      "coord": "L39",
+      "formula": "=VLOOKUP($K39,$K$33:$M$37,2)",
+      "value": "0.213"
+    },
+    {
+      "coord": "M39",
+      "formula": "=VLOOKUP($K39,$K$33:$M$37,3)",
+      "value": "0.118"
+    },
+    {
+      "coord": "K40",
+      "formula": "=I36",
+      "value": "0.3"
+    },
+    {
+      "coord": "L40",
+      "formula": "=VLOOKUP($K40,$K$33:$M$37,2)",
+      "value": "0.235"
+    },
+    {
+      "coord": "M40",
+      "formula": "=VLOOKUP($K40,$K$33:$M$37,3)",
+      "value": "0.141"
+    },
+    {
+      "coord": "A41",
+      "value": "     SDNR for rbCOD/bCOD ="
+    },
+    {
+      "coord": "C41",
+      "formula": "=C35",
+      "value": "0.29296875"
+    },
+    {
+      "coord": "D41",
+      "value": "    is equal to:"
+    },
+    {
+      "coord": "F41",
+      "formula": "=F38+((C41-C38)/(C39-C38))*(F39-F38)",
+      "value": "0.2274017158"
+    },
+    {
+      "coord": "G41",
+      "value": "  g NO3-N/day/g biomass   (at 20oC)"
+    },
+    {
+      "coord": "K42",
+      "value": "Equations for SDNR as a function of F/M"
+    },
+    {
+      "coord": "A43",
+      "value": "            at Tww, SDNR ="
+    },
+    {
+      "coord": "C43",
+      "formula": "=F41*(1.026^(Tww-20))",
+      "value": "0.1851888569"
+    },
+    {
+      "coord": "D43",
+      "value": "  g NO3-N/day/g biomass   (at Tww)"
+    },
+    {
+      "coord": "K44",
+      "value": "For F/M < 0.5,   SDNR = 0.24*F/M     (at 20oC)"
+    },
+    {
+      "coord": "A45",
+      "value": "  Value of SDNR including Internal Recycle correction:"
+    },
+    {
+      "coord": "K46",
+      "value": "For F/M  >  0.5,  SDNR = bo + b1[ ln(F/M) ]      (at 20oC)"
+    },
+    {
+      "coord": "A47",
+      "value": "       For IR = 2, SDNR ="
+    },
+    {
+      "coord": "C47",
+      "formula": "=C43-(0.0166*LN(C31))-0.078",
+      "value": "0.1079095584"
+    },
+    {
+      "coord": "A48",
+      "value": "       For IR = 3, SDNR ="
+    },
+    {
+      "coord": "C48",
+      "formula": "=C43-(0.029*LN(C31))-0.012",
+      "value": "0.1744479137"
+    },
+    {
+      "coord": "K48",
+      "value": "Temperature Correction:  "
+    },
+    {
+      "coord": "M48",
+      "value": "  SDNR at Tww = (SDNR at 20oC)(1.026Tww - 20)"
+    },
+    {
+      "coord": "D50",
+      "value": " For IR ="
+    },
+    {
+      "coord": "E50",
+      "formula": "=IR",
+      "value": "1.789469954"
+    },
+    {
+      "coord": "F50",
+      "value": "   SDNR ="
+    },
+    {
+      "coord": "G50",
+      "formula": "=IF(IR<=1,C43,IF(IR<=2,C47+(((2-IR)/1)*(C43-C47)),IF(IR=2,C47,IF(IR<3,C47+(IR-2)*(C48-C47),IF(IR<=4,C48,\"IR above Max Value\")))))",
+      "value": "0.1241791727"
+    },
+    {
+      "coord": "K50",
+      "value": "Equations for Internal Recycle Correction:  "
+    },
+    {
+      "coord": "A52",
+      "value": "  5.  Calculate the Anoxic Tank Volume, Dimensions and Detention Time"
+    },
+    {
+      "coord": "K52",
+      "value": "for IR < 1, no correction is needed"
+    },
+    {
+      "coord": "B53",
+      "value": "(User Input needed in Blue Cells)"
+    },
+    {
+      "coord": "K54",
+      "value": "for IR = 2,   SDNRadj = SDNRIR1 -  0.0166LN(F/M) - 0.078"
+    },
+    {
+      "coord": "A55",
+      "value": "  NO3-N reduction capacity ="
+    },
+    {
+      "coord": "C55",
+      "formula": "=(H27)*C43*C22",
+      "value": "123779.8765"
+    },
+    {
+      "coord": "D55",
+      "value": "g/d"
+    },
+    {
+      "coord": "F55",
+      "value": " % Excess Nitrif. Capacity:"
+    },
+    {
+      "coord": "H55",
+      "formula": "=(C55-H26)/H26",
+      "value": "1.252702573"
+    },
+    {
+      "coord": "A56",
+      "value": "           Difference between Design and Calculated % Excess Nitrification Capacity ="
+    },
+    {
+      "coord": "H56",
+      "formula": "=H13-H55",
+      "value": "-1.052702573"
+    },
+    {
+      "coord": "K56",
+      "value": "for 3 < IR < 4,   SDNRadj = SDNRIR1 -  0.029LN(F/M) - 0.012"
+    },
+    {
+      "coord": "A57",
+      "value": "          Goal Seek Result:"
+    },
+    {
+      "coord": "A58",
+      "value": "Anoxic Tank min. Vol., Van ="
+    },
+    {
+      "coord": "C58",
+      "formula": "=IF(ABS(H56)<0.001,H27,\"Redo Goal Seek\")",
+      "value": "Redo Goal Seek"
+    },
+    {
+      "coord": "E58",
+      "value": "m3 "
+    },
+    {
+      "coord": "F58",
+      "value": " min. Anox. Det. Time, tan ="
+    },
+    {
+      "coord": "H58",
+      "formula": "=C58*24/(Qo)",
+      "value": "#VALUE!"
+    },
+    {
+      "coord": "I58",
+      "value": "hr"
+    },
+    {
+      "coord": "K58",
+      "value": "NOTE:  These equations are from: "
+    },
+    {
+      "coord": "K59",
+      "value": " Metcalf & Eddy/Aecom, (Revised by Tchobanoglous, G, Burton, F.L., Stensel, H.D.), "
+    },
+    {
+      "coord": "A60",
+      "value": "NOTE:  This is an iterative solution.  You must use Excel's \"Goal Seek\" to find the Van vand tan"
+    },
+    {
+      "coord": "K60",
+      "value": "  Wastewater Engineering, Treatment and Resource Recovery, 5th Ed., New York, NY, 2014."
+    },
+    {
+      "coord": "A61",
+      "value": "values as follows:  Place the cursor on cell H49 and click on \"goal seek\" (in the \"tools\" menu of"
+    },
+    {
+      "coord": "A62",
+      "value": "older versions and under \"Data What If Analysis\" in newer versions of Excel).  Enter values to"
+    },
+    {
+      "coord": "A63",
+      "value": "\"Set cell\" H49 \"To value:\" 0, \"By changing cell:\" C14, and click on \"OK\".  The calculated values"
+    },
+    {
+      "coord": "A64",
+      "value": "of Van and tan will be in cells C51 and H51.  Cell H49 should be zero if the process worked properly."
+    },
+    {
+      "coord": "A65",
+      "value": "A preliminary estimate for tan is needed in cell C14 in order for the iterative solution to work."
+    },
+    {
+      "coord": "E67",
+      "value": "Click on green box and then  on"
+    },
+    {
+      "coord": "A68",
+      "value": " Min. Vol. per tank,  Vtank ="
+    },
+    {
+      "coord": "C68",
+      "formula": "=C58/C16",
+      "value": "#VALUE!"
+    },
+    {
+      "coord": "D68",
+      "value": "m3"
+    },
+    {
+      "coord": "E68",
+      "value": "  arrow to Select Tank Shape:"
+    },
+    {
+      "coord": "H68",
+      "value": "rectangular"
+    },
+    {
+      "coord": "A69",
+      "formula": "=IF(H68=\"cylindrical\",\"Calculated Tank Diam.  =\",\"  Calculated Tank Width =\")",
+      "value": "  Calculated Tank Width ="
+    },
+    {
+      "coord": "C69",
+      "formula": "=IF(H68=\"cylindrical\",((C68/H14)*4/PI())^0.5,((C68/H14)/H15)^0.5)",
+      "value": "#VALUE!"
+    },
+    {
+      "coord": "D69",
+      "value": "m"
+    },
+    {
+      "coord": "E69",
+      "formula": "=IF(H68=\"cylindrical\",\"          Actual Tank Diam:\",\"         Actual Tank Width:\")",
+      "value": "         Actual Tank Width:"
+    },
+    {
+      "coord": "H69",
+      "value": "5.0"
+    },
+    {
+      "coord": "I69",
+      "value": "m"
+    },
+    {
+      "coord": "A70",
+      "formula": "=IF(H68=\"cylindrical\",\"\",\"  Calculated Tank Length =\")",
+      "value": "  Calculated Tank Length ="
+    },
+    {
+      "coord": "C70",
+      "formula": "=IF(H68=\"cylindrical\",\"\",(C68/H14)/C69)",
+      "value": "#VALUE!"
+    },
+    {
+      "coord": "D70",
+      "value": "m"
+    },
+    {
+      "coord": "E70",
+      "formula": "=IF(H68=\"cylindrical\",\"    Not Used for Cylindrical:\",\"       Actual Tank Length:\")",
+      "value": "       Actual Tank Length:"
+    },
+    {
+      "coord": "H70",
+      "value": "5.0"
+    },
+    {
+      "coord": "I70",
+      "value": "m"
+    },
+    {
+      "coord": "A71",
+      "value": "           Tank Wall Height ="
+    },
+    {
+      "coord": "C71",
+      "formula": "=H14+C15",
+      "value": "5.5"
+    },
+    {
+      "coord": "D71",
+      "value": "m"
+    },
+    {
+      "coord": "E71",
+      "value": "    Actual Tank liquid Volume ="
+    },
+    {
+      "coord": "H71",
+      "formula": "=IF(H68=\"rectangular\",H14*H69*H70,H14*PI()*(H69/2)^2)",
+      "value": "125"
+    },
+    {
+      "coord": "I71",
+      "value": "m3 "
+    },
+    {
+      "coord": "A73",
+      "value": "      Anoxic Det'n time,  t ="
+    },
+    {
+      "coord": "C73",
+      "formula": "=H71*C16*24/Qo",
+      "value": "2.25"
+    },
+    {
+      "coord": "D73",
+      "value": "hr"
+    },
+    {
+      "coord": "A75",
+      "value": "  6.  Recalculate the oxygen/air requirement due to the nitrate reduction oxygen credit"
+    },
+    {
+      "coord": "A76",
+      "value": "                Oxygen credit  ="
+    },
+    {
+      "coord": "C76",
+      "formula": "=2.86*(NOX-C12)*Qo/1000",
+      "value": "157.1492176"
+    },
+    {
+      "coord": "D76",
+      "value": "     kg/day    ="
+    },
+    {
+      "coord": "F76",
+      "formula": "=C76/24",
+      "value": "6.547884068"
+    },
+    {
+      "coord": "G76",
+      "value": "kg/hr"
+    },
+    {
+      "coord": "A78",
+      "value": "     O2 Utilization Rate ="
+    },
+    {
+      "coord": "C78",
+      "formula": "=O2lbperhr_nitrif-F76",
+      "value": "41.99270237"
+    },
+    {
+      "coord": "D78",
+      "value": "kg/hr"
+    },
+    {
+      "coord": "E78",
+      "value": "       Req'd air flow rate, Nm3/hr ="
+    },
+    {
+      "coord": "H78",
+      "formula": "=SCFM_Nitrif*C78/O2lbperhr_nitrif",
+      "value": "1048.842362"
+    },
+    {
+      "coord": "I78",
+      "value": "Nm3/hr"
+    },
+    {
+      "coord": "E79",
+      "value": "       Req'd air flow rate, m3/hr ="
+    },
+    {
+      "coord": "H79",
+      "formula": "=ACFM_nitrif*C78/O2lbperhr_nitrif",
+      "value": "741.9966966"
+    },
+    {
+      "coord": "I79",
+      "value": "m3/hr"
+    },
+    {
+      "coord": "F80",
+      "value": "Blower Outlet Pressure ="
+    },
+    {
+      "coord": "H80",
+      "formula": "=BlowerPress",
+      "value": "1.47564"
+    },
+    {
+      "coord": "I80",
+      "value": "bar"
+    },
+    {
+      "coord": "K80",
+      "value": "Oxygen credit for nitrate reduction  =  2.86 Qo(NOx - Ne)"
+    },
+    {
+      "coord": "A82",
+      "value": "  7.  Recalculate Alkalinity Requirement"
+    },
+    {
+      "coord": "A84",
+      "value": "        Alkalinity produced ="
+    },
+    {
+      "coord": "C84",
+      "formula": "=3.57*(NOX-C12)",
+      "value": "49.04044641"
+    },
+    {
+      "coord": "D84",
+      "value": " mg/L as CaCO3"
+    },
+    {
+      "coord": "K84",
+      "value": "Alkalinity produced by nitrate reduction =  3.57(NOx - Ne)"
+    },
+    {
+      "coord": "A86",
+      "value": "             Alkalinity needed ="
+    },
+    {
+      "coord": "C86",
+      "formula": "=ALKneeded1-C84",
+      "value": "31.88044641"
+    },
+    {
+      "coord": "D86",
+      "value": " mg/L as CaCO3"
+    },
+    {
+      "coord": "F86",
+      "value": "         Alkalinity needed ="
+    },
+    {
+      "coord": "H86",
+      "formula": "=Qo*C86/1000",
+      "value": "127.5217857"
+    },
+    {
+      "coord": "I86",
+      "value": " kg/day as CaCO3"
+    },
+    {
+      "coord": "A88",
+      "value": "               Sodium bicarbonate needed per day to maintain alkalinity  ="
+    },
+    {
+      "coord": "G88",
+      "formula": "=H86*84/50",
+      "value": "214.2365999"
+    },
+    {
+      "coord": "H88",
+      "value": " kg/day  NaHCO3"
+    },
+    {
+      "coord": "A90",
+      "value": "  8.  Calculate Anoxic tank mixing power needed"
+    },
+    {
+      "coord": "A92",
+      "value": "  Anoxic Tank Mixing Power ="
+    },
+    {
+      "coord": "C92",
+      "formula": "=H71*C16*H10/1000",
+      "value": "3.75"
+    },
+    {
+      "coord": "D92",
+      "value": "kW"
+    },
+    {
+      "coord": "A94",
+      "value": "  9.  Calculate Sludge Wasting Rate"
+    },
+    {
+      "coord": "B94",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "B95",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "A96",
+      "value": " Waste A.S. Rate, Qw  ="
+    },
+    {
+      "coord": "C96",
+      "formula": "=(((((TankNumber_Nitrif*V_Tank_Nitrif)*MLSS_Nitrif)+(((TankNumber_Anoxic*V_Tank_Anoxic)*C22)))/SRT)-(Qo*TSSe))/(TSSw_Nitrif-TSSe)",
+      "value": "322.8322573"
+    },
+    {
+      "coord": "D96",
+      "value": "m3/d"
+    },
+    {
+      "coord": "B102",
+      "value": "       Find more Excel spreadsheets for engineering at"
+    },
+    {
+      "coord": "D103",
+      "value": "EngineeringExcelTemplates.com"
+    },
+    {
+      "coord": "B106",
+      "value": "Copyright \u00a9 2020 Harlan H Bengtson. All Rights Reserved."
+    },
+    {
+      "coord": "A160",
+      "value": "cylindrical"
+    },
+    {
+      "coord": "A161",
+      "value": "rectangular"
+    }
+  ],
+  "5. A2O EBPR Process": [
+    {
+      "coord": "A1",
+      "value": "Completely Mixed Activated Sludge Denitrification Calculations - S.I. units"
+    },
+    {
+      "coord": "A2",
+      "value": "    PreAnoxic Denitrification - A2O EBPR Process"
+    },
+    {
+      "coord": "A3",
+      "value": "This spreadsheet makes the design calculations for enhanced biological phosphorus removal"
+    },
+    {
+      "coord": "A4",
+      "value": "with the CMAS system designed for preanoxic denitrification in Worksheet 4."
+    },
+    {
+      "coord": "A5",
+      "value": "  (The wastewater parameters/characteristics and biological kinetic coefficients entered on"
+    },
+    {
+      "coord": "A6",
+      "value": "     Worksheet 2 will also be used in this worksheet.)"
+    },
+    {
+      "coord": "A8",
+      "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+    },
+    {
+      "coord": "A9",
+      "value": "Inputs - Additional Design Parameters"
+    },
+    {
+      "coord": "A11",
+      "value": "       Nitrate conc. in RAS  ="
+    },
+    {
+      "coord": "C11",
+      "value": "6.0"
+    },
+    {
+      "coord": "D11",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F11",
+      "value": "   rbCOD used by nitrate ="
+    },
+    {
+      "coord": "H11",
+      "value": "5.2"
+    },
+    {
+      "coord": "I11",
+      "value": " g rbCOD/g NO3-N"
+    },
+    {
+      "coord": "A12",
+      "value": "        Effl.  nitrate conc. Ne  ="
+    },
+    {
+      "coord": "C12",
+      "value": "6.0"
+    },
+    {
+      "coord": "D12",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F12",
+      "value": "                     RAS ratio ="
+    },
+    {
+      "coord": "H12",
+      "value": "0.6"
+    },
+    {
+      "coord": "A14",
+      "value": " Influent nbVSS, nbVSSo  ="
+    },
+    {
+      "coord": "C14",
+      "value": "20.0"
+    },
+    {
+      "coord": "D14",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F14",
+      "value": "  Liquid Depth in Tank ="
+    },
+    {
+      "coord": "H14",
+      "value": "5.0"
+    },
+    {
+      "coord": "I14",
+      "value": "m"
+    },
+    {
+      "coord": "A15",
+      "value": "             Anaerobic HRT  ="
+    },
+    {
+      "coord": "C15",
+      "value": "0.75"
+    },
+    {
+      "coord": "D15",
+      "value": "hr"
+    },
+    {
+      "coord": "F15",
+      "value": "         Tank L:W ratio ="
+    },
+    {
+      "coord": "H15",
+      "value": "1.0"
+    },
+    {
+      "coord": "J15",
+      "value": "Equations used for the calculations:  (note that conversion factors are needed in some of the equations)"
+    },
+    {
+      "coord": "A16",
+      "value": "            Tank Freeboard  ="
+    },
+    {
+      "coord": "C16",
+      "value": "0.5"
+    },
+    {
+      "coord": "D16",
+      "value": "m"
+    },
+    {
+      "coord": "E16",
+      "value": "       (target L:W - only used if tank is rectangular)"
+    },
+    {
+      "coord": "A17",
+      "value": "         Number of Tanks ="
+    },
+    {
+      "coord": "C17",
+      "value": "3.0"
+    },
+    {
+      "coord": "K17",
+      "value": "rbCOD in Influent  = Qo*rbCODo"
+    },
+    {
+      "coord": "A19",
+      "value": "Calculations - Enhanced Biological Phosporus Removal by A2O Process"
+    },
+    {
+      "coord": "K19",
+      "value": "NO3-N fed to Anaerobic Tank = RASRatio*Qo*(g rbCOD/d NO3-N)"
+    },
+    {
+      "coord": "A21",
+      "value": "  1.  Calculate the rbCOD available for Enhanced Biological Phosporus Removal"
+    },
+    {
+      "coord": "K21",
+      "value": "rbCOD consumed by nitrate  = (rbCOD used by nitrate)*(NO3-N fed to Anaerobic Tank)"
+    },
+    {
+      "coord": "A22",
+      "value": "   rbCOD in Infl.,  rbCODo ="
+    },
+    {
+      "coord": "C22",
+      "formula": "=Qo*rbCODo",
+      "value": "300000"
+    },
+    {
+      "coord": "D22",
+      "value": "g/d"
+    },
+    {
+      "coord": "F22",
+      "value": "NO3-N fed to"
+    },
+    {
+      "coord": "A23",
+      "value": "      rbCOD consumed"
+    },
+    {
+      "coord": "F23",
+      "value": "           Anaerobic Tank ="
+    },
+    {
+      "coord": "H23",
+      "formula": "=RASRatio*Qo*C11",
+      "value": "12000"
+    },
+    {
+      "coord": "I23",
+      "value": "  g NO3-N/d"
+    },
+    {
+      "coord": "K23",
+      "value": "rbCOD available  = rbCODo - rbCOD consumed by nitrate"
+    },
+    {
+      "coord": "B24",
+      "value": "  by nitrate ="
+    },
+    {
+      "coord": "C24",
+      "formula": "=H11*H23",
+      "value": "62400"
+    },
+    {
+      "coord": "D24",
+      "value": "  g rbCOD/d"
+    },
+    {
+      "coord": "F24",
+      "value": "      rbCOD available ="
+    },
+    {
+      "coord": "H24",
+      "formula": "=C22-C24",
+      "value": "237600"
+    },
+    {
+      "coord": "I24",
+      "value": "  g rbCOD/d"
+    },
+    {
+      "coord": "A26",
+      "value": "  2.  Determine Phosporus Removal by EBPR"
+    },
+    {
+      "coord": "K26",
+      "value": "Influent VFA/rbCOD ratio  =  VFAo/rbCODo"
+    },
+    {
+      "coord": "A28",
+      "value": "        Infl. VFA/rbCOD ratio ="
+    },
+    {
+      "coord": "C28",
+      "formula": "=VFAo/rbCODo",
+      "value": "0.2"
+    },
+    {
+      "coord": "F28",
+      "value": "       rbCOD/P removal ="
+    },
+    {
+      "coord": "H28",
+      "formula": "=(-65.53*(C28^3))+(125.22*(C28^2))-(82.644*(C28))+27.393",
+      "value": "15.34876"
+    },
+    {
+      "coord": "I28",
+      "value": "  g rbCOD/g P"
+    },
+    {
+      "coord": "K28",
+      "value": "rbCOD/P = -65.53(VFA/rbCOD)3 + 125.22(VFA/rbCOD)2 - 82.644(VFA/rbCOD) + 27.393"
+    },
+    {
+      "coord": "J29",
+      "value": "*"
+    },
+    {
+      "coord": "A30",
+      "value": "  P removal rate by EBPR ="
+    },
+    {
+      "coord": "C30",
+      "formula": "=H24/H28",
+      "value": "15480.07787"
+    },
+    {
+      "coord": "D30",
+      "value": "  g P/d"
+    },
+    {
+      "coord": "E30",
+      "value": "  P conc. reduction by EBPR ="
+    },
+    {
+      "coord": "H30",
+      "formula": "=C30/Qo",
+      "value": "3.870019467"
+    },
+    {
+      "coord": "I30",
+      "value": "   mg/L"
+    },
+    {
+      "coord": "K30",
+      "value": "P removal rate by EBPR = (rbCOD available)/(rbCOD/P removal)"
+    },
+    {
+      "coord": "K32",
+      "value": "P Conc. reduction by EBPR = removal rate by EBPR/Qo"
+    },
+    {
+      "coord": "A33",
+      "value": "  3.  Determine P Removal by other heterotrophic bacteria for synthesis"
+    },
+    {
+      "coord": "A35",
+      "value": "       PX,bio (from Wksht 3) ="
+    },
+    {
+      "coord": "C35",
+      "formula": "=Pxbio",
+      "value": "492.1060092"
+    },
+    {
+      "coord": "D35",
+      "value": "  kg VSS/day"
+    },
+    {
+      "coord": "F35",
+      "value": "        PX,bio (in g VSS/d) ="
+    },
+    {
+      "coord": "H35",
+      "formula": "=C35*1000",
+      "value": "492106.0092"
+    },
+    {
+      "coord": "I35",
+      "value": "  g VSS/day"
+    },
+    {
+      "coord": "K35",
+      "value": "PX,bio = QY(So - S)/(1 + kdSRT)  +  fdkdQY(So - S)SRT/(1 + kdSRT)  +  QYn(NOx)/(1 + kdnSRT)"
+    },
+    {
+      "coord": "A37",
+      "value": "    P removal by Synthesis ="
+    },
+    {
+      "coord": "C37",
+      "formula": "=0.015*H35",
+      "value": "7381.590138"
+    },
+    {
+      "coord": "D37",
+      "value": "  g P/day"
+    },
+    {
+      "coord": "F37",
+      "value": "Reduction in P Conc. ="
+    },
+    {
+      "coord": "H37",
+      "formula": "=C37/Qo",
+      "value": "1.845397535"
+    },
+    {
+      "coord": "I37",
+      "value": "   mg/L"
+    },
+    {
+      "coord": "K37",
+      "value": "P removal by Synthesis = 0.015*PX,bio     (in g P/day)"
+    },
+    {
+      "coord": "A39",
+      "value": "  4.  Calculate Effluent P Concentration"
+    },
+    {
+      "coord": "K39",
+      "value": "Reduction in P conc. = 0.015*PX,bio/Qo"
+    },
+    {
+      "coord": "A41",
+      "value": "       Effluent P Conc., Pe  ="
+    },
+    {
+      "coord": "C41",
+      "formula": "=TPo-H30-H37",
+      "value": "0.2845829981"
+    },
+    {
+      "coord": "D41",
+      "value": "   mg/L"
+    },
+    {
+      "coord": "K41",
+      "value": "Effluent P Conc., Pe  =  Po - P conc. reduction by EBPR"
+    },
+    {
+      "coord": "M42",
+      "value": "         - reduction of P conc. by other heterotrophic bacteria for synthesis"
+    },
+    {
+      "coord": "A43",
+      "value": "  5.  Calculate the Anoxic Tank Volume, Dimensions and Detention Time"
+    },
+    {
+      "coord": "E45",
+      "value": "Click on green box and then  on"
+    },
+    {
+      "coord": "A46",
+      "value": " Min. Vol. per tank,  Vtank ="
+    },
+    {
+      "coord": "C46",
+      "formula": "=((Qo/24)/C17)*C15",
+      "value": "41.66666667"
+    },
+    {
+      "coord": "D46",
+      "value": "m3"
+    },
+    {
+      "coord": "E46",
+      "value": "  arrow to Select Tank Shape:"
+    },
+    {
+      "coord": "H46",
+      "value": "rectangular"
+    },
+    {
+      "coord": "K46",
+      "value": "Vtank  = (Qo/N)*HRT"
+    },
+    {
+      "coord": "A47",
+      "formula": "=IF(H46=\"cylindrical\",\"Calculated Tank Diam.  =\",\"  Calculated Tank Width =\")",
+      "value": "  Calculated Tank Width ="
+    },
+    {
+      "coord": "C47",
+      "formula": "=IF(H46=\"cylindrical\",((C46/H14)*4/PI())^0.5,((C46/H14)/H15)^0.5)",
+      "value": "2.886751346"
+    },
+    {
+      "coord": "D47",
+      "value": "m"
+    },
+    {
+      "coord": "E47",
+      "formula": "=IF(H46=\"cylindrical\",\"          Actual Tank Diam:\",\"         Actual Tank Width:\")",
+      "value": "         Actual Tank Width:"
+    },
+    {
+      "coord": "H47",
+      "value": "3.0"
+    },
+    {
+      "coord": "I47",
+      "value": "m"
+    },
+    {
+      "coord": "A48",
+      "formula": "=IF(H46=\"cylindrical\",\"\",\"  Calculated Tank Length =\")",
+      "value": "  Calculated Tank Length ="
+    },
+    {
+      "coord": "C48",
+      "formula": "=IF(H46=\"cylindrical\",\"\",(C46/H14)/C47)",
+      "value": "2.886751346"
+    },
+    {
+      "coord": "D48",
+      "value": "m"
+    },
+    {
+      "coord": "E48",
+      "formula": "=IF(H46=\"cylindrical\",\"    Not Used for Cylindrical:\",\"       Actual Tank Length:\")",
+      "value": "       Actual Tank Length:"
+    },
+    {
+      "coord": "H48",
+      "value": "3.0"
+    },
+    {
+      "coord": "I48",
+      "value": "m"
+    },
+    {
+      "coord": "A49",
+      "value": "           Tank Wall Height ="
+    },
+    {
+      "coord": "C49",
+      "formula": "=H14+C16",
+      "value": "5.5"
+    },
+    {
+      "coord": "D49",
+      "value": "m"
+    },
+    {
+      "coord": "E49",
+      "value": "    Actual Tank liquid Volume ="
+    },
+    {
+      "coord": "H49",
+      "formula": "=IF(H46=\"rectangular\",H14*H47*H48,H14*PI()*(H47/2)^2)",
+      "value": "45"
+    },
+    {
+      "coord": "I49",
+      "value": "m3 "
+    },
+    {
+      "coord": "A51",
+      "value": "      Anoxic Det'n time,  t ="
+    },
+    {
+      "coord": "C51",
+      "formula": "=H49*C17/(Qo/24)",
+      "value": "0.81"
+    },
+    {
+      "coord": "D51",
+      "value": "hr"
+    },
+    {
+      "coord": "A53",
+      "value": "  5.  Calculate P Concentration in Waste Sludge"
+    },
+    {
+      "coord": "K53",
+      "value": "Tot. Sludge Prod. Rate  =  (PX,bio/0.85) + (Qo*nbVSSo) + Qo*(TSSo - VSSo) "
+    },
+    {
+      "coord": "A55",
+      "value": "  Total Sludge Producrion  ="
+    },
+    {
+      "coord": "C55",
+      "formula": "=(Pxbio/0.85)*1000+(Qo*nbVSSo)+(Qo*(TSSo-VSSo))",
+      "value": "698948.2461"
+    },
+    {
+      "coord": "D55",
+      "value": "g/d"
+    },
+    {
+      "coord": "F55",
+      "value": "      P Removal Rate ="
+    },
+    {
+      "coord": "H55",
+      "formula": "=Qo*(TPo-C41)",
+      "value": "22861.66801"
+    },
+    {
+      "coord": "I55",
+      "value": "g/d"
+    },
+    {
+      "coord": "K55",
+      "value": "P Removal Rate =  Qo(Po - Pe)"
+    },
+    {
+      "coord": "A57",
+      "value": "     % P in waste sludge ="
+    },
+    {
+      "coord": "C57",
+      "formula": "=H55/C55",
+      "value": "0.03270867068"
+    },
+    {
+      "coord": "K57",
+      "value": "% P in waste sludge =  (P Removal Rate/Total Sludge Prod. Rate)*100%"
+    },
+    {
+      "coord": "B62",
+      "value": "       Find more Excel spreadsheets for engineering at"
+    },
+    {
+      "coord": "D63",
+      "value": "EngineeringExcelTemplates.com"
+    },
+    {
+      "coord": "B66",
+      "value": "Copyright \u00a9 2020 Harlan H Bengtson. All Rights Reserved."
+    }
+  ],
+  "6. CMAS - Post-Anoxic Denitrif.": [
+    {
+      "coord": "A1",
+      "value": "Completely Mixed Activated Sludge Denitrification Calculations - S.I. units"
+    },
+    {
+      "coord": "A2",
+      "value": "    PostAnoxic, Two Sludge Denitrification"
+    },
+    {
+      "coord": "A3",
+      "value": "This spreadsheet makes the design calculations for a postanoxic, denitrification basin to go with"
+    },
+    {
+      "coord": "A4",
+      "value": "the CMAS system designed for BOD removal and Nitrification in Worksheet 3, as shown in the"
+    },
+    {
+      "coord": "A5",
+      "value": "diagram at the right.  (The wastewater parameters/characteristics and some biological kinetic"
+    },
+    {
+      "coord": "A6",
+      "value": " coefficients entered on Worksheet 2 will also be used in this worksheet.)"
+    },
+    {
+      "coord": "A8",
+      "value": "Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes"
+    },
+    {
+      "coord": "A10",
+      "value": "Inputs - Additional Design Parameters"
+    },
+    {
+      "coord": "F11",
+      "value": "Mixing energy"
+    },
+    {
+      "coord": "A12",
+      "value": " Design MLSS, MLSSD2 ="
+    },
+    {
+      "coord": "C12",
+      "value": "2000.0"
+    },
+    {
+      "coord": "D12",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F12",
+      "value": "         for anoxic reactor  ="
+    },
+    {
+      "coord": "H12",
+      "value": "10.0"
+    },
+    {
+      "coord": "I12",
+      "value": "  kW/103 m3"
+    },
+    {
+      "coord": "A13",
+      "value": "  Reaer. Det. Time, treaer  ="
+    },
+    {
+      "coord": "C13",
+      "value": "15.0"
+    },
+    {
+      "coord": "D13",
+      "value": "min"
+    },
+    {
+      "coord": "F13",
+      "value": "  Design SRT,  SRTD2  ="
+    },
+    {
+      "coord": "H13",
+      "value": "5.0"
+    },
+    {
+      "coord": "I13",
+      "value": "days"
+    },
+    {
+      "coord": "A14",
+      "value": "            Tank Freeboard  ="
+    },
+    {
+      "coord": "C14",
+      "value": "0.5"
+    },
+    {
+      "coord": "D14",
+      "value": "m"
+    },
+    {
+      "coord": "E14",
+      "value": "   Target Effl.  nitrate conc. Ne  ="
+    },
+    {
+      "coord": "H14",
+      "value": "2.0"
+    },
+    {
+      "coord": "I14",
+      "value": "mg/L"
+    },
+    {
+      "coord": "A15",
+      "value": "         Number of Tanks ="
+    },
+    {
+      "coord": "C15",
+      "value": "3.0"
+    },
+    {
+      "coord": "F15",
+      "value": "         Tank L:W ratio ="
+    },
+    {
+      "coord": "H15",
+      "value": "1.0"
+    },
+    {
+      "coord": "A16",
+      "value": "      Liquid Depth in Tank ="
+    },
+    {
+      "coord": "C16",
+      "value": "5.0"
+    },
+    {
+      "coord": "D16",
+      "value": "m"
+    },
+    {
+      "coord": "E16",
+      "value": "       (target L:W - only used if tank is rectangular)"
+    },
+    {
+      "coord": "A17",
+      "value": "   Est. Effl. TSS, TSSe ="
+    },
+    {
+      "coord": "C17",
+      "value": "15.0"
+    },
+    {
+      "coord": "D17",
+      "value": "mg/L"
+    },
+    {
+      "coord": "E17",
+      "value": "Waste/recycle A.S. conc. TSSw  ="
+    },
+    {
+      "coord": "H17",
+      "value": "6500.0"
+    },
+    {
+      "coord": "I17",
+      "value": "mg/L"
+    },
+    {
+      "coord": "A19",
+      "value": "User Inputs - Kinetic Coefficients for Denitrification with Methanol"
+    },
+    {
+      "coord": "F20",
+      "value": "at 10oC"
+    },
+    {
+      "coord": "H20",
+      "value": "at 20oC"
+    },
+    {
+      "coord": "A21",
+      "value": "                     Synth. Yield Coeff, YD (g VSS/g bCOD)  ="
+    },
+    {
+      "coord": "F21",
+      "value": "0.17"
+    },
+    {
+      "coord": "H21",
+      "value": "0.18"
+    },
+    {
+      "coord": "A22",
+      "value": "                                  Half Veloc. Coeff., KsD  (mg/L)  ="
+    },
+    {
+      "coord": "F22",
+      "value": "12.6"
+    },
+    {
+      "coord": "H22",
+      "value": "9.1"
+    },
+    {
+      "coord": "A23",
+      "value": "               Max spec. grwth rate, mmD (gVSS/d/gVSS)  ="
+    },
+    {
+      "coord": "F23",
+      "value": "0.52"
+    },
+    {
+      "coord": "H23",
+      "value": "1.86"
+    },
+    {
+      "coord": "A24",
+      "value": "              Endog. decay coeff., kdD (g VSS/d/g VSS)  ="
+    },
+    {
+      "coord": "F24",
+      "value": "0.04"
+    },
+    {
+      "coord": "H24",
+      "value": "0.05"
+    },
+    {
+      "coord": "A25",
+      "value": "      Max spec. substrate util. rate, k (g VSS/d/g VSS)  ="
+    },
+    {
+      "coord": "F25",
+      "value": "3.1"
+    },
+    {
+      "coord": "H25",
+      "value": "10.3"
+    },
+    {
+      "coord": "A27",
+      "value": "Calculations - Postanoxic basin design for denitrification"
+    },
+    {
+      "coord": "A28",
+      "value": "  1.  Calculate kinetic coefficients at ww temperature, Tww  (by interpolation)"
+    },
+    {
+      "coord": "A30",
+      "value": "   Synth. Yield Coeff, YD  ="
+    },
+    {
+      "coord": "C30",
+      "formula": "=F21+(H21-F21)*((Tww-10)/10)",
+      "value": "0.172"
+    },
+    {
+      "coord": "D30",
+      "value": "  g VSS/g bCOD"
+    },
+    {
+      "coord": "F30",
+      "value": "     From wksht 2, Tww ="
+    },
+    {
+      "coord": "H30",
+      "formula": "=Tww",
+      "value": "12"
+    },
+    {
+      "coord": "I30",
+      "value": "    oC"
+    },
+    {
+      "coord": "K30",
+      "value": "Equations used for the calculations:  (note that conversion factors are needed in some of the equations)"
+    },
+    {
+      "coord": "A31",
+      "value": "  Endog. decay coeff., kdD  ="
+    },
+    {
+      "coord": "C31",
+      "formula": "=F24+(H24-F24)*((Tww-10)/10)",
+      "value": "0.042"
+    },
+    {
+      "coord": "D31",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "F31",
+      "value": "  Half Veloc. Coeff., KsD  ="
+    },
+    {
+      "coord": "H31",
+      "formula": "=F22+(H22-F22)*((Tww-10)/10)",
+      "value": "11.9"
+    },
+    {
+      "coord": "I31",
+      "value": "mg/L"
+    },
+    {
+      "coord": "A32",
+      "value": "Max spec. substr. Utiliz., k  ="
+    },
+    {
+      "coord": "C32",
+      "formula": "=F25+(H25-F25)*((Tww-10)/10)",
+      "value": "4.54"
+    },
+    {
+      "coord": "D32",
+      "value": "  g VSS/d/g VSS"
+    },
+    {
+      "coord": "L32",
+      "value": "S = Ks[1 + (kd)SRT]/[SRT(mm - kd) - 1"
+    },
+    {
+      "coord": "A34",
+      "value": "  2.  Calculate Methanol Requirement"
+    },
+    {
+      "coord": "L34",
+      "value": "Yn  = Y/[1 + (kd)SRT]"
+    },
+    {
+      "coord": "A36",
+      "value": " Resid. Meth. Conc in effl., S:"
+    },
+    {
+      "coord": "C36",
+      "formula": "=H31*(1+(C31*H13))/(H13*((C30*C32)-C31)-1)",
+      "value": "5.344046912"
+    },
+    {
+      "coord": "D36",
+      "value": "mg/L"
+    },
+    {
+      "coord": "F36",
+      "value": "Methanol dose (as COD) ="
+    },
+    {
+      "coord": "H36",
+      "formula": "=(C38*(NOX-H14))+C36",
+      "value": "69.01364396"
+    },
+    {
+      "coord": "I36",
+      "value": "mg/L COD"
+    },
+    {
+      "coord": "L36",
+      "value": " bCOD/NO4-N = 2.86/(1 - 1.42Yn)"
+    },
+    {
+      "coord": "B37",
+      "value": "           Yn  ="
+    },
+    {
+      "coord": "C37",
+      "formula": "=C30/(1+(C31*H13))",
+      "value": "0.1421487603"
+    },
+    {
+      "coord": "D37",
+      "value": " g VSS/g bCOD"
+    },
+    {
+      "coord": "F37",
+      "value": "           Methanol dose ="
+    },
+    {
+      "coord": "H37",
+      "formula": "=H36/1.5",
+      "value": "46.00909597"
+    },
+    {
+      "coord": "I37",
+      "value": "mg/L CH3OH"
+    },
+    {
+      "coord": "A38",
+      "value": "          bCOD/NO4-N ="
+    },
+    {
+      "coord": "C38",
+      "formula": "=2.86/(1-(1.43*C37))",
+      "value": "3.589685075"
+    },
+    {
+      "coord": "D38",
+      "value": "g/g"
+    },
+    {
+      "coord": "F38",
+      "value": "Daily Methanol needed ="
+    },
+    {
+      "coord": "H38",
+      "formula": "=H37*Qo/1000",
+      "value": "184.0363839"
+    },
+    {
+      "coord": "I38",
+      "value": "kg/d"
+    },
+    {
+      "coord": "L38",
+      "value": "Methanol dose (as COD)  =  (bCOD/NO4-N)(NOx - Ne)"
+    },
+    {
+      "coord": "L39",
+      "value": "Methanol dose = Methanol dose (as COD)/(1.5 g COD/g methanol)"
+    },
+    {
+      "coord": "A40",
+      "value": "  3.  Calculate Anoxic Tank Volume, Dimensions and Detention Time"
+    },
+    {
+      "coord": "B41",
+      "value": "(User Input needed in the Blue Cells)"
+    },
+    {
+      "coord": "L41",
+      "value": "Daily Methanol needed = (Methanol dose in mg/L)Qo/(1000 g/kg)"
+    },
+    {
+      "coord": "A42",
+      "value": " Solids prod. rate, PX,TSS  ="
+    },
+    {
+      "coord": "C42",
+      "formula": "=(Qo*C30*H36/((1+(C31*H13))*0.85))+(fd*C31*H13*Qo*C30*H36/((1+(C31*H13))*0.85))+(Qo*TSSe)",
+      "value": "107619.884"
+    },
+    {
+      "coord": "D42",
+      "value": "g/d"
+    },
+    {
+      "coord": "E42",
+      "value": "Min.  Anoxic Tank Volume, Van ="
+    },
+    {
+      "coord": "H42",
+      "formula": "=C42*H13/C12",
+      "value": "269.0497101"
+    },
+    {
+      "coord": "I42",
+      "value": "m3 "
+    },
+    {
+      "coord": "E44",
+      "value": "Click on green box and then  on"
+    },
+    {
+      "coord": "A45",
+      "value": " Min. Vol. per tank,  Vtank ="
+    },
+    {
+      "coord": "C45",
+      "formula": "=H42/C15",
+      "value": "89.6832367"
+    },
+    {
+      "coord": "D45",
+      "value": "m3"
+    },
+    {
+      "coord": "E45",
+      "value": "  arrow to Select Tank Shape:"
+    },
+    {
+      "coord": "H45",
+      "value": "rectangular"
+    },
+    {
+      "coord": "A46",
+      "formula": "=IF(H45=\"cylindrical\",\"Calculated Tank Diam.  =\",\"  Calculated Tank Width =\")",
+      "value": "  Calculated Tank Width ="
+    },
+    {
+      "coord": "C46",
+      "formula": "=IF(H45=\"cylindrical\",((C45/C16)*4/PI())^0.5,((C45/C16)/H15)^0.5)",
+      "value": "4.235167923"
+    },
+    {
+      "coord": "D46",
+      "value": "m"
+    },
+    {
+      "coord": "E46",
+      "formula": "=IF(H45=\"cylindrical\",\"          Actual Tank Diam:\",\"         Actual Tank Width:\")",
+      "value": "         Actual Tank Width:"
+    },
+    {
+      "coord": "H46",
+      "value": "5.0"
+    },
+    {
+      "coord": "I46",
+      "value": "m"
+    },
+    {
+      "coord": "A47",
+      "formula": "=IF(H45=\"cylindrical\",\"\",\"  Calculated Tank Length =\")",
+      "value": "  Calculated Tank Length ="
+    },
+    {
+      "coord": "C47",
+      "formula": "=IF(H45=\"cylindrical\",\"\",(C45/C16)/C46)",
+      "value": "4.235167923"
+    },
+    {
+      "coord": "D47",
+      "value": "m"
+    },
+    {
+      "coord": "E47",
+      "formula": "=IF(H45=\"cylindrical\",\"    Not Used for Cylindrical:\",\"       Actual Tank Length:\")",
+      "value": "       Actual Tank Length:"
+    },
+    {
+      "coord": "H47",
+      "value": "5.0"
+    },
+    {
+      "coord": "I47",
+      "value": "m"
+    },
+    {
+      "coord": "A48",
+      "value": "           Tank Wall Height ="
+    },
+    {
+      "coord": "C48",
+      "formula": "=C16+C14",
+      "value": "5.5"
+    },
+    {
+      "coord": "D48",
+      "value": "m"
+    },
+    {
+      "coord": "E48",
+      "value": "    Actual Tank liquid Volume ="
+    },
+    {
+      "coord": "H48",
+      "formula": "=IF(H45=\"rectangular\",C16*H46*H47,C16*PI()*(H46/2)^2)",
+      "value": "125"
+    },
+    {
+      "coord": "I48",
+      "value": "m3 "
+    },
+    {
+      "coord": "A50",
+      "value": "      Anoxic Det'n time,  t ="
+    },
+    {
+      "coord": "C50",
+      "formula": "=H48*C15*24/Qo",
+      "value": "2.25"
+    },
+    {
+      "coord": "D50",
+      "value": "hr"
+    },
+    {
+      "coord": "F50",
+      "value": "Anoxic Tank Mixing Power ="
+    },
+    {
+      "coord": "H50",
+      "formula": "=H48*C15*H12/1000",
+      "value": "3.75"
+    },
+    {
+      "coord": "I50",
+      "value": "kW"
+    },
+    {
+      "coord": "A52",
+      "value": "  4.  Calculate Reaeration Volume, and Dimensions"
+    },
+    {
+      "coord": "A53",
+      "value": "       (User Input is needed in the Blue Cells.  The shape is kept the same as the anoxic tank(s).)"
+    },
+    {
+      "coord": "A54",
+      "value": " Reaertion Volume, Vreaer  ="
+    },
+    {
+      "coord": "C54",
+      "formula": "=Qo*C13/(24*60)",
+      "value": "41.66666667"
+    },
+    {
+      "coord": "D54",
+      "value": "m3 "
+    },
+    {
+      "coord": "E54",
+      "value": " Min. Reaer. Vol/tank, Vtank  ="
+    },
+    {
+      "coord": "H54",
+      "formula": "=C54/C15",
+      "value": "13.88888889"
+    },
+    {
+      "coord": "I54",
+      "value": "m3 "
+    },
+    {
+      "coord": "A55",
+      "formula": "=IF(H45=\"cylindrical\",\"Calculated Tank Diam.  =\",\"              Tank Width =\")",
+      "value": "              Tank Width ="
+    },
+    {
+      "coord": "C55",
+      "formula": "=IF(H45=\"cylindrical\",((H54/C16)*4/PI())^0.5,H46)",
+      "value": "5"
+    },
+    {
+      "coord": "D55",
+      "value": "m"
+    },
+    {
+      "coord": "E55",
+      "formula": "=IF(H45=\"cylindrical\",\"          Actual Tank Diam:\",\"         Actual Tank Width:\")",
+      "value": "         Actual Tank Width:"
+    },
+    {
+      "coord": "H55",
+      "value": "11.0"
+    },
+    {
+      "coord": "I55",
+      "value": "m"
+    },
+    {
+      "coord": "A56",
+      "formula": "=IF(H45=\"cylindrical\",\"\",\"  Calculated Tank Length =\")",
+      "value": "  Calculated Tank Length ="
+    },
+    {
+      "coord": "C56",
+      "formula": "=IF(H45=\"cylindrical\",\"\",(H54/C55)/C16)",
+      "value": "0.5555555556"
+    },
+    {
+      "coord": "D56",
+      "value": "m"
+    },
+    {
+      "coord": "E56",
+      "formula": "=IF(H45=\"cylindrical\",\"    Not Used for Cylindrical:\",\"       Actual Tank Length:\")",
+      "value": "       Actual Tank Length:"
+    },
+    {
+      "coord": "H56",
+      "value": "1.5"
+    },
+    {
+      "coord": "I56",
+      "value": "m"
+    },
+    {
+      "coord": "A57",
+      "value": "           Tank Wall Height ="
+    },
+    {
+      "coord": "C57",
+      "formula": "=C16+C14",
+      "value": "5.5"
+    },
+    {
+      "coord": "D57",
+      "value": "m"
+    },
+    {
+      "coord": "E57",
+      "value": "    Actual Tank liquid Volume ="
+    },
+    {
+      "coord": "H57",
+      "formula": "=IF(H45=\"rectangular\",C16*H55*H56,C16*PI()*(H55/2)^2)",
+      "value": "82.5"
+    },
+    {
+      "coord": "I57",
+      "value": "m3 "
+    },
+    {
+      "coord": "A59",
+      "value": "      Anoxic Det'n time,  t ="
+    },
+    {
+      "coord": "C59",
+      "formula": "=H57*C15*60*24/Qo",
+      "value": "89.1"
+    },
+    {
+      "coord": "D59",
+      "value": "min"
+    },
+    {
+      "coord": "A61",
+      "value": "  5.  Calculate Sludge Recycle Rate and Sludge Wasting Rate"
+    },
+    {
+      "coord": "A63",
+      "value": " A.S. Recycle Rate, R2  ="
+    },
+    {
+      "coord": "C63",
+      "formula": "=Qo*(MLSS_Denit-TSSo)/(TSSw_Denit-MLSS_Denit)",
+      "value": "1715.555556"
+    },
+    {
+      "coord": "D63",
+      "value": "m3/d"
+    },
+    {
+      "coord": "A65",
+      "value": " Waste A.S. Rate, Qw2  ="
+    },
+    {
+      "coord": "C65",
+      "formula": "=((TankNumber_Denit*H48*MLSS_Denit/SRT_Denit)-(Qo*TSSe_Denit))/(TSSw_Denit-TSSe_Denit)",
+      "value": "13.87818042"
+    },
+    {
+      "coord": "D65",
+      "value": "m3/d"
+    },
+    {
+      "coord": "B72",
+      "value": "       Find more Excel spreadsheets for engineering at"
+    },
+    {
+      "coord": "D72",
+      "value": "http://www.engineeringexceltemplates.com/downloads_main.aspx"
+    },
+    {
+      "coord": "D73",
+      "value": "EngineeringExcelTemplates.com"
+    },
+    {
+      "coord": "B76",
+      "value": "Copyright \u00a9 2020 Harlan H Bengtson. All Rights Reserved."
+    }
+  ],
+  "7, rbCOD_P vs VFA_rbCOD": [
+    {
+      "coord": "B4",
+      "value": "VFA/rbCOD"
+    },
+    {
+      "coord": "C4",
+      "value": "rbCOD/P"
+    },
+    {
+      "coord": "B5",
+      "value": "0.1"
+    },
+    {
+      "coord": "C5",
+      "value": "20.5"
+    },
+    {
+      "coord": "B6",
+      "value": "0.2"
+    },
+    {
+      "coord": "C6",
+      "value": "15.0"
+    },
+    {
+      "coord": "B7",
+      "value": "0.3"
+    },
+    {
+      "coord": "C7",
+      "value": "12.0"
+    },
+    {
+      "coord": "B8",
+      "value": "0.4"
+    },
+    {
+      "coord": "C8",
+      "value": "10.5"
+    },
+    {
+      "coord": "B9",
+      "value": "0.5"
+    },
+    {
+      "coord": "C9",
+      "value": "9.4"
+    },
+    {
+      "coord": "N9",
+      "value": "rbCOD/P = -65.53(VFA/rbCOD)3 + 125.22(VFA/rbCOD)2 - 82.644(VFA/rbCOD) + 27.393"
+    },
+    {
+      "coord": "B10",
+      "value": "0.6"
+    },
+    {
+      "coord": "C10",
+      "value": "8.5"
+    },
+    {
+      "coord": "B11",
+      "value": "0.7"
+    },
+    {
+      "coord": "C11",
+      "value": "8.25"
+    },
+    {
+      "coord": "B12",
+      "value": "0.8"
+    },
+    {
+      "coord": "C12",
+      "value": "8.0"
+    },
+    {
+      "coord": "B22",
+      "value": "Source of data for this graph:  Metcalf & Eddy, Wastewater Engineering Treatment and Resource Recovery, 5th Ed, 2014, Figure 8-38"
+    },
+    {
+      "coord": "B25",
+      "value": "Copyright \u00a9 2020 Harlan H Bengtson. All Rights Reserved."
+    }
+  ]
+}

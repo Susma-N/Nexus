@@ -1,0 +1,91 @@
+=== SHEET: 1. Contents ===
+C1: Workbook Contents
+A3: Click on tabs at the bottom of the screen to access the following:
+B5: Tab 1. Contents (current tab)
+B7: Tab 2. Sludge Quantity Calculations
+B9: Tab 3. Digester Tank Design Calculations
+A12: Why you shouldn’t give copies of this workbook away
+A13: We at EngineeringExcelTemplates.com hope that you find this workbook useful.  If you 
+A14: would like us to develop additional useful spreadsheets for you in the future, then encourage 
+A15: your friends and colleagues to buy their own copies, rather than allowing them to copy 
+A16: the spreadsheet you purchased.  We have deliberately set our prices so low that no one 
+A17: can really claim that they can’t afford to pay.  But low prices will work for us—that is, we 
+A18: can stay in business—only if we can sell enough copies.  Bottom line: the more you get 
+A19: other people to pay for their own copies, the more low-cost useful spreadsheets will be 
+A20: available for you in the future.
+A23: This workbook is provided "as is", without warranty of any kind, express or
+A24: implied.
+B30:        Find more Excel spreadsheets for engineering at
+D31: EngineeringExcelTemplates.com
+B35: Copyright © 2012 Engineering Excel Templates. All Rights Reserved.
+
+=== SHEET: 2. Sludge Quant. Calcns ===
+A1: Anaerobic Digester Calculations - S.I. units
+A3: 1.  Sludge Quantity Calculations
+A5: Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes
+A7: Primary Sludge
+A9: Inputs | F9: Inputs
+A11: Design Ave. Flow Rate, Qi = | C11: 21600.0 | D11: m3/d | F11: Prim. Sludge solids conc. = | H11: 0.05
+A12: Peaking factor for
+A13:    peak monthly flow,  PF = | C13: 1.2 | F13: Prim. Sludge Sp. Grav. = | H13: 1.02
+A15:    Influent TSS, TSSi = | C15: 400.0 | D15: g/m3  | F15: Prim. Clarif. % TSS rem = | H15: 0.7
+A17: After grit removal, TSSp = | C17: 360.0 | D17: g/m3 
+A19: Calculations
+A21: Peak monthly flow, Qm = | C21: =C13*C11 | D21: m3/d | F21: TSS in Primary Sludge = | H21: =H15*C21*C17/1000 | I21: kg/d
+A22:     (used for design)
+F23: Vol. Flow of Prim. Sludge = | H23: =H21/(1000*H13*H11) | I23: m3/d | K23: Equations Used for Calculations
+A25: Waste Activated Sludge | K25: Peak monthly flow = (Design ave. flow rate)(Peaking factor)     [  Qm  =  Qi*PF  ]
+L26: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A27: Inputs | F27: Calculations | K27: kg/day of TSS in Prim. Sludge  =  Qm*TSSp*(Prim. Clarif. % TSS removal)/1000
+L28: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A29: Infl. BOD conc., BODi = | C29: 375.0 | D29: g/m3  | F29: BOD to aeration tank = | H29: =C21*C29*(1-C31)/1000 | I29: kg/d | K29: Vol. Flow of Prim. Sldge  =  (lb/day of TSS in Prim. Sldge)/[1000*(Prim. Sldge solids conc.)(Sp. Gr.)
+L30: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A31: Prim. Clarif. % BOD rem = | C31: 0.33 | F31: Aeration tank volume, V = | H31: =H29/C37 | I31: m3  | K31: kg/day of BOD to aer. tank = (Peak mnthly flow)(BODi)(1 - % BOD rem. in prim. clarif.)/1000
+A33: Aeration tank MLSS, X = | C33: 3500.0 | D33: g/m3  | K33: Aer. tank vol. in m3  =  V  =  (kg/day of BOD to aer. tank)/VL
+F34: Waste Activated Sludge
+A35:       Design SRT = | C35: 13.0 | D35: days | F35: TSS flow rate, mdotWAS = | H35: =(H31*C33/(1000*C35))-(C21*C41/1000) | I35: kg/d | K35: kg/day of TSS in WAS, mdotWAS  =  VMG*X/(Design SRT*1000)  -  Qm*TSSe/1000
+A36: Design vol. loading  | F36: Waste Activated Sludge | L36: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A37:    for aeration tank, VL = | C37: 0.8 | F37:            Flow Rate, Qw = | H37: =H35*1000/C39 | I37: m3/d | K37: Waste Activated Sludge Flow Rate, Qw  =  mdotWAS*1000/TSSw
+A38:     (kg BOD/day/m3)
+A39: WAS conc., TSSW = | C39: 10000.0 | D39: g/m3 
+A41: Effl. TSS conc., TSSe = | C41: 20.0 | D41: g/m3 
+A43: Thickened Waste Activated Sludge
+A45: Inputs | F45: Calculations
+M46: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A47: Conc. Of thickened sludge = | C47: 0.05 | F47: TSS flow (thknd. Sludge) = | H47: =C49*H35 | I47: kg/d | K47: lb/day of TSS in thickened sludge  =  (mdotWAS)(assumed solids recovery %)
+A49: Assumed solids recovery = | C49: 0.9 | F49: Flow rate (thknd. Sludge) = | H49: =H47/(C47*1000) | I49: m3/d | K49: MGD of thickened sludge  =  (lb/day of TSS in thcknd sldge)/[(conc. of thcknd sldge)(8.34)(106)
+J52: Reference:  Mecalf & Eddy, Inc,  Wastewater Engineering Treatment and Reuse, 4th Ed, revised by:
+K53:      Tchobanoglous, G., Burton, F.L., and Stensel, D.H., McGraw Hill, 2003.
+M57: http://www.engineeringexceltemplates.com/downloads_main.aspx
+M66: http://www.engineeringexceltemplates.com/downloads_main.aspx
+M65532: http://www.engineeringexceltemplates.com/downloads_main.aspx
+
+=== SHEET: 3. Design Calcns ===
+A1: Anaerobic Digester Calculations - S.I. units | K1: Typical Design Loading Rates for mesophilic, high-rate, complete mix Anaerobic Digesters | M1: http://www.engineeringexceltemplates.com/downloads_main.aspx
+L2:   (from Metcalf & Eddy reference below)
+A3: 2.  Single Stage, Mesophilic, Completely Mixed Digester Design | K3: Solids Loading Rate:     1.6 - 4.8  kg VSS/day/m3  
+A5: Instructions:  Enter values in blue boxes.  Spreadsheet calculates values in yellow boxes | K5: Solids Retention Time:  15 - 20 days
+A7: Volume Determination | K7: Typically based on peak 2 week or peak monthly influent wastewater flow rate | M7: http://www.engineeringexceltemplates.com/downloads_main.aspx
+A9: Choose Design Criterion (either Solids Loading Rate or Solids Retention Time)
+A10: by entering either yes or no in the blue cell below: | K10: Equations Used for Calculations
+A12:      Solids Loading Rate  | C12: no | F12: Solids Retention Time | H12: =IF(C12="no","yes","no") | K12: kg/day of VSS to digester  =  (kg/day TSS in prim. sldge)(% vol. solids in prim. sldge)
+A13:      (kg VSS/day/m3)  | F13:         (SRT, days) | N13:                + (kg/day of thcknd WAS)(% vol. solids in WAS)
+A15: Inputs | F15: Calculations | K15: For Solids Loading Rate as design criterion:
+A16: % Volatile solids in 
+A17:             primary sludge = | C17: 0.7 | E17:      VSS flow rate to digester = | H17: =(PrimSolidsRate*C17)+(ThSlSolidsRate*C19) | I17: kg/d | K17: Digester liquid volume in m3  =  (kg/day of VSS to digester)/Solids Loading Rate
+A18: % Volatile solids in 
+A19:     waste activated sludge = | C19: 0.8 | E19:  Total digester liquid volume = | H19: =IF(H12="no",H17/C21,(WASFlow+PrimFlow)*C21) | I19: m3  | K19: For Solids Retention Time as design criterion:
+A21: =IF(H12="no","   Solids Loading Rate =","   Solids Retention Time =") | C21: 12.0 | D21: =IF(H12="no"," ","days") | F21: =IF(H12="no","  Solids Retention Time =","   Solids Loading Rate =") | H21: =IF(H12="no",H19/(ThSlFlowRate+PrimFlow),H17/H19) | I21: =IF(H12="no","days"," ") | K21: Digester liquid volume in m3
+A22: =IF(H12="no","  (kg VSS/day/cu.m.)"," ") | F22: =IF(H12="no"," ","  (kg VSS/day/cu.m.)") | K22:           =  (flow rate of prim. sldge + flow rate of thcknd WAS)(Solids Retention Time)
+K23:    (Note that solids retention time = liquid retention time for a completely mixed reactor)
+A24: Tank Dimensions
+A26:        Number of tanks = | C26: 2.0 | F26: Liquid volume/digester = | H26: =H19/C26 | I26: m3  | K26: Liquid volume/digester  =  (Total digester liquid volume)/(Number of tanks)
+A28:       Side water depth = | C28: 10.0 | D28: m | F28: Diameter of digester = | H28: =(4*H26/(PI()*C28))^0.5 | I28: m | K28: Diameter of digester  =  [(liquid volume/digester)*4/p*SWD]0.5  
+A29:   (min SWD = 7.5 m; max SWD = 15 m) | F29:  (min diam = 6 m;  max diam = 38 m)
+M30: http://www.engineeringexceltemplates.com/downloads_main.aspx
+J31: Reference:  Mecalf & Eddy, Inc,  Wastewater Engineering Treatment and Reuse, 4th Ed, revised by:
+K32:      Tchobanoglous, G., Burton, F.L., and Stensel, D.H., McGraw Hill, 2003.
+M65487: http://www.engineeringexceltemplates.com/downloads_main.aspx
+M65502: http://www.engineeringexceltemplates.com/downloads_main.aspx
+M65528: http://www.engineeringexceltemplates.com/downloads_main.aspx
+
